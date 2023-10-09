@@ -1,16 +1,36 @@
+/* Remova as setas do input de número */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+  
 .character-sheet {
-    max-width: 400px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-    text-align: center;
 }
 
 .character-info,
 .character-stats {
     margin-bottom: 20px;
+}
+
+.character-stats{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.character-stats input{
+    font-size: 30px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 h1 {
