@@ -1,3 +1,7 @@
+
+//SALVAR --------------------------------------------------------------------------------------------
+
+
 document.getElementById('save-button').addEventListener('click', function () {
     const characterData = {
         name: document.getElementById('char-name').value,
@@ -33,6 +37,8 @@ document.getElementById('save-button').addEventListener('click', function () {
     URL.revokeObjectURL(a.href);
 });
 
+//CARREGAR -----------------------------------------------------------------
+
 document.getElementById('load-button').addEventListener('click', function () {
     // Crie um elemento de input de arquivo oculto
     const fileInput = document.getElementById('file-input');
@@ -63,12 +69,15 @@ document.getElementById('load-button').addEventListener('click', function () {
 
                 // Exiba a imagem do retrato
                 document.getElementById('portrait-preview').src = characterData.portrait;
+            
+            
             };
-
+            
             // Leia o conteúdo do arquivo selecionado como texto
             reader.readAsText(selectedFile);
         }
     });
+    
 });
 
 
@@ -128,7 +137,7 @@ document.getElementById('save-button').addEventListener('click', function () {
 });
 
 
-//PORTRAIT
+//PORTRAIT -------------------------------------------------------------------------------------------
 
 document.getElementById('char-portrait').addEventListener('change', function () {
     const portraitInput = document.getElementById('char-portrait');
@@ -153,7 +162,7 @@ document.getElementById('char-portrait').addEventListener('change', function () 
 });
 
 
-//CLASSES DESCRIÇÕES 
+//CLASSES DESCRIÇÕES ------------------------------------------------------------------------------------
 
 // Obtém o elemento de descrição da classe
 const classDescription = document.getElementById('class-description');
@@ -178,7 +187,7 @@ classDropdown.addEventListener('change', function () {
     classDescription.textContent = classDescriptions[selectedClass] || '';
 });
 
-//RAÇAS DESCRIÇÃO
+//RAÇAS DESCRIÇÃO --------------------------------------------------------------------------------------
 
 // Obtém o elemento de descrição da raça
 const raceDescription = document.getElementById('race-description');
@@ -218,3 +227,51 @@ chooseButtons.forEach(function (button) {
         charRaceSelect.value = raceValue;
     });
 });
+
+
+// CARDS PARA RAÇA ---------------------------------------------------------------------------------------------------
+
+const raceSelect = document.getElementById('char-race');
+const raceCardContainer = document.getElementById('race-card-container');
+
+raceSelect.addEventListener('change', function () {
+    const selectedRace = raceSelect.value;
+    const raceCard = document.createElement('div');
+    raceCard.className = 'race-card';
+
+    const raceImage = document.createElement('img');
+    raceImage.className = 'race-image';
+    raceImage.src = 'images/' + selectedRace + '.png'; // Caminho da imagem baseado no valor da raça
+    raceImage.alt = selectedRace;
+
+    const raceName = document.createElement('p');
+    raceName.textContent = selectedRace;
+
+    const raceDescription = document.createElement('p');
+    // Coloque aqui uma descrição adequada para cada raça
+    switch (selectedRace) {
+        case 'dragonborn':
+            raceDescription.textContent = 'Os Dragonborn são uma raça de guerreiros com sangue de dragão.';
+            break;
+        case 'dwarf':
+            raceDescription.textContent = 'Os Dwarf são uma raça de fortes anões mineiros.';
+            break;
+        // Adicione mais casos para outras raças aqui
+        default:
+            raceDescription.textContent = 'Descrição não disponível.';
+            break;
+    }
+
+    // Adicione os elementos ao card
+    raceCard.appendChild(raceImage);
+    raceCard.appendChild(raceName);
+    raceCard.appendChild(raceDescription);
+
+    // Limpe o conteúdo anterior e adicione o novo card
+    raceCardContainer.innerHTML = '';
+    raceCardContainer.appendChild(raceCard);
+
+    // Aqui você pode adicionar código JavaScript para lidar com a escolha da raça
+    console.log("Raça escolhida: " + selectedRace);
+});
+

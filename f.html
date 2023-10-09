@@ -51,57 +51,7 @@
     <div id="race-card-container"></div>
 
     <script>
-        const raceSelect = document.getElementById('char-race');
-        const raceCardContainer = document.getElementById('race-card-container');
 
-        raceSelect.addEventListener('change', function () {
-            const selectedRace = raceSelect.value;
-            const raceCard = document.createElement('div');
-            raceCard.className = 'race-card';
-
-            const raceImage = document.createElement('img');
-            raceImage.className = 'race-image';
-            raceImage.src = selectedRace + '.jpg'; // Nome da imagem baseado no valor da raça
-            raceImage.alt = selectedRace;
-
-            const raceName = document.createElement('p');
-            raceName.textContent = selectedRace;
-
-            const raceDescription = document.createElement('p');
-            // Coloque aqui uma descrição adequada para cada raça
-            switch (selectedRace) {
-                case 'dragonborn':
-                    raceDescription.textContent = 'Os Dragonborn são uma raça de guerreiros com sangue de dragão.';
-                    break;
-                case 'dwarf':
-                    raceDescription.textContent = 'Os Dwarf são uma raça de fortes anões mineiros.';
-                    break;
-                // Adicione mais casos para outras raças aqui
-                default:
-                    raceDescription.textContent = 'Descrição não disponível.';
-                    break;
-            }
-
-            const chooseButton = document.createElement('button');
-            chooseButton.className = 'choose-button';
-            chooseButton.textContent = 'Escolher ' + selectedRace;
-            chooseButton.addEventListener('click', function () {
-                // Aqui você pode adicionar código JavaScript para lidar com a escolha da raça
-                console.log("Raça escolhida: " + selectedRace);
-            });
-
-            // Adicione os elementos ao card
-            raceCard.appendChild(raceImage);
-            raceCard.appendChild(raceName);
-            raceCard.appendChild(raceDescription);
-            raceCard.appendChild(chooseButton);
-
-            // Limpe o conteúdo anterior e adicione o novo card
-            raceCardContainer.innerHTML = '';
-            raceCardContainer.appendChild(raceCard);
-        });
-
-        
     </script>
 </body>
 </html>

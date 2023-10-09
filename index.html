@@ -3,46 +3,6 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        .character-sheet {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        .character-info,
-        .character-stats {
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-        }
-
-        input {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-
-        .portrait-image {
-            max-height: 500px;
-            width: auto;
-        }
-    </style>
 </head>
 
 <body>
@@ -58,6 +18,7 @@
             <input type="text" id="char-name"><br>
             <label for="char-race">Raça:</label>
             <select id="char-race">
+                <option value="nenhuma">Nenhuma</option>
                 <option value="dragonborn">Dragonborn</option>
                 <option value="dwarf">Dwarf</option>
                 <option value="elf">Elf</option>
@@ -67,13 +28,10 @@
                 <option value="half-orc">Half-Orc</option>
                 <option value="human">Human</option>
                 <option value="tiefling">Tiefling</option>
-
                 <!-- Adicione outras opções de raça aqui -->
             </select><br>
-
-            <div id="race-description">
-                <!-- A descrição da raça será exibida aqui -->
-            </div>
+        
+            <div id="race-card-container"></div>
 
             <label for="char-class">Classe:</label>
             <select id="char-class">
