@@ -22,15 +22,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .character-stats{
-    display: flex;
     gap: 20px;
-    width: 100%;
 }
 
 .character-stats input{
     font-size: 30px;
     text-align: center;
     box-sizing: border-box;
+}
+
+.character-skills{
+    flex: 6;
+    border-left: 2px #e1e1e1 solid;
+    padding-left: 20px;
+    margin-left: 20px;
 }
 
 h1 {
@@ -86,4 +91,8 @@ input {
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+.atributoseskills{
+    display: flex;
 }
