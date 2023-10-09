@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Estilos para os cards */
+        .race-card {
+            width: 200px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+/* Estilos para os cards selecionados */
+.selected {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+
+        /* Estilos para as imagens */
+        .race-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para o botão */
+        .choose-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <select id="char-race">
+        <option value="dragonborn">Dragonborn</option>
+        <option value="dwarf">Dwarf</option>
+        <option value="elf">Elf</option>
+        <option value="gnome">Gnome</option>
+        <option value="half-elf">Half-Elf</option>
+        <option value="halfling">Halfling</option>
+        <option value="half-orc">Half-Orc</option>
+        <option value="human">Human</option>
+        <option value="tiefling">Tiefling</option>
+        <!-- Adicione outras opções de raça aqui -->
+    </select><br>
+
+    <div id="race-card-container"></div>
+
+    <script>
+        const raceSelect = document.getElementById('char-race');
+        const raceCardContainer = document.getElementById('race-card-container');
+
+        raceSelect.addEventListener('change', function () {
+            const selectedRace = raceSelect.value;
+            const raceCard = document.createElement('div');
+            raceCard.className = 'race-card';
+
+            const raceImage = document.createElement('img');
+            raceImage.className = 'race-image';
+            raceImage.src = selectedRace + '.jpg'; // Nome da imagem baseado no valor da raça
+            raceImage.alt = selectedRace;
+
+            const raceName = document.createElement('p');
+            raceName.textContent = selectedRace;
+
+            const raceDescription = document.createElement('p');
+            // Coloque aqui uma descrição adequada para cada raça
+            switch (selectedRace) {
+                case 'dragonborn':
+                    raceDescription.textContent = 'Os Dragonborn são uma raça de guerreiros com sangue de dragão.';
+                    break;
+                case 'dwarf':
+                    raceDescription.textContent = 'Os Dwarf são uma raça de fortes anões mineiros.';
+                    break;
+                // Adicione mais casos para outras raças aqui
+                default:
+                    raceDescription.textContent = 'Descrição não disponível.';
+                    break;
+            }
+
+            const chooseButton = document.createElement('button');
+            chooseButton.className = 'choose-button';
+            chooseButton.textContent = 'Escolher ' + selectedRace;
+            chooseButton.addEventListener('click', function () {
+                // Aqui você pode adicionar código JavaScript para lidar com a escolha da raça
+                console.log("Raça escolhida: " + selectedRace);
+            });
+
+            // Adicione os elementos ao card
+            raceCard.appendChild(raceImage);
+            raceCard.appendChild(raceName);
+            raceCard.appendChild(raceDescription);
+            raceCard.appendChild(chooseButton);
+
+            // Limpe o conteúdo anterior e adicione o novo card
+            raceCardContainer.innerHTML = '';
+            raceCardContainer.appendChild(raceCard);
+        });
+
+        
+    </script>
+</body>
+</html>

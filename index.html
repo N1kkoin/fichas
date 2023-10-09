@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .character-sheet {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .character-info,
+        .character-stats {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .portrait-image {
+            max-height: 500px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+        
+    <div class="character-sheet">
+        <h1>Ficha de Personagem</h1>
+        <label for="char-portrait">Retrato:</label>
+        <input type="file" id="char-portrait" accept="image/*"><br>
+        <img id="portrait-preview" class="portrait-image" src="" alt="Retrato do Personagem">
+
+        <div class="character-info">
+            <label for="char-name">Nome:</label>
+            <input type="text" id="char-name"><br>
+            <label for="char-race">Raça:</label>
+            <select id="char-race">
+                <option value="dragonborn">Dragonborn</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="gnome">Gnome</option>
+                <option value="half-elf">Half-Elf</option>
+                <option value="halfling">Halfling</option>
+                <option value="half-orc">Half-Orc</option>
+                <option value="human">Human</option>
+                <option value="tiefling">Tiefling</option>
+
+                <!-- Adicione outras opções de raça aqui -->
+            </select><br>
+
+            <div id="race-description">
+                <!-- A descrição da raça será exibida aqui -->
+            </div>
+
+            <label for="char-class">Classe:</label>
+            <select id="char-class">
+                <option value="guerreiro">Guerreiro</option>
+                <option value="mago">Mago</option>
+                <option value="ladino">Ladino</option>
+                <!-- Adicione outras opções de classe aqui -->
+            </select><br>
+
+            <div id="class-description">
+                <!-- A descrição da classe será exibida aqui -->
+            </div>
+
+            <label for="char-level">Nível:</label>
+            <input type="number" id="char-level"><br>
+        </div>
+
+        <div class="character-stats">
+            <h2>Atributos</h2>
+            <label for="char-strength">Força:</label>
+            <input type="number" id="char-strength" min="0" max="20"><br>
+            <label for="char-dexterity">Destreza:</label>
+            <input type="number" id="char-dexterity" min="0" max="20"><br>
+            <label for="char-constitution">Constituição:</label>
+            <input type="number" id="char-constitution" min="0" max="20"><br>
+            <label for="char-intelligence">Inteligência:</label>
+            <input type="number" id="char-intelligence" min="0" max="20"><br>
+            <label for="char-wisdom">Sabedoria:</label>
+            <input type="number" id="char-wisdom" min="0" max="20"><br>
+            <label for="char-charisma">Carisma:</label>
+            <input type="number" id="char-charisma" min="0" max="20"><br>
+        </div>
+
+        <!-- ... (código HTML anterior) ... -->
+        <button id="save-button">Salvar</button>
+        <!-- ... (código HTML anterior) ... -->
+        <input type="file" id="file-input" style="display: none;">
+        <button id="load-button">Carregar</button>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
