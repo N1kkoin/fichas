@@ -32,6 +32,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 2px solid #007BFF;
     background-color: #ffffff; 
     margin-left: 20px;
+    margin-top: 40px;
 }
 
 .character-info,
@@ -221,3 +222,29 @@ select option {
 .character-info .racaeclasse label {
     margin-top: 5px;
 }
+
+/* Estilos para o tooltip personalizado */
+.custom-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-tooltip::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-transform: lowercase;
+    z-index: 2;
+}
+
+.custom-tooltip:hover::before {
+    opacity: 1;
+}
+
