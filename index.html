@@ -6,193 +6,198 @@
 </head>
 
 <body>
+    <div class="sheets">
+        <div class="character-sheet">
+            <h1>Ficha de Personagem</h1>
+            <div class="fotoeinfos">
 
-    <div class="character-sheet">
-        <h1>Ficha de Personagem</h1>
-        <div class="fotoeinfos">
+                <div class="image-container">
+                    <img id="portrait-preview" class="portrait-image" src="images/templete.png"
+                        alt="Retrato do Personagem">
+                    <label for="char-portrait" class="file-label">+</label>
+                    <input type="file" id="char-portrait" accept="image/*">
+                </div>
+                <div class="character-info">
+                    <div class="nomeestilo">
+                        <input type="text" id="char-name"><br>
+                        <label for="char-name">Nome</label>
+                    </div>
+                    <div>
+                        <input type="number" id="char-level"><br>
+                        <label for="char-level">Nível</label>
+                    </div>
+                    <div class="racaeclasse">
+                        <div>
+                            <select id="char-race">
+                                <option value="nenhumarace">-----</option>
+                                <option value="aarakocra">Aarakocra</option>
+                                <option value="aasimar">Aasimar</option>
+                                <option value="airgenasi">Air Genasi</option>
 
-            <div class="image-container">
-                <img id="portrait-preview" class="portrait-image" src="images/templete.png" alt="Retrato do Personagem">
-                <label for="char-portrait" class="file-label">+</label>
-                <input type="file" id="char-portrait" accept="image/*">
+                                <option value="dragonborn">Dragonborn</option>
+                                <option value="dwarf">Dwarf</option>
+                                <option value="elf">Elf</option>
+                                <option value="gnome">Gnome</option>
+                                <option value="halfelf">Half-Elf</option>
+                                <option value="halfling">Halfling</option>
+                                <option value="halforc">Half-Orc</option>
+                                <option value="human">Human</option>
+                                <option value="tiefling">Tiefling</option>
+                                <!-- Adicione outras opções de raça aqui -->
+                            </select><br>
+                            <label for="char-race">Raça</label>
+                        </div>
+                        <div>
+                            <select id="char-class">
+                                <option value="nenhumaclass">-----</option>
+
+                                <option value="guerreiro">Guerreiro</option>
+                                <option value="mago">Mago</option>
+                                <option value="ladino">Ladino</option>
+                                <!-- Adicione outras opções de classe aqui -->
+                            </select><br>
+                            <label for="char-class">Classe</label>
+
+                        </div>
+                        <div>
+                            <select id="char-aligment">
+                                <option value="nenhumaaligment">-----</option>
+
+                                <option value="lawfulgoodaligment">Lawful Good</option>
+                                <option value="neutralgoodaligment">Neutral Good</option>
+                                <option value="chaoticgoodaligment">Chaotic Good</option>
+                                <option value="lawfulneutralaligment">Lawful Neutral</option>
+                                <option value="trueneutralaligment">True Neutral</option>
+                                <option value="chaoticneutralaligment">Chaotic Neutral</option>
+                                <option value="lawfulevilaligment">Lawful Evil</option>
+                                <option value="neutralevilaligment">Neutral Evil</option>
+                                <option value="chaoticevilaligment">Chaotic Evil</option>
+
+                            </select><br>
+                            <label for="char-class">Alinhamento</label>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="character-info">
-                <div class="nomeestilo">
-                    <input type="text" id="char-name"><br>
-                    <label for="char-name">Nome</label>
-                </div>
-                <div>
-                    <input type="number" id="char-level"><br>
-                    <label for="char-level">Nível</label>
-                </div>
-                <div class="racaeclasse">
-                    <div>
-                        <select id="char-race">
-                            <option value="nenhumarace">-----</option>
-                            <option value="aarakocra">Aarakocra</option>
-                            <option value="aasimar">Aasimar</option>
-                            <option value="airgenasi">Air Genasi</option>
+            <div class="atributoseskills">
 
-                            <option value="dragonborn">Dragonborn</option>
-                            <option value="dwarf">Dwarf</option>
-                            <option value="elf">Elf</option>
-                            <option value="gnome">Gnome</option>
-                            <option value="halfelf">Half-Elf</option>
-                            <option value="halfling">Halfling</option>
-                            <option value="halforc">Half-Orc</option>
-                            <option value="human">Human</option>
-                            <option value="tiefling">Tiefling</option>
-                            <!-- Adicione outras opções de raça aqui -->
-                        </select><br>
-                        <label for="char-race">Raça</label>
+                <div class="character-stats">
+                    <h2>Atributos</h2>
+                    <div>
+                        <input type="number" id="char-strength"><br>
+                        <label for="char-strength">Força</label>
+                    </div>
+
+                    <div>
+                        <input type="number" id="char-dexterity"><br>
+                        <label for="char-dexterity">Destreza</label>
                     </div>
                     <div>
-                        <select id="char-class">
-                            <option value="nenhumaclass">-----</option>
-
-                            <option value="guerreiro">Guerreiro</option>
-                            <option value="mago">Mago</option>
-                            <option value="ladino">Ladino</option>
-                            <!-- Adicione outras opções de classe aqui -->
-                        </select><br>
-                        <label for="char-class">Classe</label>
+                        <input type="number" id="char-constitution"><br>
+                        <label for="char-constitution">Constituição</label>
 
                     </div>
                     <div>
-                        <select id="char-aligment">
-                            <option value="nenhumaaligment">-----</option>
+                        <input type="number" id="char-intelligence"><br>
+                        <label for="char-intelligence">Inteligência</label>
 
-                            <option value="lawfulgoodaligment">Lawful Good</option>
-                            <option value="neutralgoodaligment">Neutral Good</option>
-                            <option value="chaoticgoodaligment">Chaotic Good</option>
-                            <option value="lawfulneutralaligment">Lawful Neutral</option>
-                            <option value="trueneutralaligment">True Neutral</option>
-                            <option value="chaoticneutralaligment">Chaotic Neutral</option>
-                            <option value="lawfulevilaligment">Lawful Evil</option>
-                            <option value="neutralevilaligment">Neutral Evil</option>
-                            <option value="chaoticevilaligment">Chaotic Evil</option>
+                    </div>
+                    <div>
+                        <input type="number" id="char-wisdom"><br>
+                        <label for="char-wisdom">Sabedoria</label>
 
-                        </select><br>
-                        <label for="char-class">Alinhamento</label>
+                    </div>
+                    <div>
+                        <input type="number" id="char-charisma"><br>
+                        <label for="char-charisma">Carisma</label>
+                    </div>
+                </div>
 
+                <div class="character-skills">
+                    <h2>Skills</h2>
+                    <div class="skillsflex">
+                        <input type="number" id="char-acrobatics"><br>
+                        <label for="char-acrobatics">Acrobatismo (DES)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-animal"><br>
+                        <label for="char-animal">Manejo de Animais (SAB)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-arcana"><br>
+                        <label for="char-arcana">Arcana (INT)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-athletics"><br>
+                        <label for="char-athletics">Atletismo (FOR)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-deception"><br>
+                        <label for="char-deception">Falsidade (CAR)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-history"><br>
+                        <label for="char-history">Historia (INT)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-insight"><br>
+                        <label for="char-insight">Percepção (SAB)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-intimidation"><br>
+                        <label for="char-intimidation">Intimidação (CAR)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-investigation"><br>
+                        <label for="char-investigation">Investigação (INT)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-medicine"><br>
+                        <label for="char-medicine">Medicine (SAB)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-nature"><br>
+                        <label for="char-nature">Natureza (INT)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-perception"><br>
+                        <label for="char-perception">Percepção (SAB)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-performance"><br>
+                        <label for="char-performance">Performance (CAR)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-persuasion"><br>
+                        <label for="char-persuasion">Persuasão (CAR)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-religion"><br>
+                        <label for="char-religion">Religião (INT)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-sleightofhand"><br>
+                        <label for="char-sleightofhand">Manipulação Manual (DES)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-stealth"><br>
+                        <label for="char-stealth">Furtividade (DES)</label>
+                    </div>
+                    <div class="skillsflex">
+                        <input type="number" id="char-survival"><br>
+                        <label for="char-survival">Survival (SAB)</label>
                     </div>
                 </div>
             </div>
+            <button id="save-button">Salvar</button>
+            <input type="file" id="file-input" style="display: none;">
+            <button id="load-button">Carregar</button>
+
         </div>
-        <div class="atributoseskills">
-
-            <div class="character-stats">
-                <h2>Atributos</h2>
-                <div>
-                    <input type="number" id="char-strength"><br>
-                    <label for="char-strength">Força</label>
-                </div>
-
-                <div>
-                    <input type="number" id="char-dexterity"><br>
-                    <label for="char-dexterity">Destreza</label>
-                </div>
-                <div>
-                    <input type="number" id="char-constitution"><br>
-                    <label for="char-constitution">Constituição</label>
-
-                </div>
-                <div>
-                    <input type="number" id="char-intelligence"><br>
-                    <label for="char-intelligence">Inteligência</label>
-
-                </div>
-                <div>
-                    <input type="number" id="char-wisdom"><br>
-                    <label for="char-wisdom">Sabedoria</label>
-
-                </div>
-                <div>
-                    <input type="number" id="char-charisma"><br>
-                    <label for="char-charisma">Carisma</label>
-                </div>
-            </div>
-
-            <div class="character-skills">
-                <h2>Skills</h2>
-                <div class="skillsflex">
-                    <input type="number" id="char-acrobatics"><br>
-                    <label for="char-acrobatics">Acrobatismo (DES)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-animal"><br>
-                    <label for="char-animal">Manejo de Animais (SAB)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-arcana"><br>
-                    <label for="char-arcana">Arcana (INT)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-athletics"><br>
-                    <label for="char-athletics">Atletismo (FOR)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-deception"><br>
-                    <label for="char-deception">Falsidade (CAR)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-history"><br>
-                    <label for="char-history">Historia (INT)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-insight"><br>
-                    <label for="char-insight">Percepção (SAB)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-intimidation"><br>
-                    <label for="char-intimidation">Intimidação (CAR)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-investigation"><br>
-                    <label for="char-investigation">Investigação (INT)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-medicine"><br>
-                    <label for="char-medicine">Medicine (SAB)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-nature"><br>
-                    <label for="char-nature">Natureza (INT)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-perception"><br>
-                    <label for="char-perception">Percepção (SAB)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-performance"><br>
-                    <label for="char-performance">Performance (CAR)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-persuasion"><br>
-                    <label for="char-persuasion">Persuasão (CAR)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-religion"><br>
-                    <label for="char-religion">Religião (INT)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-sleightofhand"><br>
-                    <label for="char-sleightofhand">Manipulação Manual (DES)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-stealth"><br>
-                    <label for="char-stealth">Furtividade (DES)</label>
-                </div>
-                <div class="skillsflex">
-                    <input type="number" id="char-survival"><br>
-                    <label for="char-survival">Survival (SAB)</label>
-                </div>
-            </div>
+        <div class="explicação-sheet">
+            gtr
         </div>
-        <button id="save-button">Salvar</button>
-        <input type="file" id="file-input" style="display: none;">
-        <button id="load-button">Carregar</button>
-
     </div>
     <script src="script.js"></script>
 
