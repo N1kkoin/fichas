@@ -3,8 +3,6 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
 </head>
 
 <body>
@@ -29,9 +27,8 @@
                 </div>
                 <div class="racaeclasse">
                     <div>
-                        
                         <select id="char-race">
-                            <option value="nenhuma">-----</option>
+                            <option value="nenhumarace">-----</option>
                             <option value="aarakocra">Aarakocra</option>
                             <option value="aasimar">Aasimar</option>
                             <option value="airgenasi">Air Genasi</option>
@@ -51,7 +48,7 @@
                     </div>
                     <div>
                         <select id="char-class">
-                            <option value="nenhuma">-----</option>
+                            <option value="nenhumaclass">-----</option>
 
                             <option value="guerreiro">Guerreiro</option>
                             <option value="mago">Mago</option>
@@ -59,6 +56,24 @@
                             <!-- Adicione outras opções de classe aqui -->
                         </select><br>
                         <label for="char-class">Classe</label>
+
+                    </div>
+                    <div>
+                        <select id="char-aligment">
+                            <option value="nenhumaaligment">-----</option>
+
+                            <option value="lawfulgoodaligment">Lawful Good</option>
+                            <option value="neutralgoodaligment">Neutral Good</option>
+                            <option value="chaoticgoodaligment">Chaotic Good</option>
+                            <option value="lawfulneutralaligment">Lawful Neutral</option>
+                            <option value="trueneutralaligment">True Neutral</option>
+                            <option value="chaoticneutralaligment">Chaotic Neutral</option>
+                            <option value="lawfulevilaligment">Lawful Evil</option>
+                            <option value="neutralevilaligment">Neutral Evil</option>
+                            <option value="chaoticevilaligment">Chaotic Evil</option>
+
+                        </select><br>
+                        <label for="char-class">Alinhamento</label>
 
                     </div>
                 </div>
@@ -112,7 +127,66 @@
                     <input type="number" id="char-arcana"><br>
                     <label for="char-arcana">Arcana (INT)</label>
                 </div>
-
+                <div class="skillsflex">
+                    <input type="number" id="char-athletics"><br>
+                    <label for="char-athletics">Atletismo (FOR)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-deception"><br>
+                    <label for="char-deception">Falsidade (CAR)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-history"><br>
+                    <label for="char-history">Historia (INT)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-insight"><br>
+                    <label for="char-insight">Percepção (SAB)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-intimidation"><br>
+                    <label for="char-intimidation">Intimidação (CAR)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-investigation"><br>
+                    <label for="char-investigation">Investigação (INT)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-medicine"><br>
+                    <label for="char-medicine">Medicine (SAB)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-nature"><br>
+                    <label for="char-nature">Natureza (INT)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-perception"><br>
+                    <label for="char-perception">Percepção (SAB)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-performance"><br>
+                    <label for="char-performance">Performance (CAR)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-persuasion"><br>
+                    <label for="char-persuasion">Persuasão (CAR)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-religion"><br>
+                    <label for="char-religion">Religião (INT)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-sleightofhand"><br>
+                    <label for="char-sleightofhand">Manipulação Manual (DES)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-stealth"><br>
+                    <label for="char-stealth">Furtividade (DES)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-survival"><br>
+                    <label for="char-survival">Survival (SAB)</label>
+                </div>
             </div>
         </div>
         <button id="save-button">Salvar</button>

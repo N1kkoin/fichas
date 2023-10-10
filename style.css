@@ -39,8 +39,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .character-stats input {
-    font-size: 30px;
-    height: 80px;
+    font-size: 35px;
+    height: 120px;
     text-align: center;
     box-sizing: border-box;
     border: 2px solid #787878;
@@ -63,7 +63,7 @@ input[type="number"]::-webkit-outer-spin-button {
     text-transform: uppercase;
     background-color: #000000;
     padding-right: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
 
 }
