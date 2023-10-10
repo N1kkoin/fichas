@@ -36,7 +36,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .character-info,
 .character-stats {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 100;
 }
