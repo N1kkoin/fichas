@@ -48,6 +48,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .character-stats {
     gap: 20px;
+    background-color: #007BFF;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+
 }
 
 .character-stats input {
@@ -55,13 +60,13 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 120px;
     text-align: center;
     box-sizing: border-box;
-    border: 2px solid #787878;
-    border-radius: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
     width: 120px;
 }
 
 .character-stats label {
-    color: #787878;
+    color: white;
     margin-top: -8px;
     margin-bottom: 10px;
     font-size: 12px;
@@ -69,18 +74,21 @@ input[type="number"]::-webkit-outer-spin-button {
 
 }
 
-.character-skills {
+.character-skills, .character-savingthrows {
     padding-left: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
     text-transform: uppercase;
     background-color: #000000;
     padding-right: 20px;
     border-radius: 10px;
     color: white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
 
 }
 
-.character-skills label {
+.character-skills label, .character-savingthrows label {
     color: #ffffff;
     font-size: 12px;
     width: 100%;
@@ -88,9 +96,9 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 8px;
 }
 
-.character-skills input {
-    width: 20px;
-    height: 20px;
+.character-skills input, .character-savingthrows input {
+    width: 16px;
+    height: 16px;
     text-align: center;
     border: 0;
     border-radius: 100%;
