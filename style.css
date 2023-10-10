@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 /* Remova as setas do input de número */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -6,7 +12,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-  
+
 .character-sheet {
     max-width: 960px;
     margin: 0 auto;
@@ -19,23 +25,69 @@ input[type="number"]::-webkit-outer-spin-button {
 .character-info,
 .character-stats {
     margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 
-.character-stats{
+.character-info {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.character-stats {
     gap: 20px;
 }
 
-.character-stats input{
+.character-stats input {
     font-size: 30px;
+    height: 80px;
     text-align: center;
     box-sizing: border-box;
+    border: 2px solid #787878;
+    border-radius: 20px;
+    width: 120px;
 }
 
-.character-skills{
-    flex: 6;
-    border-left: 2px #e1e1e1 solid;
+.character-stats label {
+    color: #787878;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.character-skills {
     padding-left: 20px;
     margin-left: 20px;
+    text-transform: uppercase;
+    background-color: #000000;
+    padding-right: 20px;
+    border-radius: 20px;
+    color: white;
+
+}
+
+.character-skills label {
+    color: #ffffff;
+    font-size: 12px;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.character-skills input {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 0;
+    border-radius: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.skillsflex {
+    display: flex;
 }
 
 h1 {
@@ -58,30 +110,11 @@ input {
 }
 
 .portrait-image {
-    max-height: 500px;
-    width: auto;
-}
-
-        /* Estilos para os cards */
-        .race-card {
-    width: 200px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-/* Estilos para os cards selecionados */
-.selected {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-
-/* Estilos para as imagens */
-.race-image {
-    max-width: 100%;
-    height: auto;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 /* Estilos para o botão */
@@ -93,6 +126,78 @@ input {
     cursor: pointer;
 }
 
-.atributoseskills{
+.atributoseskills {
     display: flex;
+}
+
+.fotoeinfos {
+    display: flex;
+}
+
+.image-container {
+    display: inline-block;
+    position: relative;
+}
+
+#char-portrait {
+    display: none;
+}
+
+.file-label {
+    position: absolute;
+    bottom: 25px;
+    right: 5px;
+    background-color: #fff;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    margin-bottom: 5px;
+    margin-right: 2px;
+
+}
+
+#portrait-preview {
+    max-width: 250px;
+    max-height: 400px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.character-info label {
+    color: #787878;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.character-info input {
+    height: 30px;
+    border-radius: 10px;
+    
+}
+
+select {
+    border: 2px solid #007BFF; /* Estilo da borda personalizado */
+    border-radius: 100px; /* Borda arredondada */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+select option {
+    background-color: #F2F2F2; /* Cor de fundo das opções */
+    color: #333; /* Cor do texto das opções */
+}
+
+.racaeclasse{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.character-info .racaeclasse label {
+    margin-top: 5px;
 }

@@ -3,97 +3,119 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
 
     <div class="character-sheet">
         <h1>Ficha de Personagem</h1>
-        <label for="char-portrait">Retrato:</label>
-        <input type="file" id="char-portrait" accept="image/*"><br>
-        <img id="portrait-preview" class="portrait-image" src="" alt="Retrato do Personagem">
+        <div class="fotoeinfos">
 
-        <div class="character-info">
-            <label for="char-name">Nome:</label>
-            <input type="text" id="char-name"><br>
-            <label for="char-race">Raça:</label>
-            <select id="char-race">
-                <option value="nenhuma">Nenhuma</option>
-                <option value="dragonborn">Dragonborn</option>
-                <option value="dwarf">Dwarf</option>
-                <option value="elf">Elf</option>
-                <option value="gnome">Gnome</option>
-                <option value="half-elf">Half-Elf</option>
-                <option value="halfling">Halfling</option>
-                <option value="half-orc">Half-Orc</option>
-                <option value="human">Human</option>
-                <option value="tiefling">Tiefling</option>
-                <!-- Adicione outras opções de raça aqui -->
-            </select><br>
-
-            <div id="race-card-container"></div>
-
-            <label for="char-class">Classe:</label>
-            <select id="char-class">
-                <option value="guerreiro">Guerreiro</option>
-                <option value="mago">Mago</option>
-                <option value="ladino">Ladino</option>
-                <!-- Adicione outras opções de classe aqui -->
-            </select><br>
-
-            <div id="class-description">
-                <!-- A descrição da classe será exibida aqui -->
+            <div class="image-container">
+                <img id="portrait-preview" class="portrait-image" src="images/templete.png" alt="Retrato do Personagem">
+                <label for="char-portrait" class="file-label">+</label>
+                <input type="file" id="char-portrait" accept="image/*">
             </div>
+            <div class="character-info">
+                <div class="nomeestilo">
+                    <input type="text" id="char-name"><br>
+                    <label for="char-name">Nome</label>
+                </div>
+                <div>
+                    <input type="number" id="char-level"><br>
+                    <label for="char-level">Nível</label>
+                </div>
+                <div class="racaeclasse">
+                    <div>
+                        
+                        <select id="char-race">
+                            <option value="nenhuma">-----</option>
+                            <option value="aarakocra">Aarakocra</option>
+                            <option value="aasimar">Aasimar</option>
+                            <option value="airgenasi">Air Genasi</option>
 
-            <label for="char-level">Nível:</label>
-            <input type="number" id="char-level"><br>
+                            <option value="dragonborn">Dragonborn</option>
+                            <option value="dwarf">Dwarf</option>
+                            <option value="elf">Elf</option>
+                            <option value="gnome">Gnome</option>
+                            <option value="halfelf">Half-Elf</option>
+                            <option value="halfling">Halfling</option>
+                            <option value="halforc">Half-Orc</option>
+                            <option value="human">Human</option>
+                            <option value="tiefling">Tiefling</option>
+                            <!-- Adicione outras opções de raça aqui -->
+                        </select><br>
+                        <label for="char-race">Raça</label>
+                    </div>
+                    <div>
+                        <select id="char-class">
+                            <option value="nenhuma">-----</option>
+
+                            <option value="guerreiro">Guerreiro</option>
+                            <option value="mago">Mago</option>
+                            <option value="ladino">Ladino</option>
+                            <!-- Adicione outras opções de classe aqui -->
+                        </select><br>
+                        <label for="char-class">Classe</label>
+
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="atributoseskills">
-            
-            <div class="character-stats">        
+
+            <div class="character-stats">
                 <h2>Atributos</h2>
+                <div>
+                    <input type="number" id="char-strength"><br>
+                    <label for="char-strength">Força</label>
+                </div>
 
                 <div>
+                    <input type="number" id="char-dexterity"><br>
                     <label for="char-dexterity">Destreza</label>
-                    <input type="number" id="char-dexterity" min="0" max="20"><br>
                 </div>
                 <div>
+                    <input type="number" id="char-constitution"><br>
                     <label for="char-constitution">Constituição</label>
-                    <input type="number" id="char-constitution" min="0" max="20"><br>
+
                 </div>
                 <div>
+                    <input type="number" id="char-intelligence"><br>
                     <label for="char-intelligence">Inteligência</label>
-                    <input type="number" id="char-intelligence" min="0" max="20"><br>
+
                 </div>
                 <div>
+                    <input type="number" id="char-wisdom"><br>
                     <label for="char-wisdom">Sabedoria</label>
-                    <input type="number" id="char-wisdom" min="0" max="20"><br>
+
                 </div>
                 <div>
+                    <input type="number" id="char-charisma"><br>
                     <label for="char-charisma">Carisma</label>
-                    <input type="number" id="char-charisma" min="0" max="20"><br>
                 </div>
             </div>
 
             <div class="character-skills">
                 <h2>Skills</h2>
-                <label for="char-strength">Acrobatics (DEX)</label>
-                <input type="number" id="char-strength" min="0" max="20"><br>
-                <label for="char-dexterity">Destreza:</label>
-                <input type="number" id="char-dexterity" min="0" max="20"><br>
-                <label for="char-constitution">Constituição:</label>
-                <input type="number" id="char-constitution" min="0" max="20"><br>
-                <label for="char-intelligence">Inteligência:</label>
-                <input type="number" id="char-intelligence" min="0" max="20"><br>
-                <label for="char-wisdom">Sabedoria:</label>
-                <input type="number" id="char-wisdom" min="0" max="20"><br>
-                <label for="char-charisma">Carisma:</label>
-                <input type="number" id="char-charisma" min="0" max="20"><br>
+                <div class="skillsflex">
+                    <input type="number" id="char-acrobatics"><br>
+                    <label for="char-acrobatics">Acrobatismo (DES)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-animal"><br>
+                    <label for="char-animal">Manejo de Animais (SAB)</label>
+                </div>
+                <div class="skillsflex">
+                    <input type="number" id="char-arcana"><br>
+                    <label for="char-arcana">Arcana (INT)</label>
+                </div>
+
             </div>
         </div>
-        <!-- ... (código HTML anterior) ... -->
         <button id="save-button">Salvar</button>
-        <!-- ... (código HTML anterior) ... -->
         <input type="file" id="file-input" style="display: none;">
         <button id="load-button">Carregar</button>
 
