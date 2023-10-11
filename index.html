@@ -89,7 +89,8 @@
                     <h2>Atributos</h2>
                     <div>
                         <input type="number" id="char-strength"><br>
-                        <label for="char-strength" >Força</label>
+                        <label for="char-strength" class="custom-tooltip" 
+                        data-title="A Força representa a capacidade física do personagem. Ela influencia a capacidade de levantar, carregar e causar dano com armas corpo a corpo. Personagens fortes geralmente são guerreiros eficazes em combate e podem realizar tarefas que exigem força bruta.">Força</label>
                     </div>
                     <div>
                         <input type="number" id="char-strengthmod"><br>
@@ -97,21 +98,24 @@
 
                     <div>
                         <input type="number" id="char-dexterity"><br>
-                        <label for="char-dexterity">Destreza</label>
+                        <label for="char-dexterity"class="custom-tooltip" 
+                        data-title="A Destreza mede a agilidade, velocidade e reflexos do personagem. Ela afeta a capacidade de acertar alvos com armas à distância, evitar ataques e armadilhas, bem como realizar ações que exigem precisão, como a furtividade. ">Destreza</label>
                     </div>
                     <div>
                         <input type="number" id="char-dexteritymod"><br>
                     </div>
                     <div>
                         <input type="number" id="char-constitution"><br>
-                        <label for="char-constitution">Constituição</label>
+                        <label for="char-constitution" class="custom-tooltip" 
+                        data-title="A Constituição reflete a resistência e saúde do personagem. Ela determina quantos pontos de vida o personagem tem e quão bem ele pode resistir a doenças, venenos e condições adversas. Personagens com uma alta Constituição são geralmente mais resistentes e podem suportar melhor os rigores do combate.">Constituição</label>
                     </div>
                     <div>
                         <input type="number" id="char-constitutionmod"><br>
                     </div>
                     <div>
                         <input type="number" id="char-intelligence"><br>
-                        <label for="char-intelligence">Inteligência</label>
+                        <label for="char-intelligence" class="custom-tooltip"
+                        data-title="A Inteligência representa a capacidade mental, conhecimento e raciocínio do personagem. Ela influencia a capacidade de aprender e usar magias, resolver enigmas e tomar decisões estratégicas.">Inteligência</label>
                     </div>
                     <div>
                         <input type="number" id="char-intelligencemod"><br>
@@ -139,36 +143,36 @@
                         <div class="skillsflex">
                             <input type="number" id="char-strength-savingthrow"><br>
                             <label for="char-strength-savingthrow" class="custom-tooltip"
-                                data-title="">Força</label>
+                                data-title="Mede a capacidade do personagem de resistir a efeitos que envolvam força física bruta, como tentativas de empurrão, agarrar, ou evita ser derrubado.">Força</label>
                         </div>
 
                         <div class="skillsflex">
                             <input type="number" id="char-dexterity-savingthrow"><br>
                             <label for="char-dexterity-savingthrow" class="custom-tooltip"
-                                data-title="Força freihj">Destreza</label>
+                                data-title="Avalia a habilidade do personagem de evitar perigos, como armadilhas, explosões e ataques de área. Também é útil para evitar efeitos que exijam agilidade e reflexos, como magias de área.">Destreza</label>
                         </div>
                         <div class="skillsflex">
                             <input type="number" id="char-constitution-savingthrow"><br>
                             <label for="char-constitution-savingthrow" class="custom-tooltip"
-                            data-title="">Constituição</label>
+                            data-title="Mede a capacidade do personagem de resistir a efeitos que afetam a sua saúde e vitalidade, como venenos, doenças, ou dano por envenenamento.">Constituição</label>
 
                         </div>
                         <div class="skillsflex">
                             <input type="number" id="char-intelligence-savingthrow"><br>
                             <label for="char-intelligence-savingthrow"class="custom-tooltip"
-                            data-title=""> Inteligência</label>
+                            data-title="Raramente é usada, mas pode ser necessária para resistir a certos efeitos mentais ou mágicos que afetam o intelecto ou a memória do personagem."> Inteligência</label>
 
                         </div>
                         <div class="skillsflex">
                             <input type="number" id="char-wisdom-savingthrow"><br>
                             <label for="char-wisdom-savingthrow" class="custom-tooltip"
-                            data-title="">Sabedoria</label>
+                            data-title="Mede a capacidade do personagem de resistir a efeitos que afetam a sua mente, como encantamentos, controle mental e ilusões.">Sabedoria</label>
 
                         </div>
                         <div class="skillsflex">
                             <input type="number" id="char-charisma-savingthrow"><br>
                             <label for="char-charisma-savingthrow" class="custom-tooltip"
-                            data-title="">Carisma</label>
+                            data-title="Usada para resistir a efeitos que tentam influenciar ou controlar a personalidade do personagem, como encantamentos carismáticos ou manipulação social mágica.">Carisma</label>
                         </div>
                     </div>
                     <div class="character-skills">
@@ -254,7 +258,7 @@
 
         </div>
         <div class="explicação-sheet">
-            gtr
+            <div id="alignment-description"></div>
         </div>
     </div>
     <script src="script.js"></script>
