@@ -426,7 +426,7 @@ classSelect.addEventListener('change', function () {
             break;
         case 'barbarian':
             classTitle = 'Bárbaro';
-            classDescription = 'O bárbaro é um combatente brutal e selvagem, não no sentido de ser "alguém que não cresceu na civilização" (embora muitos de fato não tenham mesmo), mas no sentido da forma como luta ser menos dotada de uma técnica formal de combate e sim de algo instintivo e primordial. Bárbaros sentem uma fúria interior que, por vezes, os toma e os faz ignorar golpes sofridos, usando o máximo de sua força para causar o maior estrago possivel em seu adversário. </br></br>Sua principal habilidade é a Fúria. A fúria permite que o bárbaro sofra menos dano ao sofrer golpes e cause mais dano ao golpear. Bárbaros em geral lutam sem armaduras (e são favorecidos por isso), e são a classe com maior dado de vida, que é o "medidor de pontos de vida" do seu personagem. Quanto maior/melhor o dado de vida, mais resistente seu personagem tende a ser.';
+            classDescription = 'Bárbaros, independente de quão diferentes sejam, são definidos por sua fúria: Inigualável, insuperável e invencível. Mais do que uma mera emoção, essa raiva é a ferocidade de um predador encurralado, a fúria inaplacável da tempestade, a ira infinita do mar. Para alguns sua fúria vem da comunhão com espíritos, para outros é uma reserva de ira contra um mundo repleto de dor. Para cada bárbaro a fúria é um poder que não apenas rega seu frenesi de batalha, mas também seus reflexos, resiliência e feitos de força.</br></br><b>BP (Bônus de Proficiência) Inicial:</b> <span class="positivo">+2</span> </br><b>Dado de Vida:</b> D12+ Modificador de Constituição</br><b>PV níveis posteriores:</b> 1d12 (ou 7) + Modificador de Constituição</br><b>Armas:</b> Simples, marciais.</br><b>Armaduras:</b> Leves, médias.</br><b>Testes de Resistência:</b> Força, Constituição.</br><b>Perícias:</b> Duas entre Adestrar Animais, Atletismo, Intimidar, Natureza, Percepção, Sobrevivência.</br></br><a target="_blank" href="https://thesunderingtale.blogspot.com/2017/12/d-5e-barbaro.html">Mais informações</a>';
             break;
         case 'bard':
             classTitle = 'Bardo';
@@ -437,8 +437,8 @@ classSelect.addEventListener('change', function () {
             classDescription = 'Blood Hunters are hunters of the supernatural, specializing in tracking and eliminating creatures of darkness. They use forbidden knowledge and their own blood to gain power.';
             break;
         case 'cleric':
-            classTitle = 'Cleric';
-            classDescription = 'Clerics are divine spellcasters and healers. They serve as conduits for the power of gods, providing support, healing, and protection to their allies, while smiting their foes.';
+            classTitle = 'Clérigo';
+            classDescription = 'Clérigos são conjuradores que recebem suas magias através de preces à divindade a qual veneram. Sua fé e devoção pela divindade são recompensados com poderes especiais e o clérigo não só segue os preceitos da divindade como a representam e espalham sua palavra no mundo. Clérigos tem uma relação íntima com a hierarquia religiosa, ainda que possam ser errantes e não desejar fazer “carreira” dentro da igreja. </br></br> Suas magias tendem a inspirar, curar e proteger seus aliados, e ele é capaz de usar armas e armaduras com alguma perícia, ainda que não seja o seu forte. Em geral, clérigos saem em aventuras por algum tipo de motivação divina mas, mesmo em aventura, os clérigos costumam manter alguma ligação com seu templo de origem e com outros templos da fé.</br></br>Dependendo do seu deus o clérigo pode ser um ser positivo ou negativo, um missionário ou sacerdote até um cultista ou necromante, existe varias áreas e opções, já que cada divindade possui dogmas e preceitos que trazem papéis completamente diferentes umas das outras.';
             break;
         case 'druid':
             classTitle = 'Druid';
