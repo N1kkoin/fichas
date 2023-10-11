@@ -284,6 +284,13 @@ select option {
     margin-top: 10px;
 }
 
+#class-description{
+    background-color: #f7f9ff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 .input-row {
     display: flex;
     gap: 25px;

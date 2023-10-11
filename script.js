@@ -397,8 +397,8 @@ raceSelect.addEventListener('change', function () {
         // Adicione casos para outras raças conforme necessário
 
         default:
-            raceTitle = 'Race';
-            raceDescription = 'Select a race to view the description.';
+            raceTitle = 'Raça';
+            raceDescription = 'Selecione uma raça para ver a descrição.';
     }
 
     raceDescriptionDiv.innerHTML = `<h2>${raceTitle}</h2><p>${raceDescription}</p>`;
@@ -408,4 +408,84 @@ raceSelect.addEventListener('change', function () {
 window.addEventListener('load', function () {
     const raceSelect = document.getElementById('char-race');
     raceSelect.dispatchEvent(new Event('change'));
+});
+
+// DESCRICAO CLASSE ---------------------------------------------------------------------------------------
+const classSelect = document.getElementById('char-class');
+const classDescriptionDiv = document.getElementById('class-description');
+
+classSelect.addEventListener('change', function () {
+    const selectedClass = classSelect.value;
+    let classTitle = '';
+    let classDescription = '';
+
+    switch (selectedClass) {
+        case 'artificer':
+            classTitle = 'Artificer';
+            classDescription = 'Artificers are skilled inventors and creators, blending magic and technology to achieve remarkable feats. They excel at crafting and infusing magic into everyday objects.';
+            break;
+        case 'barbarian':
+            classTitle = 'Bárbaro';
+            classDescription = 'O bárbaro é um combatente brutal e selvagem, não no sentido de ser "alguém que não cresceu na civilização" (embora muitos de fato não tenham mesmo), mas no sentido da forma como luta ser menos dotada de uma técnica formal de combate e sim de algo instintivo e primordial. Bárbaros sentem uma fúria interior que, por vezes, os toma e os faz ignorar golpes sofridos, usando o máximo de sua força para causar o maior estrago possivel em seu adversário. </br></br>Sua principal habilidade é a Fúria. A fúria permite que o bárbaro sofra menos dano ao sofrer golpes e cause mais dano ao golpear. Bárbaros em geral lutam sem armaduras (e são favorecidos por isso), e são a classe com maior dado de vida, que é o "medidor de pontos de vida" do seu personagem. Quanto maior/melhor o dado de vida, mais resistente seu personagem tende a ser.';
+            break;
+        case 'bard':
+            classTitle = 'Bardo';
+            classDescription = 'Bardo é um conjurador de magias inspirador, influenciador e manipulador. Muitos bardos são eruditos, outros tanto são patifes, alguns são espiões, mas o que os une é a forma como usam suas palavras e músicas para moldar as mentes dos ouvintes, inspirando ou desmoralizando, além de serem capazes de criar ilusões e, até mesmo, curar ferimentos.</br></br>Bardos são extremamente versáteis e podem usar suas habilidades e magias para combater a distância, combater corpo a corpo, ficar a distância fazendo com que seus aliados lutem de forma mais efetiva ou tornando seus adversários menos efetivos. Se causar dano não é seu forte normalmente, suas habilidades de ilusão e encantamento permitem que eles transitem entre o ataque e defesa com muita qualidade. Eles também são úteis em campanhas e investigação, de negociação e de infiltração.';
+            break;
+        case 'bloodhunter':
+            classTitle = 'Blood Hunter';
+            classDescription = 'Blood Hunters are hunters of the supernatural, specializing in tracking and eliminating creatures of darkness. They use forbidden knowledge and their own blood to gain power.';
+            break;
+        case 'cleric':
+            classTitle = 'Cleric';
+            classDescription = 'Clerics are divine spellcasters and healers. They serve as conduits for the power of gods, providing support, healing, and protection to their allies, while smiting their foes.';
+            break;
+        case 'druid':
+            classTitle = 'Druid';
+            classDescription = 'Druids are nature-focused spellcasters and shape-shifters. They have a deep connection with the natural world, allowing them to change their form and command the elements.';
+            break;
+        case 'fighter':
+            classTitle = 'Fighter';
+            classDescription = 'Fighters are masters of combat, trained in a variety of weapons and tactics. They excel in physical combat and can specialize in various combat styles.';
+            break;
+        case 'monk':
+            classTitle = 'Monk';
+            classDescription = 'Monks are disciplined martial artists and spiritual practitioners. They use their bodies and minds in perfect harmony, making them fast, agile, and capable of incredible feats.';
+            break;
+        case 'paladin':
+            classTitle = 'Paladin';
+            classDescription = 'Paladins are holy knights, sworn to uphold justice and protect the innocent. They combine combat skills with divine magic, smiting evil and healing the wounded.';
+            break;
+        case 'ranger':
+            classTitle = 'Ranger';
+            classDescription = 'Rangers are skilled trackers and survivalists. They excel at ranged combat and are attuned to the natural world, making them exceptional hunters and scouts.';
+            break;
+        case 'rogue':
+            classTitle = 'Rogue';
+            classDescription = 'Rogues are agile and cunning adventurers. They excel in stealth, traps, and precision strikes. Their skills make them skilled thieves, spies, and assassins.';
+            break;
+        case 'sorcerer':
+            classTitle = 'Sorcerer';
+            classDescription = 'Sorcerers have innate magical abilities, drawing power from their bloodline. They can cast spells with raw magical energy and often have unique and unpredictable powers.';
+            break;
+        case 'warlock':
+            classTitle = 'Warlock';
+            classDescription = 'Warlocks make pacts with powerful otherworldly beings. They gain magical abilities in exchange for their service. Warlocks have a diverse range of magical options at their disposal.';
+            break;
+        case 'wizard':
+            classTitle = 'Wizard';
+            classDescription = 'Wizards are scholarly spellcasters who specialize in the arcane arts. They study and prepare spells, casting them with precision and control. Wizards are known for their vast spellbooks and magical knowledge.';
+            break;
+        default:
+            classTitle = 'Classe';
+            classDescription = 'Selecione uma classe para ver a descrição.';
+    }
+
+    classDescriptionDiv.innerHTML = `<h2>${classTitle}</h2><p>${classDescription}</p>`;
+});
+
+// Disparar manualmente o evento "change" no carregamento da página
+window.addEventListener('load', function () {
+    const classSelect = document.getElementById('char-class');
+    classSelect.dispatchEvent(new Event('change'));
 });
