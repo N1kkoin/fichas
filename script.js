@@ -281,39 +281,39 @@ alignmentSelect.addEventListener('change', function () {
     switch (selectedAlignment) {
         case 'lawfulgoodaligment':
             title = 'Lawful Good';
-            description = '<b>Lawful Good</b> é um alinhamento que representa personagens que valorizam a ordem e a justiça, fazendo o que é correto e ético.';
+            description = 'Ordeiro e Bom (Lawful Good) age conforme se espera ou é requerido de uma pessoa boa. Ele combina o compromisso de se opor ao mal com a disciplina de lutar incansavelmente. Ele diz a verdade, mantém sua palavra, ajuda aqueles que precisam e denuncia a injustiça. Um personagem de alinhamento "leal e bom" detesta ver os culpados escaparem impunes. </br></br><span class="positivo">Positivo:</span> é o melhor alinhamento que alguém pode ter porque combina honra e compaixão. </br></br><span class="negativo">Negativo:</span> pode ser um alinhamento perigoso quando restringe a liberdade e criminaliza o interesse próprio. </br></br> <a target="_blank" href="https://easydamus.com/lawfulgood.html">Mais informações</a>';
             break;
         case 'neutralgoodaligment':
             title = 'Neutral Good';
-            description = 'Neutral Good é um alinhamento que representa personagens que priorizam fazer o bem, mas não são excessivamente presos a regras.';
+            description = 'Neutro e Bom (Neutral Good) faz o melhor que uma pessoa boa pode fazer. Ele é dedicado a ajudar os outros. Ele trabalha com reis e magistrados, mas não se sente obrigado a eles. </br></br><span class="positivo">Positivo:</span> é o melhor alinhamento que alguém pode ter, pois significa fazer o que é bom sem viés a favor ou contra a ordem. </br></br><span class="negativo">Negativo:</span> pode ser um alinhamento perigoso quando promove a mediocridade ao limitar as ações dos verdadeiramente capazes.</br></br><a target="_blank" href="https://easydamus.com/neutralgood.html">Mais informações</a>';
             break;
         case 'chaoticgoodaligment':
             title = 'Chaotic Good';
-            description = 'Chaotic Good é um alinhamento que representa personagens que têm um forte senso de justiça e bondade, mas não têm medo de quebrar regras para alcançar objetivos.';
+            description = 'Caótico e Bom (Chaotic Good) age conforme sua consciência o direciona, com pouca consideração pelo que os outros esperam dele. Ele traça seu próprio caminho, mas é amável e benevolente. Ele acredita na bondade e no que é correto, mas tem pouca consideração pelas leis e regulamentos. Ele detesta quando as pessoas tentam intimidar os outros e dizer-lhes o que fazer. Ele segue sua própria bússola moral, que, embora seja boa, pode não estar de acordo com a da sociedade. </br></br><span class="positivo">Positivo:</span> é o melhor alinhamento que alguém pode ter porque combina um coração bondoso com um espírito livre. </br></br><span class="negativo">Negativo:</span>  pode ser um alinhamento perigoso quando perturba a ordem da sociedade e pune aqueles que se saem bem por si mesmos.</br></br><a target="_blank" href="https://easydamus.com/chaoticgood.html">Mais informações</a>';
             break;
         case 'lawfulneutralaligment':
             title = 'Lawful Neutral';
-            description = 'Lawful Neutral é um alinhamento que representa personagens que seguem a lei, mas não têm uma inclinação clara para o bem ou para o mal. Eles valorizam a ordem e a estabilidade.';
+            description = 'Ordeiro e Neutro (Lawful Neutral) age conforme a lei, a tradição ou um código pessoal a direciona. A ordem e a organização são de extrema importância para ele. Ele pode acreditar em uma ordem pessoal e viver de acordo com um código ou padrão, ou pode acreditar em uma ordem para todos e favorecer um governo forte e organizado. </br></br><span class="positivo">Positivo:</span>é o melhor alinhamento que alguém pode ter porque significa que você é confiável e honrado sem ser um fanático. </br></br><span class="negativo">Negativo:</span>  pode ser um alinhamento perigoso quando busca eliminar toda a liberdade, escolha e diversidade na sociedade.</br></br><a target="_blank" href="https://easydamus.com/lawfulneutral.html">Mais informações</a>';
             break;
         case 'trueneutralaligment':
             title = 'True Neutral';
-            description = 'True Neutral é um alinhamento que representa personagens que não têm um forte compromisso com a lei, o caos, o bem ou o mal. Eles buscam o equilíbrio e agem com imparcialidade.';
+            description = 'Neutro Verdadeiro (True Neutral) faz o que parece ser uma boa ideia. Ela não tem fortes inclinações quando se trata de bem contra mal ou ordem contra caos. A maioria dos personagens neutros exibe uma falta de convicção ou viés, em vez de um compromisso com a neutralidade. Um personagem assim considera o bem melhor do que o mal, afinal, ela preferiria ter vizinhos e governantes bons do que maus. Ainda assim, ela não está pessoalmente comprometida em defender o bem de forma abstrata ou universal.</br></br>Alguns personagens neutros, por outro lado, se comprometem filosoficamente com a neutralidade. Eles veem o bem, o mal, a lei e o caos como preconceitos e extremos perigosos. Eles advogam o caminho do meio da neutralidade como o melhor e mais equilibrado a longo prazo.</br></br><span class="positivo">Positivo:</span> é o melhor alinhamento que alguém pode ter porque significa agir naturalmente, sem preconceito ou compulsão. </br></br><span class="negativo">Negativo:</span> pode ser um alinhamento perigoso quando representa apatia, indiferença e falta de convicção.</br></br><a target="_blank" href="https://easydamus.com/trueneutral.html">Mais informações</a>';
             break;
         case 'chaoticneutralaligment':
             title = 'Chaotic Neutral';
-            description = 'Chaotic Neutral é um alinhamento que representa personagens que são imprevisíveis e seguem seus próprios desejos e impulsos, sem se preocupar muito com leis ou moral.';
+            description = 'Caótico e Neutro (Chaotic Neutral) segue seus caprichos. Ele é um individualista em primeiro e último lugar. Valoriza sua própria liberdade, mas não se esforça para proteger a liberdade dos outros. Evita a autoridade, ressente as restrições e desafia tradições. Um personagem "caótico e neutro" não perturba intencionalmente organizações como parte de uma campanha de anarquia. Para fazer isso, ele teria que ser motivado pelo bem (e o desejo de libertar os outros) ou pelo mal (e o desejo de fazer aqueles diferentes dele sofrerem). Um personagem "caótico e neutro" pode ser imprevisível, mas seu comportamento não é totalmente aleatório. Ele não é tão propenso a pular de uma ponte como a atravessá-la. </br></br><span class="positivo">Positivo:</span> é o melhor alinhamento que alguém pode ter porque representa verdadeira liberdade das restrições da sociedade e do fanatismo de fazer o bem.</br></br><span class="negativo">Negativo:</span> pode ser um alinhamento perigoso quando busca eliminar toda autoridade, harmonia e ordem na sociedade.</br></br><a target="_blank" href="https://easydamus.com/chaoticneutral.html">Mais informações</a>';
             break;
         case 'lawfulevilaligment':
             title = 'Lawful Evil';
-            description = 'Lawful Evil é um alinhamento que representa personagens que utilizam a lei para alcançar seus objetivos maléficos. Eles são astutos e calculistas em seus métodos.';
+            description = 'Ordeiro e Mau (Lawful Evil) age metodicamente para obter o que deseja dentro dos limites de seu código de conduta, sem se importar com quem ele prejudica. Ele valoriza a tradição, lealdade e ordem, mas não se preocupa com liberdade, dignidade ou vida. Ele joga de acordo com as regras, mas sem misericórdia ou compaixão. Ele se sente à vontade em uma hierarquia e gostaria de governar, mas está disposto a servir. Ele condena os outros não de acordo com suas ações, mas sim de acordo com raça, religião, terra natal ou posição social. Ele reluta em quebrar leis ou promessas.</br></br>Essa relutância parte em parte de sua natureza e em parte porque ele depende da ordem para se proteger daqueles que se opõem a ele por motivos morais. Alguns vilões leais malignos têm tabus particulares, como não matar a sangue frio (mas fazendo com que subordinados o façam) ou não deixar que crianças sofram danos (se puder ser evitado). Eles imaginam que esses escrúpulos os elevam acima de vilões sem princípios.</br></br>Algumas pessoas e criaturas leais malignas se comprometem com o mal com o mesmo zelo que um cruzado se compromete com o bem. Além de estar dispostos a prejudicar os outros para alcançar seus objetivos, eles encontram prazer em espalhar o mal como um fim em si mesmo. Eles também podem ver fazer o mal como parte de um dever para um deus ou mestre maligno.</br></br><span class="positivo">Positivo:</span>Criaturas de alinhamento "leal e maligno" consideram seu alinhamento o melhor, porque combina honra com um interesse próprio dedicado.</br></br><span class="negativo">Negativo:</span>é o alinhamento mais perigoso, porque representa o mal metódico, intencional e frequentemente bem-sucedido.</br></br><a target="_blank" href="https://easydamus.com/lawfulevil.html">Mais informações</a>';
             break;
         case 'neutralevilaligment':
             title = 'Neutral Evil';
-            description = 'Neutral Evil é um alinhamento que representa personagens que agem para seu próprio benefício, sem se importar com os outros. Eles são egoístas e muitas vezes cruéis.';
+            description = 'Neutro e Maligno (Neutral Evil) faz o que puder para se safar. Ele está apenas interessado em si mesmo, simplesmente. Ele não derrama lágrimas por aqueles que mata, seja por lucro, diversão ou conveniência. Ele não tem amor pela ordem e não tem ilusão de que seguir leis, tradições ou códigos o tornaria melhor ou mais nobre. Por outro lado, ele não tem a natureza inquieta ou o amor pelo conflito que um vilão caótico e maligno (Chaotic Evil) tem. </br></br>Alguns vilões "neutros e malignos" defendem o mal como um ideal, cometendo o mal por seu próprio bem. Com mais frequência, esses vilões são devotos de deidades malignas ou sociedades secretas.</br></br><span class="positivo">Positivo:</span>Criaturas de alinhamento "neutro e maligno" considera seu alinhamento o melhor, porque podem avançar a si mesmos sem consideração pelos outros. </br></br><span class="negativo">Negativo:</span>é o alinhamento mais perigoso, porque representa o mal puro, sem honra e sem variação.</br></br><a target="_blank" href="https://easydamus.com/neutralevil.html">Mais informações</a>';
             break;
         case 'chaoticevilaligment':
             title = 'Chaotic Evil';
-            description = 'Chaotic Evil é um alinhamento que representa personagens que são destrutivos, sádicos e têm pouco respeito pela vida e pela ordem. Eles buscam o poder a qualquer custo.';
+            description = 'Caótico e Maligno (Chaotic Evil) faz o que sua ganância, ódio e desejo de destruição o levam a fazer. Ele é de temperamento explosivo, cruel, arbitrariamente violento e imprevisível. Se ele está simplesmente atrás do que pode obter, ele é impiedoso e brutal. Se ele está comprometido com a disseminação do mal e do caos, é ainda pior. Felizmente, seus planos são caóticos, e qualquer grupo ao qual ele se junte ou forme é mal organizado. Normalmente, pessoas caóticas malignas só podem ser forçadas a trabalhar juntas, e seu líder dura apenas enquanto conseguir evitar tentativas de derrubá-lo ou assassiná-lo.</br></br><span class="positivo">Positivo:</span> Criaturas de alinhamento "caótico e maligno" acredita que seu alinhamento é o melhor, porque combina interesse próprio e liberdade pura. </br></br><span class="negativo">Negativo:</span> é o alinhamento mais perigoso, porque representa a destruição não apenas da beleza e da vida, mas também da ordem sobre a qual a beleza e a vida dependem.</br></br><a target="_blank" href="https://easydamus.com/chaoticevil.html">Mais informações</a>';
             break;
 
         default:
@@ -328,4 +328,50 @@ alignmentSelect.addEventListener('change', function () {
 window.addEventListener('load', function () {
     const alignmentSelect = document.getElementById('char-alignment');
     alignmentSelect.dispatchEvent(new Event('change'));
+});
+
+
+//CONTA PARA ATRIBUTOS -------------------------------------------------------------
+function calculateMod(attributeValue) {
+    return Math.floor(attributeValue / 2) - 5;
+}
+
+// Adicione um evento "input" para cada campo de atributos
+
+const attributes = [
+    {
+        inputId: "char-strength",
+        modId: "char-strengthmod",
+    },
+    {
+        inputId: "char-dexterity",
+        modId: "char-dexteritymod",
+    },
+    {
+        inputId: "char-constitution",
+        modId: "char-constitutionmod",
+    },
+    {
+        inputId: "char-intelligence",
+        modId: "char-intelligencemod",
+    },
+    {
+        inputId: "char-wisdom",
+        modId: "char-wisdommod",
+    },
+    {
+        inputId: "char-charisma",
+        modId: "char-charismamod",
+    },
+];
+
+attributes.forEach((attribute) => {
+    const input = document.getElementById(attribute.inputId);
+    const modInput = document.getElementById(attribute.modId);
+
+    input.addEventListener("input", function () {
+        const attributeValue = parseInt(input.value);
+        const modValue = calculateMod(attributeValue);
+        modInput.value = modValue;
+    });
 });

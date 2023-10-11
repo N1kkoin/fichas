@@ -272,7 +272,7 @@ select option {
 }
 
 #alignment-description{
-    background-color: #dde2f5;
+    background-color: #e9ecf9;
     padding: 5px 20px;
     border-radius: 10px;
 }
@@ -303,7 +303,14 @@ select option {
 #char-name{
     font-size: 22px;
     width: 100%; 
-
+}
+.positivo{
+    font-weight: bold;
+    color: #136a27;
 }
 
+.negativo{
+    font-weight: bold;
+    color: #bb1e50;
+}
 
