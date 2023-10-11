@@ -331,3 +331,14 @@ select option {
 .descriçãomenor{
     font-size: 12px;
 }
+
+@media screen and (max-width: 600px) {
+    .sheets {
+        flex-direction: column;
+    }
+    .explicação-sheet {
+        max-width: 600px; /* Define a largura máxima */
+        margin: 0 auto; /* Move o explicação-sheet para o lado esquerdo */
+        margin-top: 40px;
+    }
+  }
