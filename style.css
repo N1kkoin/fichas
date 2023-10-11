@@ -17,20 +17,24 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .character-sheet {
-    max-width: 900px; /* Define a largura máxima */
-    margin-left: auto; /* Move o character-sheet para o lado direito */
+    max-width: 900px;
+    /* Define a largura máxima */
+    margin-left: auto;
+    /* Move o character-sheet para o lado direito */
     padding: 20px;
     border-radius: 5px;
     flex-basis: 960px;
 }
 
 .explicação-sheet {
-    width: 500px; /* Define a largura máxima */
-    margin-right: auto; /* Move o explicação-sheet para o lado esquerdo */
+    width: 600px;
+    /* Define a largura máxima */
+    margin-right: auto;
+    /* Move o explicação-sheet para o lado esquerdo */
     padding: 20px;
     border-radius: 20px;
     border: 2px solid #007BFF;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     margin-left: 20px;
     margin-top: 40px;
 }
@@ -68,16 +72,16 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .character-stats div:nth-child(odd) input {
     font-size: 14px;
-    height: 30px;
+    height: 45px;
     text-align: center;
     box-sizing: border-box;
     border: 2px solid #007BFF;
     border-radius: 100%;
-    width: 30px;
+    width: 45px;
     margin: 0 auto;
     display: flex;
     z-index: 1;
-    margin-top: -65px;
+    margin-top: -70px;
     background-color: white;
     position: absolute;
 
@@ -92,7 +96,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 }
 
-.character-skills, .character-savingthrows {
+.character-skills,
+.character-savingthrows {
     padding-left: 20px;
     margin-left: 10px;
     text-transform: uppercase;
@@ -106,7 +111,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 }
 
-.character-skills label, .character-savingthrows label {
+.character-skills label,
+.character-savingthrows label {
     color: #ffffff;
     font-size: 12px;
     width: 100%;
@@ -114,7 +120,8 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 8px;
 }
 
-.character-skills input, .character-savingthrows input {
+.character-skills input,
+.character-savingthrows input {
     width: 16px;
     height: 16px;
     text-align: center;
@@ -213,12 +220,14 @@ input {
 .character-info input {
     height: 30px;
     border-radius: 10px;
-    
+
 }
 
 select {
-    border: 2px solid #007BFF; /* Estilo da borda personalizado */
-    border-radius: 100px; /* Borda arredondada */
+    border: 2px solid #007BFF;
+    /* Estilo da borda personalizado */
+    border-radius: 100px;
+    /* Borda arredondada */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -227,11 +236,13 @@ select {
 }
 
 select option {
-    background-color: #F2F2F2; /* Cor de fundo das opções */
-    color: #333; /* Cor do texto das opções */
+    background-color: #F2F2F2;
+    /* Cor de fundo das opções */
+    color: #333;
+    /* Cor do texto das opções */
 }
 
-.racaeclasse{
+.racaeclasse {
     display: flex;
     width: 100%;
     gap: 10px;
@@ -271,20 +282,20 @@ select option {
     opacity: 1;
 }
 
-#alignment-description{
+#alignment-description {
     background-color: #f7f9ff;
     padding: 5px 20px;
     border-radius: 10px;
 }
 
-#race-description{
+#race-description {
     background-color: #f7f9ff;
     padding: 5px 20px;
     border-radius: 10px;
     margin-top: 10px;
 }
 
-#class-description{
+#class-description {
     background-color: #f7f9ff;
     padding: 5px 20px;
     border-radius: 10px;
@@ -307,38 +318,47 @@ select option {
     flex-basis: auto;
 }
 
-#char-level{
+#char-level {
     font-size: 22px;
     text-align: center;
-    max-width: 50px; /* Define a largura máxima para o campo de Nível */
+    max-width: 50px;
+    /* Define a largura máxima para o campo de Nível */
 
 }
 
-#char-name{
+#char-name {
     font-size: 22px;
-    width: 100%; 
+    width: 100%;
 }
-.positivo{
+
+.positivo {
     font-weight: bold;
     color: #136a27;
 }
 
-.negativo{
+.negativo {
     font-weight: bold;
     color: #bb1e50;
 }
 
-.descriçãomenor{
+.descriçãomenor {
     font-size: 12px;
 }
 
 @media screen and (max-width: 600px) {
     .sheets {
+        display: flex;
         flex-direction: column;
     }
+
     .explicação-sheet {
-        max-width: 600px; /* Define a largura máxima */
-        margin: 0 auto; /* Move o explicação-sheet para o lado esquerdo */
+        width: 100%;
+        /* Define a largura máxima */
+        margin: 0 auto;
+        /* Move o explicação-sheet para o lado esquerdo */
         margin-top: 40px;
     }
-  }
+
+}
+
+  
