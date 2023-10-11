@@ -140,6 +140,13 @@ document.getElementById('load-button').addEventListener('click', function () {
                 // Exiba a imagem do retrato
                 document.getElementById('portrait-preview').src = characterData.portrait;
 
+                // Atualize a descrição do alinhamento com base na escolha do arquivo JSON
+                const alignmentSelect = document.getElementById('char-alignment');
+                alignmentSelect.value = characterData.alignment; // Atualize a seleção
+
+                // Manualmente disparar o evento 'change' no elemento select
+                var event = new Event('change', { bubbles: true });
+                alignmentSelect.dispatchEvent(event);
 
             };
 
@@ -217,7 +224,7 @@ document.getElementById('save-button').addEventListener('click', function () {
                 survival: document.getElementById('char-survival').value
             }
         };
-        
+
 
 
         // Converte os dados da ficha de personagem em formato JSON
@@ -266,57 +273,63 @@ document.getElementById('char-portrait').addEventListener('change', function () 
     }
 });
 
-//DESCRIÇÃO ALINHAMENTO
+//DESCRIÇÃO ALINHAMENTO ------------------------------------------------------------------
 const alignmentSelect = document.getElementById('char-alignment');
-    const descriptionDiv = document.getElementById('alignment-description');
+const descriptionDiv = document.getElementById('alignment-description');
 
-    alignmentSelect.addEventListener('change', function () {
-        const selectedAlignment = alignmentSelect.value;
-        let title = '';
-        let description = '';
+alignmentSelect.addEventListener('change', function () {
+    const selectedAlignment = alignmentSelect.value;
+    let title = '';
+    let description = '';
 
-        switch (selectedAlignment) {
-            case 'lawfulgoodaligment':
-                title = 'Lawful Good';
-                description = 'Lawful Good é um alinhamento que representa personagens que valorizam a ordem e a justiça, fazendo o que é correto e ético.';
-                break;
-            case 'neutralgoodaligment':
-                title = 'Neutral Good';
-                description = 'Neutral Good é um alinhamento que representa personagens que priorizam fazer o bem, mas não são excessivamente presos a regras.';
-                break;
-            case 'chaoticgoodaligment':
-                title = 'Chaotic Good';
-                description = 'Chaotic Good é um alinhamento que representa personagens que têm um forte senso de justiça e bondade, mas não têm medo de quebrar regras para alcançar objetivos.';
-                break;
-            case 'lawfulneutralaligment':
-                title = 'Lawful Neutral';
-                description = 'Lawful Neutral é um alinhamento que representa personagens que seguem a lei, mas não têm uma inclinação clara para o bem ou para o mal. Eles valorizam a ordem e a estabilidade.';
-                break;
-            case 'trueneutralaligment':
-                title = 'True Neutral';
-                description = 'True Neutral é um alinhamento que representa personagens que não têm um forte compromisso com a lei, o caos, o bem ou o mal. Eles buscam o equilíbrio e agem com imparcialidade.';
-                break;
-            case 'chaoticneutralaligment':
-                title = 'Chaotic Neutral';
-                description = 'Chaotic Neutral é um alinhamento que representa personagens que são imprevisíveis e seguem seus próprios desejos e impulsos, sem se preocupar muito com leis ou moral.';
-                break;
-            case 'lawfulevilaligment':
-                title = 'Lawful Evil';
-                description = 'Lawful Evil é um alinhamento que representa personagens que utilizam a lei para alcançar seus objetivos maléficos. Eles são astutos e calculistas em seus métodos.';
-                break;
-            case 'neutralevilaligment':
-                title = 'Neutral Evil';
-                description = 'Neutral Evil é um alinhamento que representa personagens que agem para seu próprio benefício, sem se importar com os outros. Eles são egoístas e muitas vezes cruéis.';
-                break;
-            case 'chaoticevilaligment':
-                title = 'Chaotic Evil';
-                description = 'Chaotic Evil é um alinhamento que representa personagens que são destrutivos, sádicos e têm pouco respeito pela vida e pela ordem. Eles buscam o poder a qualquer custo.';
-                break;
+    switch (selectedAlignment) {
+        case 'lawfulgoodaligment':
+            title = 'Lawful Good';
+            description = 'Lawful Good é um alinhamento que representa personagens que valorizam a ordem e a justiça, fazendo o que é correto e ético.';
+            break;
+        case 'neutralgoodaligment':
+            title = 'Neutral Good';
+            description = 'Neutral Good é um alinhamento que representa personagens que priorizam fazer o bem, mas não são excessivamente presos a regras.';
+            break;
+        case 'chaoticgoodaligment':
+            title = 'Chaotic Good';
+            description = 'Chaotic Good é um alinhamento que representa personagens que têm um forte senso de justiça e bondade, mas não têm medo de quebrar regras para alcançar objetivos.';
+            break;
+        case 'lawfulneutralaligment':
+            title = 'Lawful Neutral';
+            description = 'Lawful Neutral é um alinhamento que representa personagens que seguem a lei, mas não têm uma inclinação clara para o bem ou para o mal. Eles valorizam a ordem e a estabilidade.';
+            break;
+        case 'trueneutralaligment':
+            title = 'True Neutral';
+            description = 'True Neutral é um alinhamento que representa personagens que não têm um forte compromisso com a lei, o caos, o bem ou o mal. Eles buscam o equilíbrio e agem com imparcialidade.';
+            break;
+        case 'chaoticneutralaligment':
+            title = 'Chaotic Neutral';
+            description = 'Chaotic Neutral é um alinhamento que representa personagens que são imprevisíveis e seguem seus próprios desejos e impulsos, sem se preocupar muito com leis ou moral.';
+            break;
+        case 'lawfulevilaligment':
+            title = 'Lawful Evil';
+            description = 'Lawful Evil é um alinhamento que representa personagens que utilizam a lei para alcançar seus objetivos maléficos. Eles são astutos e calculistas em seus métodos.';
+            break;
+        case 'neutralevilaligment':
+            title = 'Neutral Evil';
+            description = 'Neutral Evil é um alinhamento que representa personagens que agem para seu próprio benefício, sem se importar com os outros. Eles são egoístas e muitas vezes cruéis.';
+            break;
+        case 'chaoticevilaligment':
+            title = 'Chaotic Evil';
+            description = 'Chaotic Evil é um alinhamento que representa personagens que são destrutivos, sádicos e têm pouco respeito pela vida e pela ordem. Eles buscam o poder a qualquer custo.';
+            break;
 
-            default:
-                title = 'Descrição do Alinhamento';
-                description = 'Selecione um alinhamento para ver a descrição.';
-        }
+        default:
+            title = 'Alinhamento';
+            description = 'Selecione um alinhamento para ver a descrição.';
+    }
 
-        descriptionDiv.innerHTML = `<h2>${title}</h2><p>${description}</p>`;
-    });
+    descriptionDiv.innerHTML = `<h2>${title}</h2><p>${description}</p>`;
+});
+
+// Disparar manualmente o evento "change" no carregamento da página
+window.addEventListener('load', function () {
+    const alignmentSelect = document.getElementById('char-alignment');
+    alignmentSelect.dispatchEvent(new Event('change'));
+});
