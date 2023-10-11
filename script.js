@@ -1,7 +1,5 @@
 
 //SALVAR --------------------------------------------------------------------------------------------
-
-
 document.getElementById('save-button').addEventListener('click', function () {
     const characterData = {
         name: document.getElementById('char-name').value,
@@ -224,8 +222,6 @@ document.getElementById('save-button').addEventListener('click', function () {
                 survival: document.getElementById('char-survival').value
             }
         };
-
-
 
         // Converte os dados da ficha de personagem em formato JSON
         const characterJSON = JSON.stringify(characterData);
