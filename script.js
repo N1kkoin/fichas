@@ -285,7 +285,7 @@ alignmentSelect.addEventListener('change', function () {
     switch (selectedAlignment) {
         case 'lawfulgoodaligment':
             title = 'Lawful Good';
-            description = 'Lawful Good é um alinhamento que representa personagens que valorizam a ordem e a justiça, fazendo o que é correto e ético.';
+            description = '<b>Lawful Good</b> é um alinhamento que representa personagens que valorizam a ordem e a justiça, fazendo o que é correto e ético.';
             break;
         case 'neutralgoodaligment':
             title = 'Neutral Good';
