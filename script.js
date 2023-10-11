@@ -375,3 +375,37 @@ attributes.forEach((attribute) => {
         modInput.value = modValue;
     });
 });
+
+// DESCRICAO RAÇA ---------------------------------------------------------------------------------------
+const raceSelect = document.getElementById('char-race');
+const raceDescriptionDiv = document.getElementById('race-description');
+
+raceSelect.addEventListener('change', function () {
+    const selectedRace = raceSelect.value;
+    let raceTitle = '';
+    let raceDescription = '';
+
+    switch (selectedRace) {
+        case 'human':
+            raceTitle = 'Human';
+            raceDescription = 'Humans are a versatile race known for their adaptability and ambition. They are found in various societies and environments, excelling in diverse fields.';
+            break;
+        case 'elf':
+            raceTitle = 'Elf';
+            raceDescription = 'Elves are an elegant and long-lived race with a deep connection to nature. They are known for their grace, keen senses, and proficiency in archery and magic.';
+            break;
+        // Adicione casos para outras raças conforme necessário
+
+        default:
+            raceTitle = 'Race';
+            raceDescription = 'Select a race to view the description.';
+    }
+
+    raceDescriptionDiv.innerHTML = `<h2>${raceTitle}</h2><p>${raceDescription}</p>`;
+});
+
+// Disparar manualmente o evento "change" no carregamento da página
+window.addEventListener('load', function () {
+    const raceSelect = document.getElementById('char-race');
+    raceSelect.dispatchEvent(new Event('change'));
+});
