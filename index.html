@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -88,7 +89,10 @@
                     <h2>Atributos</h2>
                     <div>
                         <input type="number" id="char-strength"><br>
-                        <label for="char-strength">Força</label>
+                        <label for="char-strength" >Força</label>
+                    </div>
+                    <div>
+                        <input type="number" id="char-strengthmod"><br>
                     </div>
 
                     <div>
@@ -96,23 +100,37 @@
                         <label for="char-dexterity">Destreza</label>
                     </div>
                     <div>
+                        <input type="number" id="char-dexteritymod"><br>
+                    </div>
+                    <div>
                         <input type="number" id="char-constitution"><br>
                         <label for="char-constitution">Constituição</label>
-
+                    </div>
+                    <div>
+                        <input type="number" id="char-constitutionmod"><br>
                     </div>
                     <div>
                         <input type="number" id="char-intelligence"><br>
                         <label for="char-intelligence">Inteligência</label>
-
+                    </div>
+                    <div>
+                        <input type="number" id="char-intelligencemod"><br>
                     </div>
                     <div>
                         <input type="number" id="char-wisdom"><br>
-                        <label for="char-wisdom">Sabedoria</label>
-
+                        <label for="char-wisdom" class="custom-tooltip"
+                        data-title="A Sabedoria reflete a intuição, sensibilidade e discernimento do personagem. Ela afeta a capacidade de perceber o ambiente ao redor, resistir ao controle mental e fazer escolhas morais.">Sabedoria</label>
+                    </div>
+                    <div>
+                        <input type="number" id="char-wisdommod"><br>
                     </div>
                     <div>
                         <input type="number" id="char-charisma"><br>
-                        <label for="char-charisma">Carisma</label>
+                        <label for="char-charisma"  class="custom-tooltip"
+                        data-title="O Carisma representa a personalidade, carisma e poder de persuasão do personagem. Ele influencia a capacidade de interagir socialmente, convencer outros e liderar.">Carisma</label>
+                    </div>
+                    <div>
+                        <input type="number" id="char-charismamod"><br>
                     </div>
                 </div>
                 <div>
@@ -150,7 +168,7 @@
                         <div class="skillsflex">
                             <input type="number" id="char-charisma"><br>
                             <label for="char-charisma" class="custom-tooltip"
-                            data-title="Governa a habilidade de falar fluentemente, mas também descreve o seu magnetismo, talento artístico e a sua geral simpatia.">Carisma</label>
+                            data-title="">Carisma</label>
                         </div>
                     </div>
                     <div class="character-skills">
