@@ -112,8 +112,8 @@ document.getElementById('load-button').addEventListener('click', function () {
                 document.getElementById('char-wisdommod').value = characterData.wisdommod;
                 document.getElementById('char-charisma').value = characterData.charisma;
                 document.getElementById('char-charismamod').value = characterData.charismamod;
-                document.getElementById('char-alignment').value = characterData.alignment; 
-                document.getElementById('char-gods').value = characterData.chargods; 
+                document.getElementById('char-alignment').value = characterData.alignment;
+                document.getElementById('char-gods').value = characterData.chargods;
 
 
                 // Set saving throw values
@@ -219,7 +219,7 @@ document.getElementById('save-button').addEventListener('click', function () {
             wisdommod: document.getElementById('char-wisdommod').value,
             charisma: charisma,
             charismamod: document.getElementById('char-charismamod').value,
-            alignment: document.getElementById('char-alignment').value, 
+            alignment: document.getElementById('char-alignment').value,
             chargods: document.getElementById('char-gods').value,
 
             portrait: portraitPreview.src, // Caminho da imagem do retrato
@@ -790,4 +790,110 @@ godSelect.addEventListener('change', function () {
 window.addEventListener('load', function () {
     const godSelect = document.getElementById('char-gods');
     godSelect.dispatchEvent(new Event('change'));
+});
+
+
+//CONTA PONTOS DE XP E NIVEIS ------------------------------------------------------------------------------------------------
+
+// Obtém referências para os elementos de input
+var charLevelInput = document.getElementById("char-level");
+var charExpInput = document.getElementById("char-exp");
+
+// Adiciona um ouvinte de evento para o input de "Nível de Personagem"
+charLevelInput.addEventListener("input", function () {
+    // Obter o valor do nível
+    var charLevel = parseInt(charLevelInput.value);
+
+    // Definir os valores de experiência com base no nível
+    if (charLevel === 1) {
+        charExpInput.value = 0;
+    } else if (charLevel === 2) {
+        charExpInput.value = 300;
+    } else if (charLevel === 3) {
+        charExpInput.value = 900;
+    } else if (charLevel === 4) {
+        charExpInput.value = 2700;
+    } else if (charLevel === 5) {
+        charExpInput.value = 6500;
+    } else if (charLevel === 6) {
+        charExpInput.value = 14000;
+    } else if (charLevel === 7) {
+        charExpInput.value = 23000;
+    } else if (charLevel === 8) {
+        charExpInput.value = 34000;
+    } else if (charLevel === 9) {
+        charExpInput.value = 48000;
+    } else if (charLevel === 10) {
+        charExpInput.value = 64000;
+    } else if (charLevel === 11) {
+        charExpInput.value = 85000;
+    } else if (charLevel === 12) {
+        charExpInput.value = 100000;
+    } else if (charLevel === 13) {
+        charExpInput.value = 120000;
+    } else if (charLevel === 14) {
+        charExpInput.value = 140000;
+    } else if (charLevel === 15) {
+        charExpInput.value = 165000;
+    } else if (charLevel === 16) {
+        charExpInput.value = 195000;
+    } else if (charLevel === 17) {
+        charExpInput.value = 225000;
+    } else if (charLevel === 18) {
+        charExpInput.value = 265000;
+    } else if (charLevel === 19) {
+        charExpInput.value = 305000;
+    } else if (charLevel === 20) {
+        charExpInput.value = 355000;
+    }
+
+});
+
+// Adiciona um ouvinte de evento para o input de "Pontos de Experiência"
+charExpInput.addEventListener("input", function () {
+    // Obter o valor de experiência
+    var charExp = parseInt(charExpInput.value);
+
+    // Definir o nível com base nos pontos de experiência
+    if (charExp >= 0 && charExp < 300) {
+        charLevelInput.value = 1;
+    } else if (charExp >= 300 && charExp < 900) {
+        charLevelInput.value = 2;
+    } else if (charExp >= 900 && charExp < 2700) {
+        charLevelInput.value = 3;
+    } else if (charExp >= 2700 && charExp < 6500) {
+        charLevelInput.value = 4;
+    } else if (charExp >= 6500 && charExp < 14000) {
+        charLevelInput.value = 5;
+    } else if (charExp >= 14000 && charExp < 23000) {
+        charLevelInput.value = 6;
+    } else if (charExp >= 23000 && charExp < 34000) {
+        charLevelInput.value = 7;
+    } else if (charExp >= 34000 && charExp < 48000) {
+        charLevelInput.value = 8;
+    } else if (charExp >= 48000 && charExp < 64000) {
+        charLevelInput.value = 9;
+    } else if (charExp >= 64000 && charExp < 85000) {
+        charLevelInput.value = 10;
+    } else if (charExp >= 85000 && charExp < 100000) {
+        charLevelInput.value = 11;
+    } else if (charExp >= 100000 && charExp < 120000) {
+        charLevelInput.value = 12;
+    } else if (charExp >= 120000 && charExp < 140000) {
+        charLevelInput.value = 13;
+    } else if (charExp >= 140000 && charExp < 165000) {
+        charLevelInput.value = 14;
+    } else if (charExp >= 165000 && charExp < 195000) {
+        charLevelInput.value = 15;
+    } else if (charExp >= 195000 && charExp < 225000) {
+        charLevelInput.value = 16;
+    } else if (charExp >= 225000 && charExp < 265000) {
+        charLevelInput.value = 17;
+    } else if (charExp >= 265000 && charExp < 305000) {
+        charLevelInput.value = 18;
+    } else if (charExp >= 305000 && charExp < 355000) {
+        charLevelInput.value = 19;
+    } else if (charExp >= 355000) {
+        charLevelInput.value = 20;
+    }
 });
