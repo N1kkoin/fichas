@@ -7,6 +7,10 @@ document.getElementById('save-button').addEventListener('click', function () {
         class: document.getElementById('char-class').value,
         level: document.getElementById('char-level').value,
         classlevel: document.getElementById('class-level').value,
+       
+        armor: document.getElementById('char-armor').value,
+        initiative: document.getElementById('char-initiative').value,
+        speed: document.getElementById('char-speed').value,
 
         exp: document.getElementById('char-exp').value,
         strength: document.getElementById('char-strength').value,
@@ -99,6 +103,10 @@ document.getElementById('load-button').addEventListener('click', function () {
                 document.getElementById('char-level').value = characterData.level;
                 document.getElementById('class-level').value = characterData.classlevel;
                 document.getElementById('char-exp').value = characterData.exp;
+
+                document.getElementById('char-armor').value = characterData.armor;
+                document.getElementById('char-initiative').value = characterData.initiative;
+                document.getElementById('char-speed').value = characterData.speed;
 
                 document.getElementById('char-strength').value = characterData.strength;
                 document.getElementById('char-strengthmod').value = characterData.strengthmod;
@@ -206,6 +214,11 @@ document.getElementById('save-button').addEventListener('click', function () {
             class: document.getElementById('char-class').value,
             level: document.getElementById('char-level').value,
             classlevel: document.getElementById('class-level').value,
+
+            armor: document.getElementById('char-armor').value,
+            initiative: document.getElementById('char-initiative').value,
+            speed: document.getElementById('char-speed').value,
+            
             exp: document.getElementById('char-exp').value,
             strength: strength,
             strengthmod: document.getElementById('char-strengthmod').value,
