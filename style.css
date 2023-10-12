@@ -100,9 +100,10 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 120px;
     text-align: center;
     box-sizing: border-box;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 100%;
     width: 120px;
+
 }
 
 .character-stats div:nth-child(odd) input {
@@ -110,7 +111,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 45px;
     text-align: center;
     box-sizing: border-box;
-    border: 2px solid #007BFF;
+    border: 1px solid #afb9d1;
     border-radius: 100%;
     width: 45px;
     margin: 0 auto;
@@ -164,6 +165,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 100%;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+    border: 1px solid #000000;
 }
 
 .skillsflex {
