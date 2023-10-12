@@ -22,6 +22,8 @@ document.getElementById('save-button').addEventListener('click', function () {
         charisma: document.getElementById('char-charisma').value,
         charismamod: document.getElementById('char-charismamod').value,
         alignment: document.getElementById('char-alignment').value, // Added alignment attribute
+        chargods: document.getElementById('char-gods').value,
+
         portrait: document.getElementById('portrait-preview').src, // URL da imagem
         savingThrows: {
             strength: document.getElementById('char-strength-savingthrow').value,
@@ -110,7 +112,9 @@ document.getElementById('load-button').addEventListener('click', function () {
                 document.getElementById('char-wisdommod').value = characterData.wisdommod;
                 document.getElementById('char-charisma').value = characterData.charisma;
                 document.getElementById('char-charismamod').value = characterData.charismamod;
-                document.getElementById('char-alignment').value = characterData.alignment; // Set alignment value
+                document.getElementById('char-alignment').value = characterData.alignment; 
+                document.getElementById('char-gods').value = characterData.chargods; 
+
 
                 // Set saving throw values
                 document.getElementById('char-strength-savingthrow').value = characterData.savingThrows.strength;
@@ -148,16 +152,24 @@ document.getElementById('load-button').addEventListener('click', function () {
                 const alignmentSelect = document.getElementById('char-alignment');
                 const raceSelect = document.getElementById('char-race');
                 const classSelect = document.getElementById('char-class');
+                const godsSelect = document.getElementById('char-gods');
 
                 alignmentSelect.value = characterData.alignment;
                 raceSelect.value = characterData.race;
                 classSelect.value = characterData.class;
+                godsSelect.value = characterData.chargods;
+
 
                 alignmentSelect.dispatchEvent(new Event('change', { bubbles: true }));
                 raceSelect.dispatchEvent(new Event('change', { bubbles: true }));
                 classSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                godsSelect.dispatchEvent(new Event('change', { bubbles: true }));
 
-                // Agora você pode adicionar lógica específica para atualizar as descrições com base na raça e classe selecionadas
+
+                // Atualize a descrição dos deuses
+                updateGodsDescription(characterData.chargods);
+
+                // Agora você pode adicionar lógica específica para atualizar as descrições com base na raça, classe e deuses selecionados
                 updateRaceDescription(characterData.race);
                 updateClassDescription(characterData.class);
             };
@@ -207,7 +219,9 @@ document.getElementById('save-button').addEventListener('click', function () {
             wisdommod: document.getElementById('char-wisdommod').value,
             charisma: charisma,
             charismamod: document.getElementById('char-charismamod').value,
-            alignment: document.getElementById('char-alignment').value, // Added alignment attribute
+            alignment: document.getElementById('char-alignment').value, 
+            chargods: document.getElementById('char-gods').value,
+
             portrait: portraitPreview.src, // Caminho da imagem do retrato
             savingThrows: {
                 strength: document.getElementById('char-strength-savingthrow').value,
