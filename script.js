@@ -417,11 +417,11 @@ raceSelect.addEventListener('change', function () {
 
     switch (selectedRace) {
         case 'human':
-            raceTitle = 'Human';
+            raceTitle = 'Humano';
             raceDescription = 'Humans are a versatile race known for their adaptability and ambition. They are found in various societies and environments, excelling in diverse fields.';
             break;
         case 'elf':
-            raceTitle = 'Elf';
+            raceTitle = 'Elfo';
             raceDescription = 'Elves are an elegant and long-lived race with a deep connection to nature. They are known for their grace, keen senses, and proficiency in archery and magic.';
             break;
         // Adicione casos para outras raças conforme necessário
@@ -452,19 +452,19 @@ classSelect.addEventListener('change', function () {
     switch (selectedClass) {
         case 'artificer':
             classTitle = 'Artificer';
-            classDescription = 'Artificers are skilled inventors and creators, blending magic and technology to achieve remarkable feats. They excel at crafting and infusing magic into everyday objects.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'barbarian':
             classTitle = 'Bárbaro';
-            classDescription = 'Bárbaros, independente de quão diferentes sejam, são definidos por sua fúria: Inigualável, insuperável e invencível. Mais do que uma mera emoção, essa raiva é a ferocidade de um predador encurralado, a fúria inaplacável da tempestade, a ira infinita do mar. Para alguns sua fúria vem da comunhão com espíritos, para outros é uma reserva de ira contra um mundo repleto de dor. Para cada bárbaro a fúria é um poder que não apenas rega seu frenesi de batalha, mas também seus reflexos, resiliência e feitos de força.</br></br><span class="descriçãomenor"><b>BP (Bônus de Proficiência) Inicial:</b> <span class="positivo">+2</span> </br><b>Dado de Vida:</b> D12+ Modificador de Constituição</br><b>PV níveis posteriores:</b> 1d12 (ou 7) + Modificador de Constituição</br><b>Armas:</b> Simples, marciais.</br><b>Armaduras:</b> Leves, médias.</br><b>Testes de Resistência:</b> Força, Constituição.</br><b>Perícias:</b> Duas entre Adestramento, Atletismo, Intimidar, Natureza, Percepção, Sobrevivência.</br></br></span><a target="_blank" href="https://thesunderingtale.blogspot.com/2017/12/d-5e-barbaro.html">Mais informações</a>';
+            classDescription = 'Bárbaros, independente de quão diferentes sejam, são definidos por sua fúria: Inigualável, insuperável e invencível. Mais do que uma mera emoção, essa raiva é a ferocidade de um predador encurralado, a fúria inaplacável da tempestade, a ira infinita do mar. Para alguns sua fúria vem da comunhão com espíritos, para outros é uma reserva de ira contra um mundo repleto de dor. Para cada bárbaro a fúria é um poder que não apenas rega seu frenesi de batalha, mas também seus reflexos, resiliência e feitos de força</br></br><span class="descriçãomenor"><b>BP (Bônus de Proficiência) Inicial:</b> <span class="positivo">+2</span> </br><b>Dado de Vida:</b> D12+ Modificador de Constituição</br><b>PV níveis posteriores:</b> 1d12 (ou 7) + Modificador de Constituição</br><b>Armas:</b> Simples, marciais</br><b>Armaduras:</b> Leves, médias</br><b>Ferramentas:</b> Nenhuma<b></b>Testes de Resistência:</b> Força, Constituição</br><b>Perícias:</b> Duas entre Adestramento, Atletismo, Intimidar, Natureza, Percepção, Sobrevivência</br></br></span><a target="_blank" href="https://thesunderingtale.blogspot.com/2017/12/d-5e-barbaro.html">Mais informações</a>';
             break;
         case 'bard':
             classTitle = 'Bardo';
-            classDescription = 'Bardo é um conjurador de magias inspirador, influenciador e manipulador. Muitos bardos são eruditos, outros tanto são patifes, alguns são espiões, mas o que os une é a forma como usam suas palavras e músicas para moldar as mentes dos ouvintes, inspirando ou desmoralizando, além de serem capazes de criar ilusões e, até mesmo, curar ferimentos.</br></br>Bardos são extremamente versáteis e podem usar suas habilidades e magias para combater a distância, combater corpo a corpo, ficar a distância fazendo com que seus aliados lutem de forma mais efetiva ou tornando seus adversários menos efetivos. Se causar dano não é seu forte normalmente, suas habilidades de ilusão e encantamento permitem que eles transitem entre o ataque e defesa com muita qualidade. Eles também são úteis em campanhas e investigação, de negociação e de infiltração.';
+            classDescription = 'Bardo é um conjurador de magias inspirador, influenciador e manipulador. Muitos bardos são eruditos, outros tanto são patifes, alguns são espiões, mas o que os une é a forma como usam suas palavras e músicas para moldar as mentes dos ouvintes, inspirando ou desmoralizando, além de serem capazes de criar ilusões e, até mesmo, curar ferimentos.</br></br>Bardos são extremamente versáteis e podem usar suas habilidades e magias para combater a distância, combater corpo a corpo, ficar a distância fazendo com que seus aliados lutem de forma mais efetiva ou tornando seus adversários menos efetivos. Se causar dano não é seu forte normalmente, suas habilidades de ilusão e encantamento permitem que eles transitem entre o ataque e defesa com muita qualidade. Eles também são úteis em campanhas e investigação, de negociação e de infiltração.</br></br><span class="descriçãomenor"><b>BP (Bônus de Proficiência) Inicial:</b> <span class="positivo">+2</span> </br><b>Dado de Vida:</b> D8+ Modificador de Constituição</br><b>PV níveis posteriores:</b> 1d8 (ou 5) + Modificador de Constituição</br><b>Armas:</b> Simples, besta de mão, espada curta, espada longa, rapieira</br><b>Armaduras:</b> Leves</br><b>Ferramentas:</b> Escolha três instrumentos musicais</br><b>Testes de Resistência:</b> Destreza e Carisma</br><b>Perícias:</b> Escolha três que quiser</br><b>Habilidade de Conjuração:</b> Carisma</br></br></span><a target="_blank" href="https://thesunderingtale.blogspot.com/2017/12/d-5e-bardo.html">Mais informações</a>';
             break;
         case 'bloodhunter':
             classTitle = 'Blood Hunter';
-            classDescription = 'Blood Hunters are hunters of the supernatural, specializing in tracking and eliminating creatures of darkness. They use forbidden knowledge and their own blood to gain power.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'cleric':
             classTitle = 'Clérigo';
@@ -472,39 +472,39 @@ classSelect.addEventListener('change', function () {
             break;
         case 'druid':
             classTitle = 'Druid';
-            classDescription = 'Druids are nature-focused spellcasters and shape-shifters. They have a deep connection with the natural world, allowing them to change their form and command the elements.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'fighter':
             classTitle = 'Fighter';
-            classDescription = 'Fighters are masters of combat, trained in a variety of weapons and tactics. They excel in physical combat and can specialize in various combat styles.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'monk':
             classTitle = 'Monk';
-            classDescription = 'Monks are disciplined martial artists and spiritual practitioners. They use their bodies and minds in perfect harmony, making them fast, agile, and capable of incredible feats.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'paladin':
             classTitle = 'Paladin';
-            classDescription = 'Paladins are holy knights, sworn to uphold justice and protect the innocent. They combine combat skills with divine magic, smiting evil and healing the wounded.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'ranger':
             classTitle = 'Ranger';
-            classDescription = 'Rangers are skilled trackers and survivalists. They excel at ranged combat and are attuned to the natural world, making them exceptional hunters and scouts.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'rogue':
             classTitle = 'Rogue';
-            classDescription = 'Rogues are agile and cunning adventurers. They excel in stealth, traps, and precision strikes. Their skills make them skilled thieves, spies, and assassins.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'sorcerer':
             classTitle = 'Sorcerer';
-            classDescription = 'Sorcerers have innate magical abilities, drawing power from their bloodline. They can cast spells with raw magical energy and often have unique and unpredictable powers.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'warlock':
             classTitle = 'Warlock';
-            classDescription = 'Warlocks make pacts with powerful otherworldly beings. They gain magical abilities in exchange for their service. Warlocks have a diverse range of magical options at their disposal.';
+            classDescription = 'Ainda não coloquei.';
             break;
         case 'wizard':
             classTitle = 'Wizard';
-            classDescription = 'Wizards are scholarly spellcasters who specialize in the arcane arts. They study and prepare spells, casting them with precision and control. Wizards are known for their vast spellbooks and magical knowledge.';
+            classDescription = 'Ainda não coloquei.';
             break;
         default:
             classTitle = 'Classe';

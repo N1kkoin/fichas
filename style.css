@@ -420,3 +420,10 @@ button {
     display: flex;
     gap: 22px;
 }
+
+.armadurainiciativavelocidade input{
+    height: 65px;
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid #afb9d1; 
+}
