@@ -321,38 +321,20 @@ input:focus {
     opacity: 1;
 }
 
-#alignment-description {
-    background-color: #ffffff;
-    padding: 5px 20px;
-    border-radius: 10px;
-}
 
-#race-description {
+#race-description, #gods-description, #class-description, #alignment-description{
     background-color: #ffffff;
     padding: 5px 20px;
     border-radius: 10px;
     margin-top: 10px;
 }
 
-#class-description {
-    background-color: #ffffff;
-    padding: 5px 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
 
-#char-level {
+
+#char-level, #char-exp, #class-level {
     font-size: 22px;
     text-align: center;
-    border: 1px solid #afb9d1;
-    
-}
-
-#char-exp {
-    font-size: 22px;
-    border: 1px solid #afb9d1;
-    text-align: center;
-
+    border: 1px solid #afb9d1; 
 }
 
 #char-name {

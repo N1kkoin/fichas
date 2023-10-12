@@ -4,9 +4,6 @@
 
 <head>
     <!-- DESIGN DO SELECT/OPTION -->
-    <script src="jquery-nice-select-1.1.0/js/jquery.js"></script>
-    <script src="jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
-    <link rel="stylesheet" href="jquery-nice-select-1.1.0/css/nice-select.css">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -98,6 +95,51 @@
                             <label for="char-class">Alinhamento</label>
 
                         </div>
+                        <div>
+                            <select id="char-gods">
+                                <option value="defaultgod">-----</option>
+                                <option value="unaffiliated">Não afiliado</option>
+                                <option value="auril">Auril</option>
+                                <option value="azuth">Azuth</option>
+                                <option value="bane">Bane</option>
+                                <option value="beshaba">Beshaba</option>
+                                <option value="bhaal">Bhaal</option>
+                                <option value="chauntea">Chauntea</option>
+                                <option value="cyric">Cyric</option>
+                                <option value="deneir">Deneir</option>
+                                <option value="eldath">Eldath</option>
+                                <option value="gond">Gond</option>
+                                <option value="helm">Helm</option>
+                                <option value="ilmater">Ilmater</option>
+                                <option value="kelemvor">Kelemvor</option>
+                                <option value="lathander">Lathander</option>
+                                <option value="leira">Leira</option>
+                                <option value="lliira">Lliira</option>
+                                <option value="loviatar">Loviatar</option>
+                                <option value="malar">Malar</option>
+                                <option value="mask">Mask</option>
+                                <option value="mielikki">Mielikki</option>
+                                <option value="milil">Milil</option>
+                                <option value="myrkul">Myrkul</option>
+                                <option value="mystra">Mystra</option>
+                                <option value="oghma">Oghma</option>
+                                <option value="savras">Savras</option>
+                                <option value="selune">Selûne</option>
+                                <option value="shar">Shar</option>
+                                <option value="silvanus">Silvanus</option>
+                                <option value="sune">Sune</option>
+                                <option value="talona">Talona</option>
+                                <option value="talos">Talos</option>
+                                <option value="tempus">Tempus</option>
+                                <option value="torm">Torm</option>
+                                <option value="tymora">Tymora</option>
+                                <option value="tyr">Tyr</option>
+                                <option value="umberlee">Umberlee</option>
+                                <option value="waukeen">Waukeen</option>
+                            </select><br>
+                            <label for="char-class">Religião</label>
+
+                        </div>
                     </div>
                     <div class="juntos">
                         <div>
@@ -105,7 +147,7 @@
                             <label for="char-level">Nível de Personagem</label>
                         </div>
                         <div>
-                            <input type="number" id="char-exp">
+                            <input type="number" id="class-level">
                             <label for="class-level">Nível de Classe</label>
                         </div>
                         <div>
@@ -294,6 +336,8 @@
         </div>
         <div class="explicação-sheet">
             <div id="alignment-description"></div>
+            <div id="gods-description"></div>
+
             <div id="class-description"></div>
             <div id="race-description"></div>
 
