@@ -6,6 +6,7 @@ document.getElementById('save-button').addEventListener('click', function () {
         race: document.getElementById('char-race').value,
         class: document.getElementById('char-class').value,
         level: document.getElementById('char-level').value,
+        exp: document.getElementById('char-exp').value,
         strength: document.getElementById('char-strength').value,
         strengthmod: document.getElementById('char-strengthmod').value,
         dexterity: document.getElementById('char-dexterity').value,
@@ -92,6 +93,8 @@ document.getElementById('load-button').addEventListener('click', function () {
                 document.getElementById('char-race').value = characterData.race;
                 document.getElementById('char-class').value = characterData.class;
                 document.getElementById('char-level').value = characterData.level;
+                document.getElementById('char-exp').value = characterData.exp;
+
                 document.getElementById('char-strength').value = characterData.strength;
                 document.getElementById('char-strengthmod').value = characterData.strengthmod;
                 document.getElementById('char-dexterity').value = characterData.dexterity;
@@ -138,14 +141,22 @@ document.getElementById('load-button').addEventListener('click', function () {
                 // Exiba a imagem do retrato
                 document.getElementById('portrait-preview').src = characterData.portrait;
 
-                // Atualize a descrição do alinhamento com base na escolha do arquivo JSON
+                // Atualize a descrição com base na escolha do arquivo JSON
                 const alignmentSelect = document.getElementById('char-alignment');
-                alignmentSelect.value = characterData.alignment; // Atualize a seleção
+                const raceSelect = document.getElementById('char-race');
+                const classSelect = document.getElementById('char-class');
 
-                // Manualmente disparar o evento 'change' no elemento select
-                var event = new Event('change', { bubbles: true });
-                alignmentSelect.dispatchEvent(event);
+                alignmentSelect.value = characterData.alignment;
+                raceSelect.value = characterData.race;
+                classSelect.value = characterData.class;
 
+                alignmentSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                raceSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                classSelect.dispatchEvent(new Event('change', { bubbles: true }));
+
+                // Agora você pode adicionar lógica específica para atualizar as descrições com base na raça e classe selecionadas
+                updateRaceDescription(characterData.race);
+                updateClassDescription(characterData.class);
             };
 
             // Leia o conteúdo do arquivo selecionado como texto
@@ -179,6 +190,7 @@ document.getElementById('save-button').addEventListener('click', function () {
             race: document.getElementById('char-race').value,
             class: document.getElementById('char-class').value,
             level: document.getElementById('char-level').value,
+            exp: document.getElementById('char-exp').value,
             strength: strength,
             strengthmod: document.getElementById('char-strengthmod').value,
             dexterity: dexterity,
@@ -293,7 +305,7 @@ alignmentSelect.addEventListener('change', function () {
             break;
         case 'lawfulneutralaligment':
             title = 'Lawful Neutral';
-            description = 'Ordeiro e Neutro (Lawful Neutral) age conforme a lei, a tradição ou um código pessoal a direciona. A ordem e a organização são de extrema importância para ele. Ele pode acreditar em uma ordem pessoal e viver de acordo com um código ou padrão, ou pode acreditar em uma ordem para todos e favorecer um governo forte e organizado. </br></br><span class="positivo">Positivo:</span>é o melhor alinhamento que alguém pode ter porque significa que você é confiável e honrado sem ser um fanático. </br></br><span class="negativo">Negativo:</span>  pode ser um alinhamento perigoso quando busca eliminar toda a liberdade, escolha e diversidade na sociedade.</br></br><a target="_blank" href="https://easydamus.com/lawfulneutral.html">Mais informações</a>';
+            description = 'Ordeiro e Neutro (Lawful Neutral) age conforme a lei, a tradição ou um código pessoal a direciona. A ordem e a organização são de extrema importância para ele. Ele pode acreditar em uma ordem pessoal e viver de acordo com um código ou padrão, ou pode acreditar em uma ordem para todos e favorecer um governo forte e organizado. </br></br><span class="positivo">Positivo:</span> é o melhor alinhamento que alguém pode ter porque significa que você é confiável e honrado sem ser um fanático. </br></br><span class="negativo">Negativo:</span>  pode ser um alinhamento perigoso quando busca eliminar toda a liberdade, escolha e diversidade na sociedade.</br></br><a target="_blank" href="https://easydamus.com/lawfulneutral.html">Mais informações</a>';
             break;
         case 'trueneutralaligment':
             title = 'True Neutral';
@@ -305,15 +317,15 @@ alignmentSelect.addEventListener('change', function () {
             break;
         case 'lawfulevilaligment':
             title = 'Lawful Evil';
-            description = 'Ordeiro e Mau (Lawful Evil) age metodicamente para obter o que deseja dentro dos limites de seu código de conduta, sem se importar com quem ele prejudica. Ele valoriza a tradição, lealdade e ordem, mas não se preocupa com liberdade, dignidade ou vida. Ele joga de acordo com as regras, mas sem misericórdia ou compaixão. Ele se sente à vontade em uma hierarquia e gostaria de governar, mas está disposto a servir. Ele condena os outros não de acordo com suas ações, mas sim de acordo com raça, religião, terra natal ou posição social. Ele reluta em quebrar leis ou promessas.</br></br>Essa relutância parte em parte de sua natureza e em parte porque ele depende da ordem para se proteger daqueles que se opõem a ele por motivos morais. Alguns vilões leais malignos têm tabus particulares, como não matar a sangue frio (mas fazendo com que subordinados o façam) ou não deixar que crianças sofram danos (se puder ser evitado). Eles imaginam que esses escrúpulos os elevam acima de vilões sem princípios.</br></br>Algumas pessoas e criaturas leais malignas se comprometem com o mal com o mesmo zelo que um cruzado se compromete com o bem. Além de estar dispostos a prejudicar os outros para alcançar seus objetivos, eles encontram prazer em espalhar o mal como um fim em si mesmo. Eles também podem ver fazer o mal como parte de um dever para um deus ou mestre maligno.</br></br><span class="positivo">Positivo:</span>Criaturas de alinhamento "leal e maligno" consideram seu alinhamento o melhor, porque combina honra com um interesse próprio dedicado.</br></br><span class="negativo">Negativo:</span>é o alinhamento mais perigoso, porque representa o mal metódico, intencional e frequentemente bem-sucedido.</br></br><a target="_blank" href="https://easydamus.com/lawfulevil.html">Mais informações</a>';
+            description = 'Ordeiro e Mau (Lawful Evil) age metodicamente para obter o que deseja dentro dos limites de seu código de conduta, sem se importar com quem ele prejudica. Ele valoriza a tradição, lealdade e ordem, mas não se preocupa com liberdade, dignidade ou vida. Ele joga de acordo com as regras, mas sem misericórdia ou compaixão. Ele se sente à vontade em uma hierarquia e gostaria de governar, mas está disposto a servir. Ele condena os outros não de acordo com suas ações, mas sim de acordo com raça, religião, terra natal ou posição social. Ele reluta em quebrar leis ou promessas.</br></br>Essa relutância parte em parte de sua natureza e em parte porque ele depende da ordem para se proteger daqueles que se opõem a ele por motivos morais. Alguns vilões leais malignos têm tabus particulares, como não matar a sangue frio (mas fazendo com que subordinados o façam) ou não deixar que crianças sofram danos (se puder ser evitado). Eles imaginam que esses escrúpulos os elevam acima de vilões sem princípios.</br></br>Algumas pessoas e criaturas leais malignas se comprometem com o mal com o mesmo zelo que um cruzado se compromete com o bem. Além de estar dispostos a prejudicar os outros para alcançar seus objetivos, eles encontram prazer em espalhar o mal como um fim em si mesmo. Eles também podem ver fazer o mal como parte de um dever para um deus ou mestre maligno.</br></br><span class="positivo">Positivo:</span> criaturas de alinhamento "leal e maligno" consideram seu alinhamento o melhor, porque combina honra com um interesse próprio dedicado.</br></br><span class="negativo">Negativo:</span> é o alinhamento mais perigoso, porque representa o mal metódico, intencional e frequentemente bem-sucedido.</br></br><a target="_blank" href="https://easydamus.com/lawfulevil.html">Mais informações</a>';
             break;
         case 'neutralevilaligment':
             title = 'Neutral Evil';
-            description = 'Neutro e Maligno (Neutral Evil) faz o que puder para se safar. Ele está apenas interessado em si mesmo, simplesmente. Ele não derrama lágrimas por aqueles que mata, seja por lucro, diversão ou conveniência. Ele não tem amor pela ordem e não tem ilusão de que seguir leis, tradições ou códigos o tornaria melhor ou mais nobre. Por outro lado, ele não tem a natureza inquieta ou o amor pelo conflito que um vilão caótico e maligno (Chaotic Evil) tem. </br></br>Alguns vilões "neutros e malignos" defendem o mal como um ideal, cometendo o mal por seu próprio bem. Com mais frequência, esses vilões são devotos de deidades malignas ou sociedades secretas.</br></br><span class="positivo">Positivo:</span>Criaturas de alinhamento "neutro e maligno" considera seu alinhamento o melhor, porque podem avançar a si mesmos sem consideração pelos outros. </br></br><span class="negativo">Negativo:</span>é o alinhamento mais perigoso, porque representa o mal puro, sem honra e sem variação.</br></br><a target="_blank" href="https://easydamus.com/neutralevil.html">Mais informações</a>';
+            description = 'Neutro e Maligno (Neutral Evil) faz o que puder para se safar. Ele está apenas interessado em si mesmo, simplesmente. Ele não derrama lágrimas por aqueles que mata, seja por lucro, diversão ou conveniência. Ele não tem amor pela ordem e não tem ilusão de que seguir leis, tradições ou códigos o tornaria melhor ou mais nobre. Por outro lado, ele não tem a natureza inquieta ou o amor pelo conflito que um vilão caótico e maligno (Chaotic Evil) tem. </br></br>Alguns vilões "neutros e malignos" defendem o mal como um ideal, cometendo o mal por seu próprio bem. Com mais frequência, esses vilões são devotos de deidades malignas ou sociedades secretas.</br></br><span class="positivo">Positivo:</span> criaturas de alinhamento "neutro e maligno" considera seu alinhamento o melhor, porque podem avançar a si mesmos sem consideração pelos outros. </br></br><span class="negativo">Negativo:</span> é o alinhamento mais perigoso, porque representa o mal puro, sem honra e sem variação.</br></br><a target="_blank" href="https://easydamus.com/neutralevil.html">Mais informações</a>';
             break;
         case 'chaoticevilaligment':
             title = 'Chaotic Evil';
-            description = 'Caótico e Maligno (Chaotic Evil) faz o que sua ganância, ódio e desejo de destruição o levam a fazer. Ele é de temperamento explosivo, cruel, arbitrariamente violento e imprevisível. Se ele está simplesmente atrás do que pode obter, ele é impiedoso e brutal. Se ele está comprometido com a disseminação do mal e do caos, é ainda pior. Felizmente, seus planos são caóticos, e qualquer grupo ao qual ele se junte ou forme é mal organizado. Normalmente, pessoas caóticas malignas só podem ser forçadas a trabalhar juntas, e seu líder dura apenas enquanto conseguir evitar tentativas de derrubá-lo ou assassiná-lo.</br></br><span class="positivo">Positivo:</span> Criaturas de alinhamento "caótico e maligno" acredita que seu alinhamento é o melhor, porque combina interesse próprio e liberdade pura. </br></br><span class="negativo">Negativo:</span> é o alinhamento mais perigoso, porque representa a destruição não apenas da beleza e da vida, mas também da ordem sobre a qual a beleza e a vida dependem.</br></br><a target="_blank" href="https://easydamus.com/chaoticevil.html">Mais informações</a>';
+            description = 'Caótico e Maligno (Chaotic Evil) faz o que sua ganância, ódio e desejo de destruição o levam a fazer. Ele é de temperamento explosivo, cruel, arbitrariamente violento e imprevisível. Se ele está simplesmente atrás do que pode obter, ele é impiedoso e brutal. Se ele está comprometido com a disseminação do mal e do caos, é ainda pior. Felizmente, seus planos são caóticos, e qualquer grupo ao qual ele se junte ou forme é mal organizado. Normalmente, pessoas caóticas malignas só podem ser forçadas a trabalhar juntas, e seu líder dura apenas enquanto conseguir evitar tentativas de derrubá-lo ou assassiná-lo.</br></br><span class="positivo">Positivo:</span> criaturas de alinhamento "caótico e maligno" acredita que seu alinhamento é o melhor, porque combina interesse próprio e liberdade pura. </br></br><span class="negativo">Negativo:</span> é o alinhamento mais perigoso, porque representa a destruição não apenas da beleza e da vida, mas também da ordem sobre a qual a beleza e a vida dependem.</br></br><a target="_blank" href="https://easydamus.com/chaoticevil.html">Mais informações</a>';
             break;
 
         default:
@@ -410,7 +422,7 @@ window.addEventListener('load', function () {
     raceSelect.dispatchEvent(new Event('change'));
 });
 
-// DESCRICAO CLASSE ---------------------------------------------------------------------------------------
+// DESCRICAO CLASSEs ---------------------------------------------------------------------------------------
 const classSelect = document.getElementById('char-class');
 const classDescriptionDiv = document.getElementById('class-description');
 
@@ -426,7 +438,7 @@ classSelect.addEventListener('change', function () {
             break;
         case 'barbarian':
             classTitle = 'Bárbaro';
-            classDescription = 'Bárbaros, independente de quão diferentes sejam, são definidos por sua fúria: Inigualável, insuperável e invencível. Mais do que uma mera emoção, essa raiva é a ferocidade de um predador encurralado, a fúria inaplacável da tempestade, a ira infinita do mar. Para alguns sua fúria vem da comunhão com espíritos, para outros é uma reserva de ira contra um mundo repleto de dor. Para cada bárbaro a fúria é um poder que não apenas rega seu frenesi de batalha, mas também seus reflexos, resiliência e feitos de força.</br></br><b>BP (Bônus de Proficiência) Inicial:</b> <span class="positivo">+2</span> </br><b>Dado de Vida:</b> D12+ Modificador de Constituição</br><b>PV níveis posteriores:</b> 1d12 (ou 7) + Modificador de Constituição</br><b>Armas:</b> Simples, marciais.</br><b>Armaduras:</b> Leves, médias.</br><b>Testes de Resistência:</b> Força, Constituição.</br><b>Perícias:</b> Duas entre Adestramento, Atletismo, Intimidar, Natureza, Percepção, Sobrevivência.</br></br><a target="_blank" href="https://thesunderingtale.blogspot.com/2017/12/d-5e-barbaro.html">Mais informações</a>';
+            classDescription = 'Bárbaros, independente de quão diferentes sejam, são definidos por sua fúria: Inigualável, insuperável e invencível. Mais do que uma mera emoção, essa raiva é a ferocidade de um predador encurralado, a fúria inaplacável da tempestade, a ira infinita do mar. Para alguns sua fúria vem da comunhão com espíritos, para outros é uma reserva de ira contra um mundo repleto de dor. Para cada bárbaro a fúria é um poder que não apenas rega seu frenesi de batalha, mas também seus reflexos, resiliência e feitos de força.</br></br><span class="descriçãomenor"><b>BP (Bônus de Proficiência) Inicial:</b> <span class="positivo">+2</span> </br><b>Dado de Vida:</b> D12+ Modificador de Constituição</br><b>PV níveis posteriores:</b> 1d12 (ou 7) + Modificador de Constituição</br><b>Armas:</b> Simples, marciais.</br><b>Armaduras:</b> Leves, médias.</br><b>Testes de Resistência:</b> Força, Constituição.</br><b>Perícias:</b> Duas entre Adestramento, Atletismo, Intimidar, Natureza, Percepção, Sobrevivência.</br></br></span><a target="_blank" href="https://thesunderingtale.blogspot.com/2017/12/d-5e-barbaro.html">Mais informações</a>';
             break;
         case 'bard':
             classTitle = 'Bardo';
@@ -488,4 +500,9 @@ classSelect.addEventListener('change', function () {
 window.addEventListener('load', function () {
     const classSelect = document.getElementById('char-class');
     classSelect.dispatchEvent(new Event('change'));
+});
+
+
+$(document).ready(function () {
+    $('select').niceSelect();
 });

@@ -3,6 +3,11 @@
 
 
 <head>
+    <!-- DESIGN DO SELECT/OPTION -->
+    <script src="jquery-nice-select-1.1.0/js/jquery.js"></script>
+    <script src="jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
+    <link rel="stylesheet" href="jquery-nice-select-1.1.0/css/nice-select.css">
+
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -19,15 +24,11 @@
                     <input type="file" id="char-portrait" accept="image/*">
                 </div>
                 <div class="character-info">
-
-                    <div class="input-wrapper">
+                    <div>
                         <input type="text" id="char-name">
                         <label for="char-name">Nome</label>
                     </div>
-                    <div class="input-wrapper">
-                        <input type="number" id="char-level">
-                        <label for="char-level">Nível</label>
-                    </div>
+
 
                     <div class="racaeclasse">
                         <div>
@@ -98,8 +99,23 @@
 
                         </div>
                     </div>
+                    <div class="juntos">
+                        <div>
+                            <input type="number" id="char-level">
+                            <label for="char-level">Nível de Personagem</label>
+                        </div>
+                        <div>
+                            <input type="number" id="char-exp">
+                            <label for="class-level">Nível de Classe</label>
+                        </div>
+                        <div>
+                            <input type="number" id="char-exp">
+                            <label for="char-exp">Pontos de Experiência</label>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="atributoseskills">
 
                 <div class="character-stats">
@@ -271,9 +287,9 @@
                     </div>
                 </div>
             </div>
-            <button id="save-button">Salvar</button>
+            <button class="buttonsalvar" id="save-button">Salvar</button>
             <input type="file" id="file-input" style="display: none;">
-            <button id="load-button">Carregar</button>
+            <button class="buttonload" id="load-button">Carregar</button>
 
         </div>
         <div class="explicação-sheet">
