@@ -497,5 +497,13 @@ button {
     margin: 0;
     width: 20px;
     border: 1px solid #afb9d1;
+}
 
+.titulocinza{
+    color: #787878;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    width: fit-content;
+    text-transform: uppercase;
 }
