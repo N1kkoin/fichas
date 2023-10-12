@@ -897,3 +897,27 @@ charExpInput.addEventListener("input", function () {
         charLevelInput.value = 20;
     }
 });
+
+
+//MULTICLASSE ---------------------------------------------------------------------------
+function updateClassLevel() {
+    var selectedClasses = [];
+
+    if (document.getElementById("class-2nd").checked) {
+        selectedClasses.push(document.getElementById("class-2nd-subclass").value);
+        selectedClasses.push(document.getElementById("class-2nd-select").value);
+        selectedClasses.push(document.getElementById("class-2nd-level").value);
+    }
+    if (document.getElementById("class-3rd").checked) {
+        selectedClasses.push(document.getElementById("class-3rd-subclass").value);
+        selectedClasses.push(document.getElementById("class-3rd-select").value);
+        selectedClasses.push(document.getElementById("class-3rd-level").value);
+    }
+    if (document.getElementById("class-4th").checked) {
+        selectedClasses.push(document.getElementById("class-4th-subclass").value);
+        selectedClasses.push(document.getElementById("class-4th-select").value);
+        selectedClasses.push(document.getElementById("class-4th-level").value);
+    }
+
+    document.getElementById("class-level").value = selectedClasses.join(", ");
+}

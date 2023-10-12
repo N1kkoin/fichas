@@ -154,18 +154,19 @@
                             <input type="number" id="char-level">
                             <label for="char-level">Nível de Personagem</label>
                         </div>
-                        <div>
-                            <input type="number" id="class-level">
-                            <label for="class-level">Nível de Classe</label>
-                        </div>
+
                         <div>
                             <input type="number" id="char-exp">
                             <label for="char-exp">Pontos de Experiência</label>
                         </div>
                     </div>
-                    
+                    <div>
+                        <input type="text" id="class-level">
+                        <label for="class-level">Nível de Classe</label>
+                    </div>
                 </div>
             </div>
+
 
             <div class="atributoseskills">
 
@@ -338,6 +339,7 @@
                         
                     </div>
                 </div>
+                <div>
                 <div class="juntos armadurainiciativavelocidade">
                     <div class="armadura">
                         <input type="number" id="char-armor"><br>
@@ -352,6 +354,54 @@
                         <label for="char-speed">Deslocamento</label>
                     </div>
                 </div>
+                <div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="class-2nd" onchange="updateClassLevel()">
+                            Check mark 2nd class:
+                            <select id="class-2nd-select" onchange="updateClassLevel()">
+                                <option value="human">Humano</option>
+                                <option value="elf">Elfo</option>
+                                <option value="dwarf">Anão</option>
+                                <option value="halfling">Halfling</option>
+                            </select>
+                            Level: <input type="text" id="class-2nd-level" oninput="updateClassLevel()">
+                            Subclass: <input type="text" id="class-2nd-subclass" oninput="updateClassLevel()">
+                        </label>
+                    </div>
+                
+                    <div>
+                        <label>
+                            <input type="checkbox" id="class-3rd" onchange="updateClassLevel()">
+                            Check mark 3rd class:
+                            <select id="class-3rd-select" onchange="updateClassLevel()">
+                                <option value="human">Humano</option>
+                                <option value="elf">Elfo</option>
+                                <option value="dwarf">Anão</option>
+                                <option value="halfling">Halfling</option>
+                            </select>
+                            Level: <input type="text" id="class-3rd-level" oninput="updateClassLevel()">
+                            Subclass: <input type="text" id="class-3rd-subclass" oninput="updateClassLevel()">
+                        </label>
+                    </div>
+                
+                    <div>
+                        <label>
+                            <input type="checkbox" id="class-4th" onchange="updateClassLevel()">
+                            Check mark 4th class:
+                            <select id="class-4th-select" onchange="updateClassLevel()">
+                                <option value="human">Humano</option>
+                                <option value="elf">Elfo</option>
+                                <option value="dwarf">Anão</option>
+                                <option value="halfling">Halfling</option>
+                            </select>
+                            Level: <input type="text" id="class-4th-level" oninput="updateClassLevel()">
+                            Subclass: <input type="text" id="class-4th-subclass" oninput="updateClassLevel()">
+                        </label>
+                    </div>
+                </div>
+            </div>
+                
             </div>
             <button class="buttonsalvar" id="save-button">Salvar</button>
             <input type="file" id="file-input" style="display: none;">

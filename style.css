@@ -346,9 +346,12 @@ input:focus {
 
 
 #char-level,
-#char-exp,
-#class-level {
+#char-exp {
     font-size: 22px;
+    text-align: center;
+    border: 1px solid #afb9d1;
+}
+#class-level{
     text-align: center;
     border: 1px solid #afb9d1;
 }
