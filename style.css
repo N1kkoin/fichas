@@ -329,6 +329,9 @@ input:focus {
     margin-top: 10px;
 }
 
+#alignment-description{
+    margin-top: 0;
+}
 
 
 #char-level, #char-exp, #class-level {
