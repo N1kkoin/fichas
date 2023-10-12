@@ -424,7 +424,107 @@ raceSelect.addEventListener('change', function () {
             raceTitle = 'Elfo';
             raceDescription = 'Elves are an elegant and long-lived race with a deep connection to nature. They are known for their grace, keen senses, and proficiency in archery and magic.';
             break;
-        // Adicione casos para outras raças conforme necessário
+        // Adicione outros casos para as outras raças aqui
+        case 'aarakocra':
+            raceTitle = 'Aarakocra';
+            raceDescription = 'Aarakocra are bird-like humanoids with the ability to fly. They live in high mountainous regions and are skilled in aerial combat and scouting.';
+            break;
+        case 'aasimar':
+            raceTitle = 'Aasimar';
+            raceDescription = 'Aasimar are celestial descendants with divine traits. They are often noble and possess abilities related to their celestial ancestry.';
+            break;
+        case 'airgenasi':
+            raceTitle = 'Air Genasi';
+            raceDescription = 'Air Genasi are infused with the power of air elementals. They have air-related abilities and are known for their agility and connection to the sky.';
+            break;
+        case 'bugbear':
+            raceTitle = 'Bugbear';
+            raceDescription = 'Bugbears are large and strong goblinoids. They are known for their stealth and brutality, often making them skilled in ambushes.';
+            break;
+        case 'centaur':
+            raceTitle = 'Centaur';
+            raceDescription = 'Centaur are half-human, half-horse creatures. They are skilled in archery, hunting, and are often guardians of the wilderness.';
+            break;
+        case 'changeling':
+            raceTitle = 'Changeling';
+            raceDescription = 'Changelings are shapeshifters with the ability to change their appearance. They are skilled in subterfuge and disguise.';
+            break;
+        case 'deepgnome':
+            raceTitle = 'Deep Gnome';
+            raceDescription = 'Deep Gnomes, or Svirfneblin, are subterranean gnomes known for their stealth and connection to the Underdark.';
+            break;
+        case 'dragonborn':
+            raceTitle = 'Dragonborn';
+            raceDescription = 'Dragonborn are dragon-like humanoids with breath weapons and dragon ancestry. They often have strong personalities.';
+            break;
+        case 'duergar':
+            raceTitle = 'Duergar';
+            raceDescription = 'Duergar are dark dwarves who dwell underground. They are known for their resilience and innate magical abilities.';
+            break;
+        case 'dwarf':
+            raceTitle = 'Dwarf';
+            raceDescription = 'Dwarves are stout and tough humanoids with a deep connection to the earth. They excel in craftsmanship and combat.';
+            break;
+        case 'earthgenasi':
+            raceTitle = 'Earth Genasi';
+            raceDescription = 'Earth Genasi are infused with the power of earth elementals. They have earth-related abilities and are known for their endurance and stability.';
+            break;
+        case 'highelves':
+            raceTitle = 'Alto Elfo';
+            raceDescription = 'Os elfos altos são uma sub-raça dos elfos conhecida por sua afinidade com a magia, destreza e beleza.';
+            break;
+        case 'avariel':
+            raceTitle = 'Elfos Alados (Avariel)';
+            raceDescription = 'Os avariel são uma rara sub-raça de elfos que possuem asas e podem voar. Eles são ligados ao céu e ao vento.';
+            break;
+        case 'eladrin':
+            raceTitle = 'Eladrin';
+            raceDescription = 'Os eladrin são elfos que têm uma forte conexão com o plano das fadas e são conhecidos por sua graça e magia.';
+            break;
+        case 'woodelves':
+            raceTitle = 'Elfo da Floresta';
+            raceDescription = 'Os elfos da floresta são uma sub-raça de elfos que vivem em harmonia com a natureza e são excelentes arqueiros.';
+            break;
+        case 'seaelves':
+            raceTitle = 'Elfo do Mar';
+            raceDescription = 'Os elfos do mar são uma sub-raça de elfos que habitam as regiões costeiras e são hábeis nadadores e navegadores.';
+            break;
+        case 'wildelves':
+            raceTitle = 'Elfos Selvagens';
+            raceDescription = 'Os elfos selvagens são nômades e possuem uma profunda conexão com a vida selvagem e a natureza.';
+            break;
+        case 'darkelves':
+            raceTitle = 'Elfo Negro (Drow)';
+            raceDescription = 'Os elfos negros, ou drow, vivem nas profundezas subterrâneas e são conhecidos por sua magia e sociedade complexa.';
+            break;
+        case 'greyelves':
+            raceTitle = 'Grey elves';
+            raceDescription = 'Grey elves are a reclusive subrace of elves known for their intelligence and magic proficiency.';
+            break;
+        case 'fairy':
+            raceTitle = 'Fairy';
+            raceDescription = 'Fairies are small, magical beings known for their playful nature and connection to the natural world.';
+            break;
+        case 'gnome':
+            raceTitle = 'Gnome';
+            raceDescription = 'Gnomes are small, clever humanoids with a knack for inventing and an affinity for illusions.';
+            break;
+        case 'halfelf':
+            raceTitle = 'Half-Elf';
+            raceDescription = 'Half-Elves are a hybrid race with human and elven ancestry, often having the best qualities of both races.';
+            break;
+        case 'halfling':
+            raceTitle = 'Halfling';
+            raceDescription = 'Halflings are small and nimble folk known for their love of comfort, food, and a simple, happy life.';
+            break;
+        case 'halforc':
+            raceTitle = 'Half-Orc';
+            raceDescription = 'Half-Orcs are strong and robust, born of human and orc parentage, often possessing both races\' strengths.';
+            break;
+        case 'tiefling':
+            raceTitle = 'Tiefling';
+            raceDescription = 'Tieflings are descendants of fiends, with infernal traits and a struggle against their dark ancestry.';
+            break;
 
         default:
             raceTitle = 'Raça';
