@@ -527,8 +527,8 @@ raceSelect.addEventListener('change', function () {
             break;
 
         default:
-            raceTitle = 'Raça';
-            raceDescription = 'Selecione uma raça para ver a descrição.';
+            raceTitle = 'Ancestralidade';
+            raceDescription = 'Selecione uma ancestralidade para ver a descrição.';
     }
 
     raceDescriptionDiv.innerHTML = `<h2>${raceTitle}</h2><p>${raceDescription}</p>`;
@@ -563,7 +563,7 @@ classSelect.addEventListener('change', function () {
             classDescription = 'Bardo é um conjurador de magias inspirador, influenciador e manipulador. Muitos bardos são eruditos, outros tanto são patifes, alguns são espiões, mas o que os une é a forma como usam suas palavras e músicas para moldar as mentes dos ouvintes, inspirando ou desmoralizando, além de serem capazes de criar ilusões e, até mesmo, curar ferimentos.</br></br>Bardos são extremamente versáteis e podem usar suas habilidades e magias para combater a distância, combater corpo a corpo, ficar a distância fazendo com que seus aliados lutem de forma mais efetiva ou tornando seus adversários menos efetivos. Se causar dano não é seu forte normalmente, suas habilidades de ilusão e encantamento permitem que eles transitem entre o ataque e defesa com muita qualidade. Eles também são úteis em campanhas e investigação, de negociação e de infiltração.</br></br><span class="descriçãomenor"><b>BP (Bônus de Proficiência) Inicial:</b> <span class="positivo">+2</span> </br><b>Dado de Vida:</b> D8+ Modificador de Constituição</br><b>PV níveis posteriores:</b> 1d8 (ou 5) + Modificador de Constituição</br><b>Armas:</b> Simples, besta de mão, espada curta, espada longa, rapieira</br><b>Armaduras:</b> Leves</br><b>Ferramentas:</b> Escolha três instrumentos musicais</br><b>Testes de Resistência:</b> Destreza e Carisma</br><b>Perícias:</b> Escolha três que quiser</br><b>Habilidade de Conjuração:</b> Carisma</br></br></span><a target="_blank" href="https://thesunderingtale.blogspot.com/2017/12/d-5e-bardo.html">Mais informações</a>';
             break;
         case 'bloodhunter':
-            classTitle = 'Caçador de';
+            classTitle = 'Caçador de Sangue';
             classDescription = 'Ainda não coloquei.';
             break;
         case 'cleric':
