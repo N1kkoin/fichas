@@ -272,6 +272,7 @@ select {
     padding: 5px 10px;
     text-align: left;
     font-size: 16px;
+    width: 100%;
 }
 
 select:focus {
@@ -293,6 +294,7 @@ input:focus {
     display: flex;
     width: 100%;
     gap: 10px;
+    box-sizing: border-box;
 }
 
 .character-info .racaeclasse label {
@@ -441,7 +443,7 @@ button {
 
 .juntos {
     display: flex;
-    gap: 22px;
+    gap: 10px;
 }
 
 .armadurainiciativavelocidade input {
@@ -472,9 +474,6 @@ button {
     margin-left: 20px;
 }
 
-.multiclasscontainer{
-    margin-left: 20px;
-}
 
 .multiclasscontainer input[type="text"] {
     -webkit-appearance: none;
@@ -488,31 +487,31 @@ button {
  #class-2nd-level, #class-3rd-level, #class-4th-level{
     width: 100%;
     box-sizing: border-box;
-
-
 }
 
 #class-2nd-subclass, #class-3rd-subclass, #class-4th-subclass{
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .multiclasscontainer label{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     margin-top: 10px;
     box-sizing: border-box;
-    box-sizing: border-box;
-
 }
 
 #class-2nd, #class-3rd, #class-4th{
     margin: 0;
-    width: 20px;
+    width: 18px;
     border: 1px solid #afb9d1;
     box-sizing: border-box;
+    margin-bottom: 20px;
 
+}
+
+#class-2nd-select section{
+    width: fit-content;
 }
 
 .titulocinza{
