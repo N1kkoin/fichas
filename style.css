@@ -350,16 +350,23 @@ input:focus {
     font-size: 22px;
     text-align: center;
     border: 1px solid #afb9d1;
+    box-sizing: border-box;
+    height: 40px;
 }
 #class-level{
     text-align: center;
     border: 1px solid #afb9d1;
+    box-sizing: border-box;
+    height: 40px;
+
 }
 
 #char-name {
     font-size: 22px;
     width: 100%;
     border: 1px solid #afb9d1;
+    box-sizing: border-box;
+    height: 40px;
 }
 
 .positivo {
@@ -443,6 +450,7 @@ button {
     text-align: center;
     border: 1px solid #afb9d1;
     border-radius: 10px;
+    box-sizing: border-box;
 
 }
 
@@ -479,11 +487,15 @@ button {
 
  #class-2nd-level, #class-3rd-level, #class-4th-level{
     width: 100%;
+    box-sizing: border-box;
+
 
 }
 
 #class-2nd-subclass, #class-3rd-subclass, #class-4th-subclass{
     width: 100%;
+    box-sizing: border-box;
+
 }
 
 .multiclasscontainer label{
@@ -491,12 +503,16 @@ button {
     gap: 20px;
     margin-top: 10px;
     box-sizing: border-box;
+    box-sizing: border-box;
+
 }
 
 #class-2nd, #class-3rd, #class-4th{
     margin: 0;
     width: 20px;
     border: 1px solid #afb9d1;
+    box-sizing: border-box;
+
 }
 
 .titulocinza{
@@ -506,4 +522,17 @@ button {
     font-size: 12px;
     width: fit-content;
     text-transform: uppercase;
+}
+
+summary{
+    background-color: #007bff56;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
 }
