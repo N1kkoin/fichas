@@ -111,14 +111,14 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 45px;
     text-align: center;
     box-sizing: border-box;
-    border: 1px solid #afb9d1;
+    border: 1px solid #ffffff;
     border-radius: 100%;
     width: 45px;
     margin: 0 auto;
     display: flex;
     z-index: 1;
-    margin-top: -70px;
-    background-color: white;
+    margin-top: -75px;
+    background-color: hwb(212 88% 0%);
     position: absolute;
 
 }
@@ -154,6 +154,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     margin-left: 10px;
     margin-top: 8px;
+    min-width: 140px
 }
 
 .character-skills input,
@@ -273,15 +274,19 @@ select {
 }
 
 select:focus {
-    border: 1px solid #007BFF !important; /* Mude as propriedades da borda conforme desejado */
-    outline: none; /* Opcional: para remover a borda padrão do navegador */
-  }
-  
+    border: 1px solid #007BFF !important;
+    /* Mude as propriedades da borda conforme desejado */
+    outline: none;
+    /* Opcional: para remover a borda padrão do navegador */
+}
+
 input:focus {
-    border: 1px solid #007BFF !important; /* Mude as propriedades da borda conforme desejado */
-    outline: none; /* Opcional: para remover a borda padrão do navegador */
-  }
-  
+    border: 1px solid #007BFF !important;
+    /* Mude as propriedades da borda conforme desejado */
+    outline: none;
+    /* Opcional: para remover a borda padrão do navegador */
+}
+
 
 .racaeclasse {
     display: flex;
@@ -324,22 +329,27 @@ input:focus {
 }
 
 
-#race-description, #gods-description, #class-description, #alignment-description{
+#race-description,
+#gods-description,
+#class-description,
+#alignment-description {
     background-color: #ffffff;
     padding: 5px 20px;
     border-radius: 10px;
     margin-top: 10px;
 }
 
-#alignment-description{
+#alignment-description {
     margin-top: 0;
 }
 
 
-#char-level, #char-exp, #class-level {
+#char-level,
+#char-exp,
+#class-level {
     font-size: 22px;
     text-align: center;
-    border: 1px solid #afb9d1; 
+    border: 1px solid #afb9d1;
 }
 
 #char-name {
@@ -423,9 +433,25 @@ button {
     gap: 22px;
 }
 
-.armadurainiciativavelocidade input{
+.armadurainiciativavelocidade input {
     height: 65px;
     font-size: 22px;
     text-align: center;
-    border: 1px solid #afb9d1; 
+    border: 1px solid #afb9d1;
+    border-radius: 10px;
+
+}
+
+.armadurainiciativavelocidade label {
+    color: #787878;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    width: fit-content;
+    text-transform: uppercase;
+
+}
+
+.armadurainiciativavelocidade {
+    margin-left: 20px;
 }
