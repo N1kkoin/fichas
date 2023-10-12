@@ -477,10 +477,25 @@ button {
     font-family: 'Lato', sans-serif;
 }
 
- #class-2nd-level, #class-3nd-level{
-    width: 30px;
+ #class-2nd-level, #class-3rd-level, #class-4th-level{
+    width: 100%;
+
 }
 
-#class-4th-subclass{
-    width: 150px;
+#class-2nd-subclass, #class-3rd-subclass, #class-4th-subclass{
+    width: 100%;
+}
+
+.multiclasscontainer label{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+#class-2nd, #class-3rd, #class-4th{
+    margin: 0;
+    width: 20px;
+    border: 1px solid #afb9d1;
+
 }

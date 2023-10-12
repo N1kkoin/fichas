@@ -952,3 +952,5 @@ function updateClassLevel() {
         document.getElementById("class-level").value = selectedClasses.join(", ");
     }
 }
+
+//ESCONDER MULTICLASSE ---------------------------------------------------------------------------
