@@ -902,22 +902,53 @@ charExpInput.addEventListener("input", function () {
 //MULTICLASSE ---------------------------------------------------------------------------
 function updateClassLevel() {
     var selectedClasses = [];
+    var activeCheckboxes = 0;
 
     if (document.getElementById("class-2nd").checked) {
-        selectedClasses.push(document.getElementById("class-2nd-subclass").value);
-        selectedClasses.push(document.getElementById("class-2nd-select").value);
-        selectedClasses.push(document.getElementById("class-2nd-level").value);
-    }
-    if (document.getElementById("class-3rd").checked) {
-        selectedClasses.push(document.getElementById("class-3rd-subclass").value);
-        selectedClasses.push(document.getElementById("class-3rd-select").value);
-        selectedClasses.push(document.getElementById("class-3rd-level").value);
-    }
-    if (document.getElementById("class-4th").checked) {
-        selectedClasses.push(document.getElementById("class-4th-subclass").value);
-        selectedClasses.push(document.getElementById("class-4th-select").value);
-        selectedClasses.push(document.getElementById("class-4th-level").value);
+        var subclass2nd = document.getElementById("class-2nd-subclass").value;
+        var class2nd = document.getElementById("class-2nd-select").value;
+        var level2nd = document.getElementById("class-2nd-level").value;
+
+        if (subclass2nd && class2nd && level2nd) {
+            selectedClasses.push(subclass2nd + class2nd + ", " + level2nd);
+        } else {
+            selectedClasses.push(class2nd + ", " + level2nd);
+        }
+
+        activeCheckboxes++;
     }
 
-    document.getElementById("class-level").value = selectedClasses.join(", ");
+    if (document.getElementById("class-3rd").checked) {
+        var subclass3rd = document.getElementById("class-3rd-subclass").value;
+        var class3rd = document.getElementById("class-3rd-select").value;
+        var level3rd = document.getElementById("class-3rd-level").value;
+
+        if (subclass3rd && class3rd && level3rd) {
+            selectedClasses.push(subclass3rd + class3rd + ", " + level3rd);
+        } else {
+            selectedClasses.push(class3rd + ", " + level3rd);
+        }
+
+        activeCheckboxes++;
+    }
+
+    if (document.getElementById("class-4th").checked) {
+        var subclass4th = document.getElementById("class-4th-subclass").value;
+        var class4th = document.getElementById("class-4th-select").value;
+        var level4th = document.getElementById("class-4th-level").value;
+
+        if (subclass4th && class4th && level4th) {
+            selectedClasses.push(subclass4th + class4th + ", " + level4th);
+        } else {
+            selectedClasses.push(class4th + ", " + level4th);
+        }
+
+        activeCheckboxes++;
+    }
+
+    if (activeCheckboxes > 1) {
+        document.getElementById("class-level").value = selectedClasses.join(" | ");
+    } else {
+        document.getElementById("class-level").value = selectedClasses.join(", ");
+    }
 }

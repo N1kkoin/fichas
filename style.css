@@ -459,3 +459,28 @@ button {
 .armadurainiciativavelocidade {
     margin-left: 20px;
 }
+
+.multiclasscontainer{
+    margin-left: 20px;
+}
+
+.multiclasscontainer{
+    margin-left: 20px;
+}
+
+.multiclasscontainer input[type="text"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    border: 1px solid #afb9d1;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+ #class-2nd-level, #class-3nd-level{
+    width: 30px;
+}
+
+#class-4th-subclass{
+    width: 150px;
+}
