@@ -783,8 +783,8 @@ godSelect.addEventListener('change', function () {
             godsdescription = 'Waukeen é a deusa do comércio e do lucro. Ela é adorada por mercadores e comerciantes que buscam prosperidade nos negócios. Sua influência está ligada à riqueza material e ao sucesso financeiro.';
             break;
         default:
-            godstitle = 'Divindade';
-            godsdescription = 'Selecione uma divindade para ver a descrição.';
+            godstitle = 'Religião';
+            godsdescription = 'Selecione uma religião para ver a descrição.';
     }
 
     godsdescriptionDiv.innerHTML = `<h2>${godstitle}</h2><p>${godsdescription}</p>`;
