@@ -410,11 +410,13 @@ const attributes = [
         inputId: "char-strength",
         modId: "char-strengthmod",
         savingThrowId: "char-strength-savingthrow",
+        skillIds: ["char-athletics"]
     },
     {
         inputId: "char-dexterity",
         modId: "char-dexteritymod",
         savingThrowId: "char-dexterity-savingthrow",
+        skillIds: ["char-acrobatics", "char-sleightofhand", "char-stealth"]
     },
     {
         inputId: "char-constitution",
@@ -425,16 +427,19 @@ const attributes = [
         inputId: "char-intelligence",
         modId: "char-intelligencemod",
         savingThrowId: "char-intelligence-savingthrow",
+        skillIds: ["char-arcana", "char-history", "char-investigation", "char-nature", "char-religion"]
     },
     {
         inputId: "char-wisdom",
         modId: "char-wisdommod",
         savingThrowId: "char-wisdom-savingthrow",
+        skillIds: ["char-animal", "char-survival", "char-perception", "char-medicine", "char-insight"]
     },
     {
         inputId: "char-charisma",
         modId: "char-charismamod",
         savingThrowId: "char-charisma-savingthrow",
+        skillIds: ["char-persuasion", "char-performance", "char-deception", "char-intimidation"]
     },
 ];
 
@@ -447,7 +452,15 @@ attributes.forEach((attribute) => {
         const attributeValue = parseInt(input.value);
         const modValue = calculateMod(attributeValue);
         modInput.value = modValue;
-        savingThrowInput.value = modValue; // Atualiza o valor do mod também para o campo de salvaguarda
+        savingThrowInput.value = modValue;
+
+        // Atualize os campos de perícia com base no novo valor de salvaguarda
+        if (attribute.skillIds) {
+            attribute.skillIds.forEach((skillId) => {
+                const skillInput = document.getElementById(skillId);
+                skillInput.value = modValue;
+            });
+        }
     });
 });
 
