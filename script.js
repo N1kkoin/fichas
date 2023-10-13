@@ -1,7 +1,8 @@
 
 //SALVAR --------------------------------------------------------------------------------------------
 document.getElementById('save-button').addEventListener('click', function () {
-
+    
+    const characterName = document.getElementById('char-name').value; // Obtenha o nome do personagem
     const characterData = {
         name: document.getElementById('char-name').value,
         race: document.getElementById('char-race').value,
@@ -80,7 +81,7 @@ document.getElementById('save-button').addEventListener('click', function () {
     // Cria um link para download do arquivo JSON
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'ficha_personagem.json';
+    a.download = characterName + '_ficha.json'; // Nome do arquivo será "NOMEDOPERSONAGEM_ficha.json"
 
     // Simula um clique no link para iniciar o download
     a.click();
