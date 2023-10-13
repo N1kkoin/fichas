@@ -1,13 +1,14 @@
 
 //SALVAR --------------------------------------------------------------------------------------------
 document.getElementById('save-button').addEventListener('click', function () {
+
     const characterData = {
         name: document.getElementById('char-name').value,
         race: document.getElementById('char-race').value,
         class: document.getElementById('char-class').value,
         level: document.getElementById('char-level').value,
         classlevel: document.getElementById('class-level').value,
-       
+
         armor: document.getElementById('char-armor').value,
         initiative: document.getElementById('char-initiative').value,
         speed: document.getElementById('char-speed').value,
@@ -56,7 +57,17 @@ document.getElementById('save-button').addEventListener('click', function () {
             sleightOfHand: document.getElementById('char-sleightofhand').value,
             stealth: document.getElementById('char-stealth').value,
             survival: document.getElementById('char-survival').value
-        }
+        },
+
+        // Configurações do editor de texto
+        editorSettings: {
+            fontSize: document.getElementById("fontSize").value,
+            fontColor: document.getElementById("myColor").value,
+            fontFamily: document.getElementById("input-font").value,
+        },
+
+        // Texto do editor
+        editorText: document.getElementById("editor1").innerHTML,
     };
 
 
@@ -152,7 +163,11 @@ document.getElementById('load-button').addEventListener('click', function () {
                 document.getElementById('char-stealth').value = characterData.skills.stealth;
                 document.getElementById('char-survival').value = characterData.skills.survival;
 
-
+                // Carregar as configurações do editor de texto e o texto do editor a partir do objeto characterData
+                document.getElementById("fontSize").value = characterData.editorSettings.fontSize;
+                document.getElementById("myColor").value = characterData.editorSettings.fontColor;
+                document.getElementById("input-font").value = characterData.editorSettings.fontFamily;
+                document.getElementById("editor1").innerHTML = characterData.editorText;
                 // Exiba a imagem do retrato
                 document.getElementById('portrait-preview').src = characterData.portrait;
 
@@ -218,7 +233,7 @@ document.getElementById('save-button').addEventListener('click', function () {
             armor: document.getElementById('char-armor').value,
             initiative: document.getElementById('char-initiative').value,
             speed: document.getElementById('char-speed').value,
-            
+
             exp: document.getElementById('char-exp').value,
             strength: strength,
             strengthmod: document.getElementById('char-strengthmod').value,
@@ -263,7 +278,16 @@ document.getElementById('save-button').addEventListener('click', function () {
                 sleightOfHand: document.getElementById('char-sleightofhand').value,
                 stealth: document.getElementById('char-stealth').value,
                 survival: document.getElementById('char-survival').value
-            }
+            },
+            // Configurações do editor de texto
+            editorSettings: {
+                fontSize: document.getElementById("fontSize").value,
+                fontColor: document.getElementById("myColor").value,
+                fontFamily: document.getElementById("input-font").value,
+            },
+
+            // Texto do editor
+            editorText: document.getElementById("editor1").innerHTML,
         };
 
         // Converte os dados da ficha de personagem em formato JSON
@@ -966,6 +990,29 @@ function updateClassLevel() {
     }
 }
 
-//ESCONDER MULTICLASSE ---------------------------------------------------------------------------
+// TEXTO LONGO TEXT EDITOR ---------------------------------------------------------------------------
+function chooseColor() {
+    var mycolor = document.getElementById("myColor").value;
+    document.execCommand('foreColor', false, mycolor);
+}
 
-  
+function changeFont() {
+    var myFont = document.getElementById("input-font").value;
+    document.execCommand('fontName', false, myFont);
+}
+
+function changeSize() {
+    var mysize = document.getElementById("fontSize").value;
+    document.execCommand('fontSize', false, mysize);
+}
+
+function checkDiv() {
+    var editorText = document.getElementById("editor1").innerHTML;
+    if (editorText === '') {
+        document.getElementById("editor1").style.border = '5px solid red';
+    }
+}
+
+function removeBorder() {
+    document.getElementById("editor1").style.border = '1px solid transparent';
+}
