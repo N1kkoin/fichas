@@ -474,6 +474,16 @@ button {
     margin-left: 20px;
 }
 
+.multiclasslevel {
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.multiclasslevel input{
+    border-radius: 10px;
+}
+
+
 
 .multiclasscontainer input[type="text"] {
     -webkit-appearance: none;
@@ -519,8 +529,8 @@ button {
     margin-top: -5px;
     margin-bottom: 10px;
     font-size: 12px;
-    width: fit-content;
     text-transform: uppercase;
+    box-sizing: border-box;
 }
 
 summary{
