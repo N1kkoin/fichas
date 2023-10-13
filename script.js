@@ -409,39 +409,48 @@ const attributes = [
     {
         inputId: "char-strength",
         modId: "char-strengthmod",
+        savingThrowId: "char-strength-savingthrow",
     },
     {
         inputId: "char-dexterity",
         modId: "char-dexteritymod",
+        savingThrowId: "char-dexterity-savingthrow",
     },
     {
         inputId: "char-constitution",
         modId: "char-constitutionmod",
+        savingThrowId: "char-constitution-savingthrow",
     },
     {
         inputId: "char-intelligence",
         modId: "char-intelligencemod",
+        savingThrowId: "char-intelligence-savingthrow",
     },
     {
         inputId: "char-wisdom",
         modId: "char-wisdommod",
+        savingThrowId: "char-wisdom-savingthrow",
     },
     {
         inputId: "char-charisma",
         modId: "char-charismamod",
+        savingThrowId: "char-charisma-savingthrow",
     },
 ];
 
 attributes.forEach((attribute) => {
     const input = document.getElementById(attribute.inputId);
     const modInput = document.getElementById(attribute.modId);
+    const savingThrowInput = document.getElementById(attribute.savingThrowId);
 
     input.addEventListener("input", function () {
         const attributeValue = parseInt(input.value);
         const modValue = calculateMod(attributeValue);
         modInput.value = modValue;
+        savingThrowInput.value = modValue; // Atualiza o valor do mod também para o campo de salvaguarda
     });
 });
+
 
 // DESCRICAO RAÇA ---------------------------------------------------------------------------------------
 const raceSelect = document.getElementById('char-race');
