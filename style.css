@@ -360,6 +360,7 @@ input:focus {
     border: 1px solid #afb9d1;
     box-sizing: border-box;
     height: 40px;
+    margin-top: 10px;
 
 }
 
