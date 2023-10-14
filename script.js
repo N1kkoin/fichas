@@ -15,6 +15,7 @@ document.getElementById('save-button').addEventListener('click', function () {
         speed: document.getElementById('char-speed').value,
 
         exp: document.getElementById('char-exp').value,
+        bonus: document.getElementById('char-bonus').value,
         strength: document.getElementById('char-strength').value,
         strengthmod: document.getElementById('char-strengthmod').value,
         dexterity: document.getElementById('char-dexterity').value,
@@ -115,6 +116,8 @@ document.getElementById('load-button').addEventListener('click', function () {
                 document.getElementById('char-level').value = characterData.level;
                 document.getElementById('class-level').value = characterData.classlevel;
                 document.getElementById('char-exp').value = characterData.exp;
+                document.getElementById('char-bonus').value = characterData.bonus;
+
 
                 document.getElementById('char-armor').value = characterData.armor;
                 document.getElementById('char-initiative').value = characterData.initiative;
@@ -236,6 +239,7 @@ document.getElementById('save-button').addEventListener('click', function () {
             speed: document.getElementById('char-speed').value,
 
             exp: document.getElementById('char-exp').value,
+            bonus: document.getElementById('char-bonus').value,
             strength: strength,
             strengthmod: document.getElementById('char-strengthmod').value,
             dexterity: dexterity,
@@ -449,17 +453,24 @@ attributes.forEach((attribute) => {
     const modInput = document.getElementById(attribute.modId);
     const savingThrowInput = document.getElementById(attribute.savingThrowId);
 
+
+
+
     input.addEventListener("input", function () {
         const attributeValue = parseInt(input.value);
         const modValue = calculateMod(attributeValue);
-        modInput.value = modValue;
-        savingThrowInput.value = modValue;
+
+        // Adiciona o "+" apenas se o modificador for maior ou igual a zero
+        modInput.value = modValue >= 0 ? `+${modValue}` : modValue;
+        savingThrowInput.value = modValue >= 0 ? `+${modValue}` : modValue;
 
         // Atualize os campos de perícia com base no novo valor de salvaguarda
         if (attribute.skillIds) {
             attribute.skillIds.forEach((skillId) => {
                 const skillInput = document.getElementById(skillId);
-                skillInput.value = modValue;
+
+                // Adiciona o "+" apenas se o modificador for maior ou igual a zero
+                skillInput.value = modValue >= 0 ? `+${modValue}` : modValue;
             });
         }
     });
@@ -1068,3 +1079,11 @@ function calculateCharBonus(charLevel) {
         return 0; // Valor padrão, se estiver fora do intervalo especificado
     }
 }
+
+//PROIBE MODIFICAÇÃO MANUAL ATRIBUTOS ---------------------------------------------------
+    // Adiciona um evento para desabilitar a edição manual ao clicar no input
+    document.querySelectorAll('.disabled-input').forEach(function (input) {
+        input.addEventListener('focus', function () {
+            this.blur();
+        });
+    });

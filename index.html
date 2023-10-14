@@ -161,7 +161,9 @@
                         </div>
                         <div>
                             <input type="text" id="char-bonus">
-                            <label for="char-bonus">Bônus de Proficiência</label>
+                            <label for="char-bonus" class="custom-tooltip"
+                                data-title="Cada classe tem proficiências únicas, ampliando as opções de jogabilidade e personalização do personagem. Esses bônus aumentam com o avanço do nível, aprofundando a expertise da classe.">
+                                Bônus de Proficiência</label>
                         </div>
                     </div>
                 </div>
@@ -173,7 +175,7 @@
                 <div class="character-stats">
                     <h2>Atributos</h2>
                     <div>
-                        <input type="number" id="char-strengthmod"><br>
+                        <input type="text" id="char-strengthmod" class="disabled-input"><br>
                         <label for="char-strength" class="custom-tooltip"
                             data-title="A Força representa a capacidade física do personagem. Ela influencia a capacidade de levantar, carregar e causar dano com armas corpo a corpo. Personagens fortes geralmente são guerreiros eficazes em combate e podem realizar tarefas que exigem força bruta.">Força</label>
                     </div>
@@ -182,7 +184,7 @@
                     </div>
 
                     <div>
-                        <input type="number" id="char-dexteritymod"><br>
+                        <input type="text" id="char-dexteritymod" class="disabled-input"><br>
                         <label for="char-dexterity" class="custom-tooltip"
                             data-title="A Destreza mede a agilidade, velocidade e reflexos do personagem. Ela afeta a capacidade de acertar alvos com armas à distância, evitar ataques e armadilhas, bem como realizar ações que exigem precisão, como a furtividade. ">Destreza</label>
                     </div>
@@ -190,7 +192,7 @@
                         <input type="number" id="char-dexterity"><br>
                     </div>
                     <div>
-                        <input type="number" id="char-constitutionmod"><br>
+                        <input type="text" id="char-constitutionmod" class="disabled-input"><br>
                         <label for="char-constitution" class="custom-tooltip"
                             data-title="A Constituição reflete a resistência e saúde do personagem. Ela determina quantos pontos de vida o personagem tem e quão bem ele pode resistir a doenças, venenos e condições adversas. Personagens com uma alta Constituição são geralmente mais resistentes e podem suportar melhor os rigores do combate.">Constituição</label>
                     </div>
@@ -198,7 +200,7 @@
                         <input type="number" id="char-constitution"><br>
                     </div>
                     <div>
-                        <input type="number" id="char-intelligencemod"><br>
+                        <input type="text" id="char-intelligencemod" class="disabled-input"><br>
                         <label for="char-intelligence" class="custom-tooltip"
                             data-title="A Inteligência representa a capacidade mental, conhecimento e raciocínio do personagem. Ela influencia a capacidade de aprender e usar magias, resolver enigmas e tomar decisões estratégicas.">Inteligência</label>
                     </div>
@@ -206,7 +208,7 @@
                         <input type="number" id="char-intelligence"><br>
                     </div>
                     <div>
-                        <input type="number" id="char-wisdommod"><br>
+                        <input type="text" id="char-wisdommod" class="disabled-input"><br>
                         <label for="char-wisdom" class="custom-tooltip"
                             data-title="A Sabedoria reflete a intuição, sensibilidade e discernimento do personagem. Ela afeta a capacidade de perceber o ambiente ao redor, resistir ao controle mental e fazer escolhas morais.">Sabedoria</label>
                     </div>
@@ -214,7 +216,7 @@
                         <input type="number" id="char-wisdom"><br>
                     </div>
                     <div>
-                        <input type="number" id="char-charismamod"><br>
+                        <input type="text" id="char-charismamod" class="disabled-input"><br>
 
                         <label for="char-charisma" class="custom-tooltip"
                             data-title="O Carisma representa a personalidade, carisma e poder de persuasão do personagem. Ele influencia a capacidade de interagir socialmente, convencer outros e liderar.">Carisma</label>
@@ -227,37 +229,37 @@
                     <div class="character-savingthrows">
                         <h2>Salvaguarda</h2>
                         <div class="skillsflex">
-                            <input type="number" id="char-strength-savingthrow"><br>
+                            <input type="text" id="char-strength-savingthrow" class="disabled-input"><br>
                             <label for="char-strength-savingthrow" class="custom-tooltip"
                                 data-title="Mede a capacidade do personagem de resistir a efeitos que envolvam força física bruta, como tentativas de empurrão, agarrar, ou evita ser derrubado.">Força</label>
                         </div>
 
                         <div class="skillsflex">
-                            <input type="number" id="char-dexterity-savingthrow"><br>
+                            <input type="text" id="char-dexterity-savingthrow" class="disabled-input"><br>
                             <label for="char-dexterity-savingthrow" class="custom-tooltip"
                                 data-title="Avalia a habilidade do personagem de evitar perigos, como armadilhas, explosões e ataques de área. Também é útil para evitar efeitos que exijam agilidade e reflexos, como magias de área.">Destreza</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-constitution-savingthrow"><br>
+                            <input type="text" id="char-constitution-savingthrow" class="disabled-input"><br>
                             <label for="char-constitution-savingthrow" class="custom-tooltip"
                                 data-title="Mede a capacidade do personagem de resistir a efeitos que afetam a sua saúde e vitalidade, como venenos, doenças, ou dano por envenenamento.">Constituição</label>
 
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-intelligence-savingthrow"><br>
+                            <input type="text" id="char-intelligence-savingthrow" class="disabled-input"><br>
                             <label for="char-intelligence-savingthrow" class="custom-tooltip"
                                 data-title="Raramente é usada, mas pode ser necessária para resistir a certos efeitos mentais ou mágicos que afetam o intelecto ou a memória do personagem.">
                                 Inteligência</label>
 
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-wisdom-savingthrow"><br>
+                            <input type="text" id="char-wisdom-savingthrow" class="disabled-input"><br>
                             <label for="char-wisdom-savingthrow" class="custom-tooltip"
                                 data-title="Mede a capacidade do personagem de resistir a efeitos que afetam a sua mente, como encantamentos, controle mental e ilusões.">Sabedoria</label>
 
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-charisma-savingthrow"><br>
+                            <input type="text" id="char-charisma-savingthrow" class="disabled-input"><br>
                             <label for="char-charisma-savingthrow" class="custom-tooltip"
                                 data-title="Usada para resistir a efeitos que tentam influenciar ou controlar a personalidade do personagem, como encantamentos carismáticos ou manipulação social mágica.">Carisma</label>
                         </div>
@@ -265,78 +267,113 @@
                     <div class="character-skills">
                         <h2>Perícias</h2>
                         <div class="skillsflex">
-                            <input type="number" id="char-acrobatics"><br>
-                            <label for="char-acrobatics">Acrobacia (DES)</label>
+                            <input type="text" id="char-acrobatics" class="disabled-input"><br>
+                            <label for="char-acrobatics" class="custom-tooltip"
+                                data-title="Realize um teste de 'Acrobacia' para ver se o personagem pode realizar façanhas acrobáticas, manter o equilíbrio enquanto está caminhando sobre superfícies estreitas ou instáveis, escapar da manobra agarrar ou de amarras e reduzir o dano de uma queda.                            ">
+                                Acrobacia (DES)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-animal"><br>
-                            <label for="char-animal">Adestramento (SAB)</label>
+                            <input type="text" id="char-animal" class="disabled-input"><br>
+                            <label for="char-animal" class="custom-tooltip"
+                                data-title="Faça um teste de 'Adestramento' para acalmar animais selvagens, treinar montarias, ou comunicar-se com bestas não inteligentes.">
+                                Adestramento (SAB)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-arcana"><br>
-                            <label for="char-arcana">Arcana (INT)</label>
+                            <input type="text" id="char-arcana" class="disabled-input"><br>
+                            <label for="char-arcana" class="custom-tooltip"
+                                data-title="Use 'Arcana' para identificar magias, entender símbolos mágicos, ou reconhecer seres e criaturas mágicas.">
+                                Arcana (INT)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-athletics"><br>
-                            <label for="char-athletics">Atletismo (FOR)</label>
+                            <input type="text" id="char-athletics" class="disabled-input"><br>
+                            <label for="char-athletics" class="custom-tooltip"
+                                data-title="Realize um teste de 'Atletismo' para escalar uma parede íngreme, pular um fosso largo, nadar em águas turbulentas ou empurrar um objeto pesado.">
+                                Atletismo (FOR)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-deception"><br>
-                            <label for="char-deception">Enganação (CAR)</label>
+                            <input type="text" id="char-deception" class="disabled-input"><br>
+                            <label for="char-deception" class="custom-tooltip"
+                                data-title="Use 'Enganação' para enganar outros personagens, criar histórias falsas, disfarçar suas intenções ou ludibriar inimigos.">
+                                Enganação (CAR)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-history"><br>
-                            <label for="char-history">Historia (INT)</label>
+                            <input type="text" id="char-history" class="disabled-input"><br>
+                            <label for="char-history" class="custom-tooltip"
+                                data-title="Faça um teste de 'História' para recordar eventos passados, identificar artefatos históricos, ou compreender a importância cultural de uma região.">
+                                Historia (INT)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-insight"><br>
-                            <label for="char-insight">Percepção (SAB)</label>
+                            <input type="text" id="char-insight" class="disabled-input"><br>
+                            <label for="char-insight" class="custom-tooltip"
+                                data-title="Use 'Percepção' para ler as intenções e emoções de outras criaturas, determinar se alguém está mentindo ou avaliar a sinceridade de suas palavras.                            ">
+                                Percepção (SAB)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-intimidation"><br>
-                            <label for="char-intimidation">Intimidação (CAR)</label>
+                            <input type="text" id="char-intimidation" class="disabled-input"><br>
+                            <label for="char-intimidation" class="custom-tooltip"
+                                data-title="Use 'Intimidação' para forçar outros personagens a obedecerem ou intimidá-los de alguma forma. Pode ser útil para obter informações de testemunhas relutantes, ameaçar inimigos ou estabelecer autoridade.">
+                                Intimidação (CAR)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-investigation"><br>
-                            <label for="char-investigation">Investigação (INT)</label>
+                            <input type="text" id="char-investigation" class="disabled-input"><br>
+                            <label for="char-investigation" class="custom-tooltip"
+                                data-title="Realize um teste de 'Investigação' para examinar cenas de crime, procurar pistas, decifrar códigos ou investigar mistérios. É essencial para resolver enigmas e desvendar tramas complexas.">
+                                Investigação (INT)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-medicine"><br>
-                            <label for="char-medicine">Medicina (SAB)</label>
+                            <input type="text" id="char-medicine" class="disabled-input"><br>
+                            <label for="char-medicine" class="custom-tooltip"
+                                data-title="Faça um teste de 'Medicina' para estancar feridas, diagnosticar doenças, administrar primeiros socorros ou tratar enfermidades. Pode ser crucial para salvar vidas e manter a saúde do grupo.">
+                                Medicina (SAB)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-nature"><br>
-                            <label for="char-nature">Natureza (INT)</label>
+                            <input type="text" id="char-nature" class="disabled-input"><br>
+                            <label for="char-nature" class="custom-tooltip"
+                                data-title="Realize um teste de 'Natureza' para rastrear criaturas na natureza, identificar plantas medicinais, ou compreender o comportamento de animais selvagens.">
+                                Natureza (INT)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-perception"><br>
-                            <label for="char-perception">Percepção (SAB)</label>
+                            <input type="text" id="char-perception" class="disabled-input"><br>
+                            <label for="char-perception" class="custom-tooltip"
+                                data-title="Faça um teste de 'Percepção' para notar detalhes importantes no ambiente, detectar inimigos escondidos, encontrar armadilhas ou identificar objetos camuflados.">
+                                Percepção (SAB)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-performance"><br>
-                            <label for="char-performance">Atuação (CAR)</label>
+                            <input type="text" id="char-performance" class="disabled-input"><br>
+                            <label for="char-performance" class="custom-tooltip"
+                                data-title="Realize um teste de 'Atuação' para entreter uma plateia com música, dança, atuação ou outra forma de arte. Pode ser usado para ganhar dinheiro em uma rua movimentada, impressionar nobres em uma festa ou acalmar uma multidão inquieta.">
+                                Atuação (CAR)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-persuasion"><br>
-                            <label for="char-persuasion">Persuasão (CAR)</label>
+                            <input type="text" id="char-persuasion" class="disabled-input"><br>
+                            <label for="char-persuasion" class="custom-tooltip"
+                                data-title="Realize um teste de 'Persuasão' para convencer outros personagens a concordarem com sua proposta, influenciar decisões importantes ou negociar melhores termos.">
+                                Persuasão (CAR)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-religion"><br>
-                            <label for="char-religion">Religião (INT)</label>
+                            <input type="text" id="char-religion" class="disabled-input"><br>
+                            <label for="char-religion" class="custom-tooltip"
+                                data-title="Faça um teste de 'Religião' para identificar divindades, rituais religiosos e símbolos sagrados. Pode ser útil para entender práticas religiosas, ler textos sagrados ou identificar objetos relacionados à fé.">
+                                Religião (INT)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-sleightofhand"><br>
-                            <label for="char-sleightofhand">Prestidigitação (DES)</label>
+                            <input type="text" id="char-sleightofhand" class="disabled-input"><br>
+                            <label for="char-sleightofhand" class="custom-tooltip"
+                                data-title="Use 'Prestidigitação' para realizar truques de prestidigitação, furtar objetos sem ser notado ou abrir fechaduras de forma sorrateira.">
+                                Prestidigitação (DES)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-stealth"><br>
-                            <label for="char-stealth">Furtividade (DES)</label>
+                            <input type="text" id="char-stealth" class="disabled-input"><br>
+                            <label for="char-stealth" class="custom-tooltip"
+                                data-title=" Use 'Furtividade' para se mover silenciosamente, esconder-se nas sombras, evitar ser detectado por guardas ou se aproximar de inimigos sem ser notado.">
+                                Furtividade (DES)</label>
                         </div>
                         <div class="skillsflex">
-                            <input type="number" id="char-survival"><br>
-                            <label for="char-survival">Sobrevivência (SAB)</label>
+                            <input type="text" id="char-survival" class="disabled-input"><br>
+                            <label for="char-survival" class="custom-tooltip"
+                                data-title="Realize um teste de 'Sobrevivência' para rastrear presas na natureza, encontrar comida e água em ambientes hostis, ou orientar-se em terrenos desconhecidos.">
+                                Sobrevivência (SAB)</label>
                         </div>
-
                     </div>
                 </div>
                 <div>
@@ -354,60 +391,85 @@
                             <label for="char-speed">Deslocamento</label>
                         </div>
                     </div>
-                    <div id="container" >
+                    <div id="container">
                         <fieldset>
-                          <button class="fontStyle italic" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"></button>
-                          <button class="fontStyle bold" onclick="document.execCommand( 'bold',false,null);" title="Bold Highlighted Text"></button>
-                          <button class="fontStyle underline" onclick="document.execCommand( 'underline',false,null);"></button>
-                          <select id="input-font" class="input"  onchange="changeFont (this);">
-                            <option value="Arial">Arial</option>
-                            <option value="Helvetica">Helvetica</option>
-                            <option value="Times New Roman">Times New Roman</option>
-                            <option value="Sans serif">Sans serif</option>
-                            <option value="Courier New">Courier New</option>
-                            <option value="Verdana">Verdana</option>
-                            <option value="Georgia">Georgia</option>
-                            <option value="Palatino">Palatino</option>
-                            <option value="Garamond">Garamond</option>
-                            <option value="Comic Sans MS">Comic Sans MS</option>
-                            <option value="Arial Black">Arial Black</option>
-                            <option value="Tahoma">Tahoma</option>
-                            <option value="Comic Sans MS">Comic Sans MS</option>
-                          </select>
-                          <button class="fontStyle strikethrough" onclick="document.execCommand( 'strikethrough',false,null);"><strikethrough></strikethrough></button>
-                          <button class="fontStyle align-left" onclick="document.execCommand( 'justifyLeft',false,null);"><justifyLeft></justifyLeft></button>
-                          <button class="fontStyle align-center" onclick="document.execCommand( 'justifyCenter',false,null);"><justifyCenter></justifyCenter></button>
-                          <button class="fontStyle align-right" onclick="document.execCommand( 'justifyRight',false,null);"><justifyRight></justifyRight></button>
-                          <button class="fontStyle redo-apply" onclick="document.execCommand( 'redo',false,null);"><redo></redo></button>
-                          <button class="fontStyle undo-apply" onclick="document.execCommand( 'undo',false,null);"><undo></undo></button>
-                          <button class="fontStyle orderedlist" onclick="document.execCommand('insertOrderedList', false, null);"><insertOrderedList></insertOrderedList></button>
-                          <button class="fontStyle unorderedlist" onclick="document.execCommand('insertUnorderedList',false, null)"><insertUnorderedList></insertUnorderedList></button>    
-                          <input class="color-apply" type="color" onchange="chooseColor()" id="myColor"> 
-                    
-                          <!-- font size start -->
-                          <select id="fontSize" onclick="changeSize()">
-                            <option value="1">1</option>      
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                          </select>
-                          <!-- font size end -->
-                          
-                      </fieldset>
-                    
-                      <div id="editor1" contenteditable="true" data-text="Enter comment...."></div>
-                      
+                            <button class="fontStyle italic" onclick="document.execCommand('italic',false,null);"
+                                title="Italicize Highlighted Text"></button>
+                            <button class="fontStyle bold" onclick="document.execCommand( 'bold',false,null);"
+                                title="Bold Highlighted Text"></button>
+                            <button class="fontStyle underline"
+                                onclick="document.execCommand( 'underline',false,null);"></button>
+                            <select id="input-font" class="input" onchange="changeFont (this);">
+                                <option value="Arial">Arial</option>
+                                <option value="Helvetica">Helvetica</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Sans serif">Sans serif</option>
+                                <option value="Courier New">Courier New</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Palatino">Palatino</option>
+                                <option value="Garamond">Garamond</option>
+                                <option value="Comic Sans MS">Comic Sans MS</option>
+                                <option value="Arial Black">Arial Black</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="Comic Sans MS">Comic Sans MS</option>
+                            </select>
+                            <button class="fontStyle strikethrough"
+                                onclick="document.execCommand( 'strikethrough',false,null);">
+                                <strikethrough></strikethrough>
+                            </button>
+                            <button class="fontStyle align-left"
+                                onclick="document.execCommand( 'justifyLeft',false,null);">
+                                <justifyLeft></justifyLeft>
+                            </button>
+                            <button class="fontStyle align-center"
+                                onclick="document.execCommand( 'justifyCenter',false,null);">
+                                <justifyCenter></justifyCenter>
+                            </button>
+                            <button class="fontStyle align-right"
+                                onclick="document.execCommand( 'justifyRight',false,null);">
+                                <justifyRight></justifyRight>
+                            </button>
+                            <button class="fontStyle redo-apply" onclick="document.execCommand( 'redo',false,null);">
+                                <redo></redo>
+                            </button>
+                            <button class="fontStyle undo-apply" onclick="document.execCommand( 'undo',false,null);">
+                                <undo></undo>
+                            </button>
+                            <button class="fontStyle orderedlist"
+                                onclick="document.execCommand('insertOrderedList', false, null);">
+                                <insertOrderedList></insertOrderedList>
+                            </button>
+                            <button class="fontStyle unorderedlist"
+                                onclick="document.execCommand('insertUnorderedList',false, null)">
+                                <insertUnorderedList></insertUnorderedList>
+                            </button>
+                            <input class="color-apply" type="color" onchange="chooseColor()" id="myColor">
+
+                            <!-- font size start -->
+                            <select id="fontSize" onclick="changeSize()">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            <!-- font size end -->
+
+                        </fieldset>
+
+                        <div id="editor1" contenteditable="true" data-text="Enter comment...."></div>
+
                     </div>
 
                     <div class="titulocinza multiclasslevel">
                         <input type="text" id="class-level">
                         <label for="class-level">Nível de Classe (multiclasse)</label>
                     </div>
-                    
+
                     <details>
                         <summary>Multiclasse</summary>
                         <div class="multiclasscontainer">
