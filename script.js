@@ -1110,6 +1110,15 @@ function updateSkills(selectedClass, charLevel) {
 
     const charBonus = calculateCharBonus(charLevel);
 
+
+    // Adicione uma classe comum a todos os elementos de habilidade
+    const allSkillInputs = document.querySelectorAll('.skill-input');
+
+    // Remova a cor de fundo de todos os elementos de habilidade
+    allSkillInputs.forEach(skillInput => {
+        skillInput.style.backgroundColor = '';
+    });
+
     const classSkillsArray = classSkills[selectedClass];
     const charBonusValue = charBonus >= 0 ? `+${charBonus}` : charBonus;
 
@@ -1117,6 +1126,9 @@ function updateSkills(selectedClass, charLevel) {
         classSkillsArray.forEach(skillId => {
             const skillInput = document.getElementById(skillId);
             skillInput.value = charBonusValue;
+
+            // Aplique a cor verde apenas aos elementos associados à classe selecionada
+            skillInput.style.backgroundColor = 'lightgreen';
         });
     }
 }
