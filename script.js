@@ -1086,26 +1086,25 @@ function calculateCharBonus(charLevel) {
 
 
 // SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
-// SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
 const charClassSelect = document.getElementById('char-class');
 const charBonusInput = document.getElementById('char-bonus');
 
 function updateSkills(selectedClass, charLevel) {
     const classSkills = {
         "defaultclass": [],
-        "artificer": ["",],
+        "artificer": [""],
         "barbarian": ["char-strength-savingthrow", "char-constitution-savingthrow", "char-athletics"],
         "bard": ["char-charisma-savingthrow", "char-dexterity-savingthrow", "char-acrobatics", "char-deception", "char-intimidation", "char-performance", "char-persuasion", "char-sleightofhand", "char-stealth"],
-        "cleric": [],
+        "cleric": ["char-wisdom-savingthrow","char-charisma-savingthrow","char-animal","char-deception","char-insight","char-intimidation","char-medicine","char-perception","char-performance","char-persuasion","char-survival"],
         "druid": ["char-intelligence-savingthrow","char-wisdom-savingthrow", "char-animal", "char-arcana","char-history","char-insight","char-investigation","char-medicine","char-nature","char-perception","char-religion","char-survival"],
-        "fighter": [],
-        "monk": [],
-        "paladin": [],
-        "ranger": [],
-        "rogue": [],
-        "sorcerer": [],
+        "fighter": ["char-strength-savingthrow","char-strength-savingthrow","char-athletics"],
+        "monk": ["char-strength-savingthrow","char-dexterity-savingthrow","char-acrobatics","char-athletics","char-sleightofhand","char-stealth"],
+        "paladin": ["char-wisdom-savingthrow","char-charisma-savingthrow","char-animal","char-deception","char-insight","char-intimidation","char-medicine","char-perception","char-performance","char-persuasion","char-survival"],
+        "ranger": ["char-strength-savingthrow","char-dexterity-savingthrow","char-acrobatics","char-athletics","char-sleightofhand","char-stealth"],
+        "rogue": ["char-dexterity-savingthrow","char-intelligence-savingthrow","char-acrobatics","char-arcana","char-history","char-investigation","char-nature","char-religion","char-sleightofhand","char-stealth"],
+        "sorcerer": ["char-charisma-savingthrow", "char-constitution-savingthrow","char-deception","char-intimidation", "char-performance","char-persuasion"],
         "warlock": ["char-wisdom-savingthrow","char-charisma-savingthrow","char-animal","char-deception","char-insight","char-intimidation","char-medicine","char-perception","char-performance","char-persuasion","char-survival"],
-        "wizard": []
+        "wizard": ["char-intelligence-savingthrow","char-wisdom-savingthrow", "char-animal", "char-arcana","char-history","char-insight","char-investigation","char-medicine","char-nature","char-perception","char-religion","char-survival"]
     };
     
 
