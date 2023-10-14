@@ -453,9 +453,6 @@ attributes.forEach((attribute) => {
     const modInput = document.getElementById(attribute.modId);
     const savingThrowInput = document.getElementById(attribute.savingThrowId);
 
-
-
-
     input.addEventListener("input", function () {
         const attributeValue = parseInt(input.value);
         const modValue = calculateMod(attributeValue);
@@ -495,7 +492,6 @@ raceSelect.addEventListener('change', function () {
             raceTitle = 'Elfo';
             raceDescription = 'Elves are an elegant and long-lived race with a deep connection to nature. They are known for their grace, keen senses, and proficiency in archery and magic.';
             break;
-        // Adicione outros casos para as outras raças aqui
         case 'aarakocra':
             raceTitle = 'Aarakocra';
             raceDescription = 'Aarakocra are bird-like humanoids with the ability to fly. They live in high mountainous regions and are skilled in aerial combat and scouting.';
@@ -1087,3 +1083,80 @@ function calculateCharBonus(charLevel) {
             this.blur();
         });
     });
+
+
+// SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
+/*const charClassSelect = document.getElementById('char-class');
+const charBonusInput = document.getElementById('char-bonus');
+
+
+function clearSkills() {
+    // Limpar os campos de habilidades
+    const skillInputs = document.querySelectorAll('input[type="text"]');
+    skillInputs.forEach(skillInput => {
+        skillInput.value = "";
+    });
+}
+
+
+function updateSkills(selectedClass, charLevel) {
+    const classSkills = {
+        "barbarian": ["char-strength-savingthrow", "char-constitution-savingthrow", "char-athletics"],
+        "bard": ["char-charisma-savingthrow", "char-dexterity-savingthrow", "char-acrobatics","char-deception","char-intimidation","char-performance","char-persuasion","char-sleightofhand","char-stealth"],
+        // Adicione outras classes e habilidades aqui
+    };
+
+    clearSkills(); // Limpa os campos de habilidades antes de aplicar o novo bônus
+
+    const charBonus = calculateCharBonus(charLevel);
+
+    const classSkillsArray = classSkills[selectedClass];
+    const charBonusValue = charBonus >= 0 ? `+${charBonus}` : charBonus;
+
+    if (classSkillsArray) {
+        classSkillsArray.forEach(skillId => {
+            const skillInput = document.getElementById(skillId);
+            skillInput.value = charBonusValue;
+        });
+    }
+}
+
+function calculateCharBonus(charLevel) {
+    if (charLevel >= 1 && charLevel <= 4) {
+        return 2;
+    } else if (charLevel >= 5 && charLevel <= 8) {
+        return 3;
+    } else if (charLevel >= 9 && charLevel <= 12) {
+        return 4;
+    } else if (charLevel >= 13 && charLevel <= 16) {
+        return 5;
+    } else if (charLevel >= 17 && charLevel <= 20) {
+        return 6;
+    } else {
+        return 0; // Valor padrão, se estiver fora do intervalo especificado
+    }
+}
+
+charClassSelect.addEventListener("change", function () {
+    const selectedClass = charClassSelect.value;
+    const charLevel = parseInt(charLevelInput.value);
+    updateSkills(selectedClass, charLevel);
+});
+
+charLevelInput.addEventListener("input", function () {
+    const selectedClass = charClassSelect.value;
+    const charLevel = parseInt(charLevelInput.value);
+    updateSkills(selectedClass, charLevel);
+});
+
+charBonusInput.addEventListener("input", function () {
+    const selectedClass = charClassSelect.value;
+    const charLevel = parseInt(charLevelInput.value);
+    updateSkills(selectedClass, charLevel);
+});
+
+// Chame a função para atualizar as informações iniciais
+const initialClass = charClassSelect.value;
+const initialLevel = parseInt(charLevelInput.value);
+updateSkills(initialClass, initialLevel);
+*/
