@@ -1086,7 +1086,59 @@ function calculateCharBonus(charLevel) {
 
 
 // SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
-/*const charClassSelect = document.getElementById('char-class');
+// SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
+const charClassSelect = document.getElementById('char-class');
+const charBonusInput = document.getElementById('char-bonus');
+
+function updateSkills(selectedClass, charLevel) {
+    const classSkills = {
+        "barbarian": ["char-strength-savingthrow", "char-constitution-savingthrow", "char-athletics"],
+        "bard": ["char-charisma-savingthrow", "char-dexterity-savingthrow", "char-acrobatics", "char-deception", "char-intimidation", "char-performance", "char-persuasion", "char-sleightofhand", "char-stealth"],
+        // Adicione outras classes e habilidades aqui
+    };
+
+    // Adicione uma classe comum a todos os elementos de habilidade
+    const allSkillInputs = document.querySelectorAll('.skill-input');
+
+    // Remova a cor de fundo de todos os elementos de habilidade
+    allSkillInputs.forEach(skillInput => {
+        skillInput.style.backgroundColor = '';
+    });
+
+    const classSkillsArray = classSkills[selectedClass];
+
+    if (classSkillsArray) {
+        classSkillsArray.forEach(skillId => {
+            const skillInput = document.getElementById(skillId);
+
+            // Aplique a cor verde apenas aos elementos associados à classe selecionada
+            skillInput.style.backgroundColor = 'lightgreen';
+        });
+    }
+}
+
+charClassSelect.addEventListener("change", function () {
+    const selectedClass = charClassSelect.value;
+    updateSkills(selectedClass);
+});
+
+charLevelInput.addEventListener("input", function () {
+    const selectedClass = charClassSelect.value;
+    updateSkills(selectedClass);
+});
+
+charBonusInput.addEventListener("input", function () {
+    const selectedClass = charClassSelect.value;
+    updateSkills(selectedClass);
+});
+
+// Chame a função para atualizar as informações iniciais
+const initialClass = charClassSelect.value;
+updateSkills(initialClass);
+
+/*
+// SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
+const charClassSelect = document.getElementById('char-class');
 const charBonusInput = document.getElementById('char-bonus');
 
 
