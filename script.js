@@ -1092,10 +1092,22 @@ const charBonusInput = document.getElementById('char-bonus');
 
 function updateSkills(selectedClass, charLevel) {
     const classSkills = {
+        "defaultclass": [],
+        "artificer": ["",],
         "barbarian": ["char-strength-savingthrow", "char-constitution-savingthrow", "char-athletics"],
         "bard": ["char-charisma-savingthrow", "char-dexterity-savingthrow", "char-acrobatics", "char-deception", "char-intimidation", "char-performance", "char-persuasion", "char-sleightofhand", "char-stealth"],
-        // Adicione outras classes e habilidades aqui
+        "cleric": [],
+        "druid": ["char-intelligence-savingthrow","char-wisdom-savingthrow", "char-animal", "char-arcana","char-history","char-insight","char-investigation","char-medicine","char-nature","char-perception","char-religion","char-survival"],
+        "fighter": [],
+        "monk": [],
+        "paladin": [],
+        "ranger": [],
+        "rogue": [],
+        "sorcerer": [],
+        "warlock": ["char-wisdom-savingthrow","char-charisma-savingthrow","char-animal","char-deception","char-insight","char-intimidation","char-medicine","char-perception","char-performance","char-persuasion","char-survival"],
+        "wizard": []
     };
+    
 
     // Adicione uma classe comum a todos os elementos de habilidade
     const allSkillInputs = document.querySelectorAll('.skill-input');
