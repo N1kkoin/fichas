@@ -348,7 +348,7 @@ input:focus {
 
 
 #char-level,
-#char-exp {
+#char-exp, #char-bonus {
     font-size: 22px;
     text-align: center;
     border: 1px solid #afb9d1;
@@ -656,4 +656,8 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAY
 #fontSize{
     width: 35px !important;
 
+}
+
+#char-bonus{
+    width: 50px;
 }

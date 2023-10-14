@@ -1039,3 +1039,32 @@ function checkDiv() {
 function removeBorder() {
     document.getElementById("editor1").style.border = '1px solid transparent';
 }
+
+
+//BONUS DE PROFICIENCIA --------------------------------------------------------------------------
+
+function updateCharBonus() {
+    var charLevelInput = document.getElementById('char-level');
+    var charBonusInput = document.getElementById('char-bonus');
+    
+    var charLevel = parseInt(charLevelInput.value);
+    var charBonus = calculateCharBonus(charLevel);
+    
+    charBonusInput.value = "+" + charBonus;
+}
+
+function calculateCharBonus(charLevel) {
+    if (charLevel >= 1 && charLevel <= 4) {
+        return 2;
+    } else if (charLevel >= 5 && charLevel <= 8) {
+        return 3;
+    } else if (charLevel >= 9 && charLevel <= 12) {
+        return 4;
+    } else if (charLevel >= 13 && charLevel <= 16) {
+        return 5;
+    } else if (charLevel >= 17 && charLevel <= 20) {
+        return 6;
+    } else {
+        return 0; // Valor padrão, se estiver fora do intervalo especificado
+    }
+}
