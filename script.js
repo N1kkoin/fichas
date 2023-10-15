@@ -1084,7 +1084,6 @@ function calculateCharBonus(charLevel) {
         });
     });
 
-
 // SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
 const charClassSelect = document.getElementById('char-class');
 const charBonusInput = document.getElementById('char-bonus');
