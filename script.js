@@ -1,7 +1,7 @@
 
 //SALVAR --------------------------------------------------------------------------------------------
 document.getElementById('save-button').addEventListener('click', function () {
-    
+
     const characterName = document.getElementById('char-name').value; // Obtenha o nome do personagem
     const characterData = {
         name: document.getElementById('char-name').value,
@@ -58,7 +58,27 @@ document.getElementById('save-button').addEventListener('click', function () {
             religion: document.getElementById('char-religion').value,
             sleightOfHand: document.getElementById('char-sleightofhand').value,
             stealth: document.getElementById('char-stealth').value,
-            survival: document.getElementById('char-survival').value
+            survival: document.getElementById('char-survival').value,
+
+            // Adicione os campos skillsadd aqui
+            acrobaticsAdd: document.getElementById('char-acrobatics-skillsadd').value,
+            animalHandlingAdd: document.getElementById('char-animal-skillsadd').value,
+            arcanaAdd: document.getElementById('char-arcana-skillsadd').value,
+            athleticsAdd: document.getElementById('char-athletics-skillsadd').value,
+            deceptionAdd: document.getElementById('char-deception-skillsadd').value,
+            historyAdd: document.getElementById('char-history-skillsadd').value,
+            insightAdd: document.getElementById('char-insight-skillsadd').value,
+            intimidationAdd: document.getElementById('char-intimidation-skillsadd').value,
+            investigationAdd: document.getElementById('char-investigation-skillsadd').value,
+            medicineAdd: document.getElementById('char-medicine-skillsadd').value,
+            natureAdd: document.getElementById('char-nature-skillsadd').value,
+            perceptionAdd: document.getElementById('char-perception-skillsadd').value,
+            performanceAdd: document.getElementById('char-performance-skillsadd').value,
+            persuasionAdd: document.getElementById('char-persuasion-skillsadd').value,
+            religionAdd: document.getElementById('char-religion-skillsadd').value,
+            sleightOfHandAdd: document.getElementById('char-sleightofhand-skillsadd').value,
+            stealthAdd: document.getElementById('char-stealth-skillsadd').value,
+            survivalAdd: document.getElementById('char-survival-skillsadd').value,
         },
 
         // Configurações do editor de texto
@@ -149,23 +169,41 @@ document.getElementById('load-button').addEventListener('click', function () {
 
                 // Set skill values
                 document.getElementById('char-acrobatics').value = characterData.skills.acrobatics;
+                document.getElementById('char-acrobatics-skillsadd').value = characterData.skills.acrobaticsAdd;
                 document.getElementById('char-animal').value = characterData.skills.animalHandling;
+                document.getElementById('char-animal-skillsadd').value = characterData.skills.animalHandlingAdd;
                 document.getElementById('char-arcana').value = characterData.skills.arcana;
+                document.getElementById('char-arcana-skillsadd').value = characterData.skills.arcanaAdd;
                 document.getElementById('char-athletics').value = characterData.skills.athletics;
+                document.getElementById('char-athletics-skillsadd').value = characterData.skills.athleticsAdd;
                 document.getElementById('char-deception').value = characterData.skills.deception;
+                document.getElementById('char-deception-skillsadd').value = characterData.skills.deceptionAdd;
                 document.getElementById('char-history').value = characterData.skills.history;
+                document.getElementById('char-history-skillsadd').value = characterData.skills.historyAdd;
                 document.getElementById('char-insight').value = characterData.skills.insight;
+                document.getElementById('char-insight-skillsadd').value = characterData.skills.insightAdd;
                 document.getElementById('char-intimidation').value = characterData.skills.intimidation;
+                document.getElementById('char-intimidation-skillsadd').value = characterData.skills.intimidationAdd;
                 document.getElementById('char-investigation').value = characterData.skills.investigation;
+                document.getElementById('char-investigation-skillsadd').value = characterData.skills.investigationAdd;
                 document.getElementById('char-medicine').value = characterData.skills.medicine;
+                document.getElementById('char-medicine-skillsadd').value = characterData.skills.medicineAdd;
                 document.getElementById('char-nature').value = characterData.skills.nature;
+                document.getElementById('char-nature-skillsadd').value = characterData.skills.natureAdd;
                 document.getElementById('char-perception').value = characterData.skills.perception;
+                document.getElementById('char-perception-skillsadd').value = characterData.skills.perceptionAdd;
                 document.getElementById('char-performance').value = characterData.skills.performance;
+                document.getElementById('char-performance-skillsadd').value = characterData.skills.performanceAdd;
                 document.getElementById('char-persuasion').value = characterData.skills.persuasion;
+                document.getElementById('char-persuasion-skillsadd').value = characterData.skills.persuasionAdd;
                 document.getElementById('char-religion').value = characterData.skills.religion;
+                document.getElementById('char-religion-skillsadd').value = characterData.skills.religionAdd;
                 document.getElementById('char-sleightofhand').value = characterData.skills.sleightOfHand;
+                document.getElementById('char-sleightofhand-skillsadd').value = characterData.skills.sleightOfHandAdd;
                 document.getElementById('char-stealth').value = characterData.skills.stealth;
+                document.getElementById('char-stealth-skillsadd').value = characterData.skills.stealthAdd;
                 document.getElementById('char-survival').value = characterData.skills.survival;
+                document.getElementById('char-survival-skillsadd').value = characterData.skills.survivalAdd;
 
                 // Carregar as configurações do editor de texto e o texto do editor a partir do objeto characterData
                 document.getElementById("fontSize").value = characterData.editorSettings.fontSize;
@@ -282,7 +320,28 @@ document.getElementById('save-button').addEventListener('click', function () {
                 religion: document.getElementById('char-religion').value,
                 sleightOfHand: document.getElementById('char-sleightofhand').value,
                 stealth: document.getElementById('char-stealth').value,
-                survival: document.getElementById('char-survival').value
+                survival: document.getElementById('char-survival').value,
+
+                // Adicione os campos skillsadd aqui
+                acrobaticsAdd: document.getElementById('char-acrobatics-skillsadd').value,
+                animalHandlingAdd: document.getElementById('char-animal-skillsadd').value,
+                arcanaAdd: document.getElementById('char-arcana-skillsadd').value,
+                athleticsAdd: document.getElementById('char-athletics-skillsadd').value,
+                deceptionAdd: document.getElementById('char-deception-skillsadd').value,
+                historyAdd: document.getElementById('char-history-skillsadd').value,
+                insightAdd: document.getElementById('char-insight-skillsadd').value,
+                intimidationAdd: document.getElementById('char-intimidation-skillsadd').value,
+                investigationAdd: document.getElementById('char-investigation-skillsadd').value,
+                medicineAdd: document.getElementById('char-medicine-skillsadd').value,
+                natureAdd: document.getElementById('char-nature-skillsadd').value,
+                perceptionAdd: document.getElementById('char-perception-skillsadd').value,
+                performanceAdd: document.getElementById('char-performance-skillsadd').value,
+                persuasionAdd: document.getElementById('char-persuasion-skillsadd').value,
+                religionAdd: document.getElementById('char-religion-skillsadd').value,
+                sleightOfHandAdd: document.getElementById('char-sleightofhand-skillsadd').value,
+                stealthAdd: document.getElementById('char-stealth-skillsadd').value,
+                survivalAdd: document.getElementById('char-survival-skillsadd').value
+
             },
             // Configurações do editor de texto
             editorSettings: {
@@ -1053,10 +1112,10 @@ function removeBorder() {
 function updateCharBonus() {
     var charLevelInput = document.getElementById('char-level');
     var charBonusInput = document.getElementById('char-bonus');
-    
+
     var charLevel = parseInt(charLevelInput.value);
     var charBonus = calculateCharBonus(charLevel);
-    
+
     charBonusInput.value = "+" + charBonus;
 }
 
@@ -1077,12 +1136,12 @@ function calculateCharBonus(charLevel) {
 }
 
 //PROIBE MODIFICAÇÃO MANUAL ATRIBUTOS ---------------------------------------------------
-    // Adiciona um evento para desabilitar a edição manual ao clicar no input
-    document.querySelectorAll('.disabled-input').forEach(function (input) {
-        input.addEventListener('focus', function () {
-            this.blur();
-        });
+// Adiciona um evento para desabilitar a edição manual ao clicar no input
+document.querySelectorAll('.disabled-input').forEach(function (input) {
+    input.addEventListener('focus', function () {
+        this.blur();
     });
+});
 
 // SALVAGUARDAS E PERICIAS -------------------------------------------------------------------------------
 const charClassSelect = document.getElementById('char-class');
@@ -1094,18 +1153,18 @@ function updateSkills(selectedClass, charLevel) {
         "artificer": [""],
         "barbarian": ["char-strength-savingthrow", "char-constitution-savingthrow", "char-athletics"],
         "bard": ["char-charisma-savingthrow", "char-dexterity-savingthrow", "char-acrobatics", "char-deception", "char-intimidation", "char-performance", "char-persuasion", "char-sleightofhand", "char-stealth"],
-        "cleric": ["char-wisdom-savingthrow","char-charisma-savingthrow","char-animal","char-deception","char-insight","char-intimidation","char-medicine","char-perception","char-performance","char-persuasion","char-survival"],
-        "druid": ["char-intelligence-savingthrow","char-wisdom-savingthrow", "char-animal", "char-arcana","char-history","char-insight","char-investigation","char-medicine","char-nature","char-perception","char-religion","char-survival"],
-        "fighter": ["char-strength-savingthrow","char-strength-savingthrow","char-athletics"],
-        "monk": ["char-strength-savingthrow","char-dexterity-savingthrow","char-acrobatics","char-athletics","char-sleightofhand","char-stealth"],
-        "paladin": ["char-wisdom-savingthrow","char-charisma-savingthrow","char-animal","char-deception","char-insight","char-intimidation","char-medicine","char-perception","char-performance","char-persuasion","char-survival"],
-        "ranger": ["char-strength-savingthrow","char-dexterity-savingthrow","char-acrobatics","char-athletics","char-sleightofhand","char-stealth"],
-        "rogue": ["char-dexterity-savingthrow","char-intelligence-savingthrow","char-acrobatics","char-arcana","char-history","char-investigation","char-nature","char-religion","char-sleightofhand","char-stealth"],
-        "sorcerer": ["char-charisma-savingthrow", "char-constitution-savingthrow","char-deception","char-intimidation", "char-performance","char-persuasion"],
-        "warlock": ["char-wisdom-savingthrow","char-charisma-savingthrow","char-animal","char-deception","char-insight","char-intimidation","char-medicine","char-perception","char-performance","char-persuasion","char-survival"],
-        "wizard": ["char-intelligence-savingthrow","char-wisdom-savingthrow", "char-animal", "char-arcana","char-history","char-insight","char-investigation","char-medicine","char-nature","char-perception","char-religion","char-survival"]
+        "cleric": ["char-wisdom-savingthrow", "char-charisma-savingthrow", "char-animal", "char-deception", "char-insight", "char-intimidation", "char-medicine", "char-perception", "char-performance", "char-persuasion", "char-survival"],
+        "druid": ["char-intelligence-savingthrow", "char-wisdom-savingthrow", "char-animal", "char-arcana", "char-history", "char-insight", "char-investigation", "char-medicine", "char-nature", "char-perception", "char-religion", "char-survival"],
+        "fighter": ["char-strength-savingthrow", "char-strength-savingthrow", "char-athletics"],
+        "monk": ["char-strength-savingthrow", "char-dexterity-savingthrow", "char-acrobatics", "char-athletics", "char-sleightofhand", "char-stealth"],
+        "paladin": ["char-wisdom-savingthrow", "char-charisma-savingthrow", "char-animal", "char-deception", "char-insight", "char-intimidation", "char-medicine", "char-perception", "char-performance", "char-persuasion", "char-survival"],
+        "ranger": ["char-strength-savingthrow", "char-dexterity-savingthrow", "char-acrobatics", "char-athletics", "char-sleightofhand", "char-stealth"],
+        "rogue": ["char-dexterity-savingthrow", "char-intelligence-savingthrow", "char-acrobatics", "char-arcana", "char-history", "char-investigation", "char-nature", "char-religion", "char-sleightofhand", "char-stealth"],
+        "sorcerer": ["char-charisma-savingthrow", "char-constitution-savingthrow", "char-deception", "char-intimidation", "char-performance", "char-persuasion"],
+        "warlock": ["char-wisdom-savingthrow", "char-charisma-savingthrow", "char-animal", "char-deception", "char-insight", "char-intimidation", "char-medicine", "char-perception", "char-performance", "char-persuasion", "char-survival"],
+        "wizard": ["char-intelligence-savingthrow", "char-wisdom-savingthrow", "char-animal", "char-arcana", "char-history", "char-insight", "char-investigation", "char-medicine", "char-nature", "char-perception", "char-religion", "char-survival"]
     };
-    
+
 
     // Adicione uma classe comum a todos os elementos de habilidade
     const allSkillInputs = document.querySelectorAll('.skill-input');
