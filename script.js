@@ -90,6 +90,7 @@ document.getElementById('save-button').addEventListener('click', function () {
 
         // Texto do editor
         editorText: document.getElementById("editor1").innerHTML,
+
     };
 
 
@@ -127,6 +128,8 @@ document.getElementById('load-button').addEventListener('click', function () {
             const reader = new FileReader();
 
             reader.onload = function (event) {
+                console.log("Dados da ficha de personagem carregados:", event.target.result);
+
                 const characterData = JSON.parse(event.target.result);
 
                 /// Preencha os campos de entrada com os dados carregados
@@ -237,6 +240,7 @@ document.getElementById('load-button').addEventListener('click', function () {
                 // Agora você pode adicionar lógica específica para atualizar as descrições com base na raça, classe e deuses selecionados
                 updateRaceDescription(characterData.race);
                 updateClassDescription(characterData.class);
+
             };
 
             // Leia o conteúdo do arquivo selecionado como texto
@@ -352,6 +356,7 @@ document.getElementById('save-button').addEventListener('click', function () {
 
             // Texto do editor
             editorText: document.getElementById("editor1").innerHTML,
+
         };
 
         // Converte os dados da ficha de personagem em formato JSON
@@ -1307,3 +1312,136 @@ window.addEventListener('load', function () {
     backgroundSelect.dispatchEvent(new Event('change'));
 });
 
+//TASKLIST -----------------------------------------------------------
+
+let tasks = [];
+
+function addTask() {
+    const title = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
+    const category = document.getElementById("category").value;
+
+    if (title && description) {
+        const task = {
+            title: title,
+            description: description,
+            category: category,
+            completed: false
+        };
+
+        tasks.push(task);
+
+        document.getElementById("title").value = "";
+        document.getElementById("description").value = "";
+
+        displayTasks();
+    }
+}
+
+function filterTasks() {
+    const filterCategory = document.getElementById("filterCategory").value;
+    const filterStatus = document.getElementById("filterStatus").value;
+    displayTasks(filterCategory, filterStatus);
+}
+
+function toggleComplete(index) {
+    tasks[index].completed = !tasks[index].completed;
+    displayTasks();
+}
+
+let selectedTaskIndex = -1;
+
+function editTask(index) {
+    selectedTaskIndex = index;
+    const task = tasks[index];
+    document.getElementById("editTitle").value = task.title;
+    document.getElementById("editDescription").value = task.description;
+    document.getElementById("editCategory").value = task.category;
+    document.getElementById("editTaskForm").style.display = "block";
+}
+
+function saveEditedTask() {
+    if (selectedTaskIndex !== -1) {
+        tasks[selectedTaskIndex].title = document.getElementById("editTitle").value;
+        tasks[selectedTaskIndex].description = document.getElementById("editDescription").value;
+        tasks[selectedTaskIndex].category = document.getElementById("editCategory").value;
+        selectedTaskIndex = -1;
+        document.getElementById("editTaskForm").style.display = "none";
+        displayTasks();
+    }
+}
+
+function displayTasks(categoryFilter = "Todos", statusFilter = "Todos") {
+    console.log("Exibindo tarefas...");
+
+    const taskList = document.getElementById("taskList");
+    taskList.innerHTML = "";
+
+    console.log("displayTasks() chamada com filtros - Categoria: " + categoryFilter + ", Status: " + statusFilter);
+
+    for (let i = 0; i < tasks.length; i++) {
+        const task = tasks[i];
+
+        if ((categoryFilter === "Todos" || task.category === categoryFilter) &&
+            (statusFilter === "Todos" || (statusFilter === "Completas" && task.completed) || (statusFilter === "Não Completas" && !task.completed))) {
+
+            const taskElement = document.createElement("div");
+            taskElement.classList.add("task");
+
+            taskElement.innerHTML = `<h3>${task.title}</h3>
+                <p>${task.description}</p>
+                <p>Categoria: ${task.category}</p>
+                <p>Completo: <input type="checkbox" onchange="toggleComplete(${i})" ${task.completed ? 'checked' : ''}>
+                <button onclick="editTask(${i})">Editar</button></p>`;
+
+            taskList.appendChild(taskElement);
+        }
+    }
+}
+
+// SALVAR E CARREGAR JSON MISSÕES ---------------------------------------------------------------------------------------------------------------------------------------
+
+function saveTasksToFile() {
+    const data = JSON.stringify(tasks);
+
+    // Crie um elemento 'a' para fazer o download do arquivo JSON
+    const a = document.createElement("a");
+    const file = new Blob([data], { type: "application/json" });
+    a.href = URL.createObjectURL(file);
+    a.download = "quests.json";
+    a.click();
+}
+
+
+function loadTasksFromFile() {
+    const fileInput = document.getElementById("file-inputtasks");
+    
+    fileInput.addEventListener("change", function () {
+        const selectedFile = fileInput.files[0];
+
+        if (selectedFile) {
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const data = event.target.result;
+                try {
+                    tasks = JSON.parse(data);
+                    displayTasks(); // Atualiza a exibição após carregar os dados
+                } catch (error) {
+                    console.error("Erro ao carregar o arquivo JSON: " + error);
+                }
+            };
+
+            reader.readAsText(selectedFile);
+        }
+    });
+}
+
+// Adicione um evento de clique para o botão "Carregar"
+const loadButton = document.getElementById("load-buttontasks");
+loadButton.addEventListener("click", function () {
+    document.getElementById("file-inputtasks").click();
+});
+
+// Chame a função loadTasksFromFile para configurar o evento de mudança
+loadTasksFromFile();

@@ -188,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-        
+
             </div>
 
             <div class="tab">
@@ -596,8 +596,7 @@
                             onclick="document.execCommand( 'strikethrough',false,null);">
                             <strikethrough></strikethrough>
                         </button>
-                        <button class="fontStyle align-left"
-                            onclick="document.execCommand( 'justifyLeft',false,null);">
+                        <button class="fontStyle align-left" onclick="document.execCommand( 'justifyLeft',false,null);">
                             <justifyLeft></justifyLeft>
                         </button>
                         <button class="fontStyle align-center"
@@ -637,17 +636,61 @@
 
                 </div>
             </div>
-            
+
             <div id="tab3" class="tabcontent">
-                <!-- Conteúdo da terceira aba -->
-                <!-- Insira o HTML que você quer na terceira aba aqui -->
-            </div>
+                <h1>Missões</h1>
+                <input type="text" id="title" placeholder="Título">
+                <input type="text" id="description" placeholder="Descrição">
+                <select id="category">
+                    <option value="questhistory">Historia</option>
+                    <option value="questpersonal">Personal</option>
+                    <option value="questfriends">Companheiros</option>
+                    <option value="outros">Outro</option>
+                </select>
+                <button onclick="addTask()">Adicionar Tarefa</button>
+                <hr>
+                <h2>Filtrar por Categoria</h2>
+                <select id="filterCategory" onchange="filterTasks()">
+                    <option value="Todos">Todos</option>
+                    <option value="questhistory">Historia</option>
+                    <option value="questpersonal">Personal</option>
+                    <option value="questfriends">Companheiros</option>
+                    <option value="outros">Outros</option>
+                </select>
+                <h2>Filtrar por Status</h2>
+                <select id="filterStatus" onchange="filterTasks()">
+                    <option value="Todos">Todos</option>
+                    <option value="Completas">Completas</option>
+                    <option value="Não Completas">Não Completas</option>
+                </select>
+                <div id="taskList"></div>
             
+                <div id="editTaskForm" style="display: none;">
+                    <h2>Editar Tarefa</h2>
+                    <input type="text" id="editTitle" placeholder="Novo Título">
+                    <input type="text" id="editDescription" placeholder="Nova Descrição">
+                    <select id="editCategory">
+                        <option value="questhistory">Historia</option>
+                        <option value="questpersonal">Personal</option>
+                        <option value="questfriends">Companheiros</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                    <button onclick="saveEditedTask()">Salvar</button>
+
+                </div>
+                <div id="taskList"></div>
+
+                <button class="buttonsalvartasks" id="save-buttontasks" onclick="saveTasksToFile()">Salvar Tarefas</button>
+                <input type="file" id="file-inputtasks" style="display: none;">
+                <button class="buttonloadtasks" id="load-buttontasks">Carregar</button>
+
+            </div>
+
             <div id="tab4" class="tabcontent">
                 <!-- Conteúdo da quarta aba -->
                 <!-- Insira o HTML que você quer na quarta aba aqui -->
             </div>
-            
+
             <div id="tab5" class="tabcontent">
                 <!-- Conteúdo da quinta aba -->
                 <!-- Insira o HTML que você quer na quinta aba aqui -->
