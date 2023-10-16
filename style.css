@@ -257,13 +257,13 @@ input {
 
 .character-info input {
     height: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 select {
     border: 1px solid #afb9d1;
     /* Estilo da borda personalizado */
-    border-radius: 10px;
+    border-radius: 5px;
     /* Borda arredondada */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -453,7 +453,7 @@ button {
     font-size: 22px;
     text-align: center;
     border: 1px solid #afb9d1;
-    border-radius: 10px;
+    border-radius: 5px;
     box-sizing: border-box;
 
 }
@@ -478,11 +478,11 @@ button {
 
 .multiclasslevel {
     margin-left: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .multiclasslevel input {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
@@ -492,7 +492,7 @@ button {
     appearance: none;
     margin: 0;
     border: 1px solid #afb9d1;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: 'Lato', sans-serif;
 }
 
@@ -736,7 +736,33 @@ summary {
 
 .task {
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 20px;
+    border: 1px solid #007BFF;
     background-color: #f9f9f9;
 }
+
+#description, #editDescription{
+    height: 150px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+#title, #description, #filterCategory, #filterStatus, #editTitle, #editDescription {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #afb9d1;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#tab3 button{
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}   
+
