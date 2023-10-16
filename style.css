@@ -785,3 +785,21 @@ summary {
     display: flex;
     gap: 10px;
 }
+
+.equipamento-container {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+.item-details {
+    display: block;
+}
+
+.collapsed .item-details {
+    display: none;
+}
+
+.toggle-button {
+    cursor: pointer;
+}
