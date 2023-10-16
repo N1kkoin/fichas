@@ -1135,7 +1135,7 @@ function calculateCharBonus(charLevel) {
     }
 }
 
-//PROIBE MODIFICAÇÃO MANUAL ATRIBUTOS ---------------------------------------------------
+//PROIBE MODIFICAÇÃO MANUAL ATRIBUTOS -------------------------------------------------------------------------------------------------
 // Adiciona um evento para desabilitar a edição manual ao clicar no input
 document.querySelectorAll('.disabled-input').forEach(function (input) {
     input.addEventListener('focus', function () {
@@ -1205,7 +1205,7 @@ charBonusInput.addEventListener("input", function () {
 const initialClass = charClassSelect.value;
 updateSkills(initialClass);
 
-//TABS ---------------------------------------------------------
+//TABS -------------------------------------------------------------------------------------------------------
 
 // Função para alternar entre as guias
 function openTab(evt, tabName) {
@@ -1224,3 +1224,86 @@ function openTab(evt, tabName) {
 
 // Abra a primeira guia por padrão
 document.getElementById("tab1").style.display = "block";
+
+
+// ANTECEDENTES -------------------------------------------------------
+
+const backgroundSelect = document.getElementById('char-background');
+const backgroundDescriptionDiv = document.getElementById('background-description');
+
+backgroundSelect.addEventListener('change', function () {
+    const selectedBackground = backgroundSelect.value;
+    let backgroundtitle = '';
+    let backgrounddescription = '';
+
+    switch (selectedBackground) {
+        case 'defaultback':
+            backgroundtitle = 'Antecedentes';
+            backgrounddescription = 'Selecione um antecedente para ver a descrição.';
+            break;
+        case 'acolyte':
+            backgroundtitle = 'Acólito';
+            backgrounddescription = 'Descrição do antecedente Acólito.';
+            break;
+        case 'charlatan':
+            backgroundtitle = 'Charlatão';
+            backgrounddescription = 'Descrição do antecedente Charlatão.';
+            break;
+        case 'criminal':
+            backgroundtitle = 'Criminoso';
+            backgrounddescription = 'Descrição do antecedente Criminoso.';
+            break;
+        case 'entertainer':
+            backgroundtitle = 'Animador';
+            backgrounddescription = 'Descrição do antecedente Animador.';
+            break;
+        case 'folkhero':
+            backgroundtitle = 'Herói do Povo';
+            backgrounddescription = 'Descrição do antecedente Herói do Povo.';
+            break;
+        case 'guildartesan':
+            backgroundtitle = 'Artesão de Guilda';
+            backgrounddescription = 'Descrição do antecedente Artesão de Guilda.';
+            break;
+        case 'hermit':
+            backgroundtitle = 'Eremita';
+            backgrounddescription = 'Descrição do antecedente Eremita.';
+            break;
+        case 'noble':
+            backgroundtitle = 'Nobre';
+            backgrounddescription = 'Descrição do antecedente Nobre.';
+            break;
+        case 'outlander':
+            backgroundtitle = 'Forasteiro';
+            backgrounddescription = 'Descrição do antecedente Forasteiro.';
+            break;
+        case 'sailor':
+            backgroundtitle = 'Marinheiro';
+            backgrounddescription = 'Descrição do antecedente Marinheiro.';
+            break;
+        case 'sage':
+            backgroundtitle = 'Sábio';
+            backgrounddescription = 'Descrição do antecedente Sábio.';
+            break;
+        case 'soldier':
+            backgroundtitle = 'Soldado';
+            backgrounddescription = 'Descrição do antecedente Soldado.';
+            break;
+        case 'urchin':
+            backgroundtitle = 'Orfão';
+            backgrounddescription = 'Descrição do antecedente Orfão.';
+            break;
+        default:
+            backgroundtitle = 'Antecedentes';
+            backgrounddescription = 'Selecione um antecedente para ver a descrição.';
+    }
+
+    backgroundDescriptionDiv.innerHTML = `<h2>${backgroundtitle}</h2><p>${backgrounddescription}</p>`;
+});
+
+// Disparar manualmente o evento "change" no carregamento da página
+window.addEventListener('load', function () {
+    const backgroundSelect = document.getElementById('char-background');
+    backgroundSelect.dispatchEvent(new Event('change'));
+});
+

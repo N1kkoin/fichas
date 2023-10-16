@@ -334,7 +334,8 @@ input:focus {
 #race-description,
 #gods-description,
 #class-description,
-#alignment-description {
+#alignment-description,
+#background-description {
     background-color: #ffffff;
     padding: 5px 20px;
     border-radius: 10px;
