@@ -1371,6 +1371,16 @@ function saveEditedTask() {
     }
 }
 
+function deleteTask() {
+    if (selectedTaskIndex !== -1) {
+        tasks.splice(selectedTaskIndex, 1);
+        selectedTaskIndex = -1;
+        document.getElementById("editTaskForm").style.display = "none";
+        displayTasks();
+    }
+}
+
+
 function displayTasks(categoryFilter = "Todos", statusFilter = "Todos") {
     console.log("Exibindo tarefas...");
 
