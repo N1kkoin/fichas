@@ -735,10 +735,9 @@ summary {
 }
 
 .task {
-    margin: 10px;
+    margin: 10px 0;
     padding: 20px;
-    border: 1px solid #007BFF;
-    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
 #description, #editDescription{
@@ -766,3 +765,18 @@ summary {
     margin-top: 10px;
 }   
 
+/* CSS para estilizar tarefas completas */
+.task.completed {
+    border: 1px solid lightgreen;
+
+}
+
+/* CSS para estilizar tarefas não completas */
+.task:not(.completed) {
+    border: 1px solid #007BFF;
+}
+
+/* Alinhe o checkbox à esquerda do texto "Completo" */
+.task input {
+    width: fit-content;
+}

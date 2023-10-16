@@ -1385,13 +1385,16 @@ function displayTasks(categoryFilter = "Todos", statusFilter = "Todos") {
         if ((categoryFilter === "Todos" || task.category === categoryFilter) &&
             (statusFilter === "Todos" || (statusFilter === "Completas" && task.completed) || (statusFilter === "Não Completas" && !task.completed))) {
 
-            const taskElement = document.createElement("div");
-            taskElement.classList.add("task");
-
+            
+                const taskElement = document.createElement("div");
+                taskElement.classList.add("task");
+                if (task.completed) {
+                    taskElement.classList.add("completed");
+                }
             taskElement.innerHTML = `<h3>${task.title}</h3>
                 <p>${task.description}</p>
                 <p>Categoria: ${task.category}</p>
-                <p>Completo: <input type="checkbox" onchange="toggleComplete(${i})" ${task.completed ? 'checked' : ''}>
+                <p><label>Completo: <input type="checkbox" onchange="toggleComplete(${i})" ${task.completed ? 'checked' : ''}></label>
                 <button onclick="editTask(${i})">Editar</button></p>`;
 
             taskList.appendChild(taskElement);
