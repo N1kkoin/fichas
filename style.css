@@ -780,3 +780,8 @@ summary {
 .task input {
     width: fit-content;
 }
+
+.filtros{
+    display: flex;
+    gap: 10px;
+}

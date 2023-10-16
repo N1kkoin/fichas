@@ -648,23 +648,28 @@
                     <option value="Outro">Outro</option>
                 </select>
                 <button onclick="addTask()">Adicionar Tarefa</button>
-                <hr>
-                <h2>Filtrar por Categoria</h2>
-                <select id="filterCategory" onchange="filterTasks()">
-                    <option value="Todos">Todos</option>
-                    <option value="Historia">Historia</option>
-                    <option value="Personal">Personal</option>
-                    <option value="Companheiros">Companheiros</option>
-                    <option value="Outro">Outros</option>
-                </select>
-                <h2>Filtrar por Status</h2>
-                <select id="filterStatus" onchange="filterTasks()">
-                    <option value="Todos">Todos</option>
-                    <option value="Completas">Completas</option>
-                    <option value="Não Completas">Não Completas</option>
-                </select>
+                <div class="filtros" >
+                    <div>
+                    <h2>Categoria</h2>
+                    <select id="filterCategory" onchange="filterTasks()">
+                        <option value="Todos">Todos</option>
+                        <option value="Historia">Historia</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Companheiros">Companheiros</option>
+                        <option value="Outro">Outros</option>
+                    </select>
+                </div>
+                    <div>
+                    <h2>Status</h2>
+                    <select id="filterStatus" onchange="filterTasks()">
+                        <option value="Todos">Todos</option>
+                        <option value="Completas">Completas</option>
+                        <option value="Não Completas">Não Completas</option>
+                    </select>
+                    </div>
+                </div>
                 <div id="taskList"></div>
-            
+
                 <div id="editTaskForm" style="display: none;">
                     <h2>Editar Tarefa</h2>
                     <input type="text" id="editTitle" placeholder="Novo Título">
@@ -681,8 +686,10 @@
 
                 </div>
                 <div id="taskList"></div>
-                <h5 style="margin-bottom: 0; color: #007BFF;">Clique no "Salvar tarefas" pois o Jornal não é salvo no mesmo arquivo que o resto da ficha!</h5>
-                <button class="buttonsalvartasks" id="save-buttontasks" onclick="saveTasksToFile()">Salvar Tarefas</button>
+                <h5 style="margin-bottom: 0; color: #007BFF;">Clique no "Salvar tarefas" pois o Jornal não é salvo no
+                    mesmo arquivo que o resto da ficha!</h5>
+                <button class="buttonsalvartasks" id="save-buttontasks" onclick="saveTasksToFile()">Salvar
+                    Tarefas</button>
                 <input type="file" id="file-inputtasks" style="display: none;">
                 <button class="buttonloadtasks" id="load-buttontasks">Carregar</button>
 
