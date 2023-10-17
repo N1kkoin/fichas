@@ -23,169 +23,168 @@
                     <input type="file" id="char-portrait" accept="image/*">
                 </div>
                 <div class="character-info">
-                    <div>
-                        <input type="text" id="char-name">
-                        <label for="char-name">Nome</label>
-                    </div>
 
-                    <div class="racaeclasse">
-                        <div>
-                            <select id="char-race">
-                                <option value="defaultrace">-----</option>
-                                <option value="aarakocra">Aarakocra</option>
-                                <option value="aasimar">Aasimar</option>
-                                <option value="airgenasi">Air Genasi</option>
-                                <option value="bugbear">Bugbear</option>
-                                <option value="centaur">Centaur</option>
-                                <option value="changeling">Changeling</option>
-                                <option value="deepgnome">Deep Gnome</option>
-                                <option value="dragonborn">Dragonborn</option>
-                                <option value="duergar">Duergar</option>
-                                <option value="dwarf">Dwarf</option>
-                                <option value="earthgenasi">Earth Genasi</option>
-                                <optgroup label="Elfos">
-                                    <option value="highelves">Alto Elfo</option>
-                                    <option value="avariel">Elfos Alados (Avariel)</option>
-                                    <option value="eladrin">Eladrin</option>
-                                    <option value="woodelves">Elfo da Floresta</option>
-                                    <option value="seaelves">Elfo do Mar</option>
-                                    <option value="wildelves">Elfos Selvagens</option>
-                                    <option value="darkelves">Elfo Negro (Drow)</option>
-                                    <option value="greyelves">Grey elves</option>
-                                </optgroup>
-                                <option value="fairy">Fairy</option>
-                                <option value="gnome">Gnome</option>
-                                <option value="githyanki">Githyanki</option>
+                    <div style="display: flex;">
+                        <div class="juntos">
+                            <div>
+                                <label for="char-name">Nome</label>
+                                <input type="text" id="char-name">
+                            </div>
+                            <div>
+                                <label for="char-level">Nível de Personagem</label>
+                                <input type="number" id="char-level" onchange="updateCharBonus()">
+                            </div>
 
-                                <option value="halfelf">Half-Elf</option>
-                                <option value="halfling">Halfling</option>
-                                <option value="halforc">Half-Orc</option>
-                                <option value="human">Human</option>
-                                <option value="tiefling">Tiefling</option>
-                                <!-- Adicione outras opções de raça aqui -->
-                            </select><br>
-                            <label for="char-race">Ancestralidade</label>
+                            <div>
+                                <label for="char-exp">Pontos de Exp</label>
+                                <input type="number" id="char-exp">
+                            </div>
+                            <div>
+                                <label for="char-bonus" class="custom-tooltip"
+                                    data-title="Some o Bônus de Proficiência com a salvaguardas e perícias relacionadas a sua classe. Cada classe tem proficiências únicas, ampliando as opções de jogabilidade e personalização do personagem. Esses bônus aumentam com o avanço do nível, aprofundando a expertise da classe.">
+                                    Bônus de Proficiência</label>
+                                <input type="text" id="char-bonus" class="disabled-input">
+                            </div>
                         </div>
-                        <div>
-                            <select id="char-background">
-                                <option value="defaultback">-----</option>
-                                <option value="acolyte">Acólito</option>
-                                <option value="charlatan">Charlatão</option>
-                                <option value="criminal">Criminoso</option>
-                                <option value="entertainer">Animador</option>
-                                <option value="folkhero">Herói do Povo</option>
-                                <option value="guildartesan">Artesão de Guilda</option>
-                                <option value="hermit">Eremita</option>
-                                <option value="noble">Nobre</option>
-                                <option value="outlander">Forasteiro</option>
+                        <div class="racaeclasse">
+                            <div>
+                                <label for="char-race">Ancestralidade</label>
+                                <select id="char-race">
+                                    <option value="defaultrace">-----</option>
+                                    <option value="aarakocra">Aarakocra</option>
+                                    <option value="aasimar">Aasimar</option>
+                                    <option value="airgenasi">Air Genasi</option>
+                                    <option value="bugbear">Bugbear</option>
+                                    <option value="centaur">Centaur</option>
+                                    <option value="changeling">Changeling</option>
+                                    <option value="deepgnome">Deep Gnome</option>
+                                    <option value="dragonborn">Dragonborn</option>
+                                    <option value="duergar">Duergar</option>
+                                    <option value="dwarf">Dwarf</option>
+                                    <option value="earthgenasi">Earth Genasi</option>
+                                    <optgroup label="Elfos">
+                                        <option value="highelves">Alto Elfo</option>
+                                        <option value="avariel">Elfos Alados (Avariel)</option>
+                                        <option value="eladrin">Eladrin</option>
+                                        <option value="woodelves">Elfo da Floresta</option>
+                                        <option value="seaelves">Elfo do Mar</option>
+                                        <option value="wildelves">Elfos Selvagens</option>
+                                        <option value="darkelves">Elfo Negro (Drow)</option>
+                                        <option value="greyelves">Grey elves</option>
+                                    </optgroup>
+                                    <option value="fairy">Fairy</option>
+                                    <option value="gnome">Gnome</option>
+                                    <option value="githyanki">Githyanki</option>
 
-                                <option value="sailor">Marinheiro</option>
-                                <option value="sage">Sábio</option>
-                                <option value="soldier">Soldado</option>
-                                <option value="urchin">Orfão</option>
-                            </select><br>
-                            <label for="char-race">Antecedentes</label>
-                        </div>
-                        <div>
-                            <select id="char-class">
-                                <option value="defaultclass">-----</option>
-                                <option value="artificer">Artífice</option>
-                                <option value="barbarian">Bárbaro</option>
-                                <option value="bard">Bardo</option>
-                                <option value="cleric">Clérigo</option>
-                                <option value="druid">Druida</option>
-                                <option value="fighter">Guerreiro</option>
-                                <option value="monk">Monge</option>
-                                <option value="paladin">Paladino</option>
-                                <option value="ranger">Patrulheiro</option>
-                                <option value="rogue">Ladino</option>
-                                <option value="sorcerer">Feiticeiro</option>
-                                <option value="warlock">Bruxo</option>
-                                <option value="wizard">Mago</option>
+                                    <option value="halfelf">Half-Elf</option>
+                                    <option value="halfling">Halfling</option>
+                                    <option value="halforc">Half-Orc</option>
+                                    <option value="human">Human</option>
+                                    <option value="tiefling">Tiefling</option>
+                                    <!-- Adicione outras opções de raça aqui -->
+                                </select><br>
+                            </div>
+                            <div>
+                                <label for="char-race">Antecedentes</label>
+                                <select id="char-background">
+                                    <option value="defaultback">-----</option>
+                                    <option value="acolyte">Acólito</option>
+                                    <option value="charlatan">Charlatão</option>
+                                    <option value="criminal">Criminoso</option>
+                                    <option value="entertainer">Animador</option>
+                                    <option value="folkhero">Herói do Povo</option>
+                                    <option value="guildartesan">Artesão de Guilda</option>
+                                    <option value="hermit">Eremita</option>
+                                    <option value="noble">Nobre</option>
+                                    <option value="outlander">Forasteiro</option>
 
-                            </select><br>
-                            <label for="char-class">Classe</label>
+                                    <option value="sailor">Marinheiro</option>
+                                    <option value="sage">Sábio</option>
+                                    <option value="soldier">Soldado</option>
+                                    <option value="urchin">Orfão</option>
+                                </select><br>
+                            </div>
+                            <div>
+                                <label for="char-class">Classe</label>
+                                <select id="char-class">
+                                    <option value="defaultclass">-----</option>
+                                    <option value="artificer">Artífice</option>
+                                    <option value="barbarian">Bárbaro</option>
+                                    <option value="bard">Bardo</option>
+                                    <option value="cleric">Clérigo</option>
+                                    <option value="druid">Druida</option>
+                                    <option value="fighter">Guerreiro</option>
+                                    <option value="monk">Monge</option>
+                                    <option value="paladin">Paladino</option>
+                                    <option value="ranger">Patrulheiro</option>
+                                    <option value="rogue">Ladino</option>
+                                    <option value="sorcerer">Feiticeiro</option>
+                                    <option value="warlock">Bruxo</option>
+                                    <option value="wizard">Mago</option>
+                                </select><br>
+                            </div>
+                            <div>
+                                <label for="char-class">Alinhamento</label>
+                                <select id="char-alignment">
+                                    <option value="defaultalignment">-----</option>
+                                    <option value="lawfulgoodaligment">Lawful Good</option>
+                                    <option value="neutralgoodaligment">Neutral Good</option>
+                                    <option value="chaoticgoodaligment">Chaotic Good</option>
+                                    <option value="lawfulneutralaligment">Lawful Neutral</option>
+                                    <option value="trueneutralaligment">True Neutral</option>
+                                    <option value="chaoticneutralaligment">Chaotic Neutral</option>
+                                    <option value="lawfulevilaligment">Lawful Evil</option>
+                                    <option value="neutralevilaligment">Neutral Evil</option>
+                                    <option value="chaoticevilaligment">Chaotic Evil</option>
+                                </select><br>
+                            </div>
+                            <div>
+                                <label for="char-class">Religião</label>
+                                <select id="char-gods">
+                                    <option value="defaultgod">-----</option>
+                                    <option value="unaffiliated">Não afiliado</option>
+                                    <option value="auril">Auril</option>
+                                    <option value="azuth">Azuth</option>
+                                    <option value="bane">Bane</option>
+                                    <option value="beshaba">Beshaba</option>
+                                    <option value="bhaal">Bhaal</option>
+                                    <option value="chauntea">Chauntea</option>
+                                    <option value="cyric">Cyric</option>
+                                    <option value="deneir">Deneir</option>
+                                    <option value="eldath">Eldath</option>
+                                    <option value="gond">Gond</option>
+                                    <option value="helm">Helm</option>
+                                    <option value="ilmater">Ilmater</option>
+                                    <option value="kelemvor">Kelemvor</option>
+                                    <option value="lathander">Lathander</option>
+                                    <option value="leira">Leira</option>
+                                    <option value="lliira">Lliira</option>
+                                    <option value="loviatar">Loviatar</option>
+                                    <option value="malar">Malar</option>
+                                    <option value="mask">Mask</option>
+                                    <option value="mielikki">Mielikki</option>
+                                    <option value="milil">Milil</option>
+                                    <option value="myrkul">Myrkul</option>
+                                    <option value="mystra">Mystra</option>
+                                    <option value="oghma">Oghma</option>
+                                    <option value="savras">Savras</option>
+                                    <option value="selune">Selûne</option>
+                                    <option value="shar">Shar</option>
+                                    <option value="silvanus">Silvanus</option>
+                                    <option value="sune">Sune</option>
+                                    <option value="talona">Talona</option>
+                                    <option value="talos">Talos</option>
+                                    <option value="tempus">Tempus</option>
+                                    <option value="torm">Torm</option>
+                                    <option value="tymora">Tymora</option>
+                                    <option value="tyr">Tyr</option>
+                                    <option value="umberlee">Umberlee</option>
+                                    <option value="waukeen">Waukeen</option>
+                                </select><br>
+                            </div>
+                        </div>
 
-                        </div>
-                        <div>
-                            <select id="char-alignment">
-                                <option value="defaultalignment">-----</option>
-                                <option value="lawfulgoodaligment">Lawful Good</option>
-                                <option value="neutralgoodaligment">Neutral Good</option>
-                                <option value="chaoticgoodaligment">Chaotic Good</option>
-                                <option value="lawfulneutralaligment">Lawful Neutral</option>
-                                <option value="trueneutralaligment">True Neutral</option>
-                                <option value="chaoticneutralaligment">Chaotic Neutral</option>
-                                <option value="lawfulevilaligment">Lawful Evil</option>
-                                <option value="neutralevilaligment">Neutral Evil</option>
-                                <option value="chaoticevilaligment">Chaotic Evil</option>
 
-                            </select><br>
-                            <label for="char-class">Alinhamento</label>
-
-                        </div>
-                        <div>
-                            <select id="char-gods">
-                                <option value="defaultgod">-----</option>
-                                <option value="unaffiliated">Não afiliado</option>
-                                <option value="auril">Auril</option>
-                                <option value="azuth">Azuth</option>
-                                <option value="bane">Bane</option>
-                                <option value="beshaba">Beshaba</option>
-                                <option value="bhaal">Bhaal</option>
-                                <option value="chauntea">Chauntea</option>
-                                <option value="cyric">Cyric</option>
-                                <option value="deneir">Deneir</option>
-                                <option value="eldath">Eldath</option>
-                                <option value="gond">Gond</option>
-                                <option value="helm">Helm</option>
-                                <option value="ilmater">Ilmater</option>
-                                <option value="kelemvor">Kelemvor</option>
-                                <option value="lathander">Lathander</option>
-                                <option value="leira">Leira</option>
-                                <option value="lliira">Lliira</option>
-                                <option value="loviatar">Loviatar</option>
-                                <option value="malar">Malar</option>
-                                <option value="mask">Mask</option>
-                                <option value="mielikki">Mielikki</option>
-                                <option value="milil">Milil</option>
-                                <option value="myrkul">Myrkul</option>
-                                <option value="mystra">Mystra</option>
-                                <option value="oghma">Oghma</option>
-                                <option value="savras">Savras</option>
-                                <option value="selune">Selûne</option>
-                                <option value="shar">Shar</option>
-                                <option value="silvanus">Silvanus</option>
-                                <option value="sune">Sune</option>
-                                <option value="talona">Talona</option>
-                                <option value="talos">Talos</option>
-                                <option value="tempus">Tempus</option>
-                                <option value="torm">Torm</option>
-                                <option value="tymora">Tymora</option>
-                                <option value="tyr">Tyr</option>
-                                <option value="umberlee">Umberlee</option>
-                                <option value="waukeen">Waukeen</option>
-                            </select><br>
-                            <label for="char-class">Religião</label>
-
-                        </div>
-                    </div>
-                    <div class="juntos">
-                        <div>
-                            <input type="number" id="char-level" onchange="updateCharBonus()">
-                            <label for="char-level">Nível de Personagem</label>
-                        </div>
-
-                        <div>
-                            <input type="number" id="char-exp">
-                            <label for="char-exp">Pontos de Exp</label>
-                        </div>
-                        <div>
-                            <input type="text" id="char-bonus">
-                            <label for="char-bonus" class="custom-tooltip"
-                                data-title="Some o bônus com a salvaguardas e perícias verdes. Cada classe tem proficiências únicas, ampliando as opções de jogabilidade e personalização do personagem. Esses bônus aumentam com o avanço do nível, aprofundando a expertise da classe.">
-                                Bônus de Proficiência</label>
-                        </div>
                     </div>
                 </div>
 
@@ -437,7 +436,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="juntos armadurainiciativavelocidade">
+                        <div class="juntoss armadurainiciativavelocidade">
                             <div class="armadura">
                                 <input type="number" id="char-armor"><br>
                                 <label for="char-armor">Armadura</label>
@@ -648,24 +647,24 @@
                     <option value="Outro">Outro</option>
                 </select>
                 <button onclick="addTask()">Adicionar Tarefa</button>
-                <div class="filtros" >
+                <div class="filtros">
                     <div>
-                    <h2>Categoria</h2>
-                    <select id="filterCategory" onchange="filterTasks()">
-                        <option value="Todos">Todos</option>
-                        <option value="Historia">Historia</option>
-                        <option value="Personal">Personal</option>
-                        <option value="Companheiros">Companheiros</option>
-                        <option value="Outro">Outros</option>
-                    </select>
-                </div>
+                        <h2>Categoria</h2>
+                        <select id="filterCategory" onchange="filterTasks()">
+                            <option value="Todos">Todos</option>
+                            <option value="Historia">Historia</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Companheiros">Companheiros</option>
+                            <option value="Outro">Outros</option>
+                        </select>
+                    </div>
                     <div>
-                    <h2>Status</h2>
-                    <select id="filterStatus" onchange="filterTasks()">
-                        <option value="Todos">Todos</option>
-                        <option value="Completas">Completas</option>
-                        <option value="Não Completas">Não Completas</option>
-                    </select>
+                        <h2>Status</h2>
+                        <select id="filterStatus" onchange="filterTasks()">
+                            <option value="Todos">Todos</option>
+                            <option value="Completas">Completas</option>
+                            <option value="Não Completas">Não Completas</option>
+                        </select>
                     </div>
                 </div>
                 <div id="taskList"></div>
@@ -696,11 +695,12 @@
             </div>
 
             <div id="tab4" class="tabcontent">
-                <h1>Equipamentos  <span style="color: #d5d5d5;">(não está salvando ainda)</span></h1>
-                
-                <form id="equipamento-form">
-                    <button id="adicionar-item">Adicionar Item</button>
-                </form>            
+                <h1>Equipamentos <span style="color: #d5d5d5;">(não está salvando ainda)</span></h1>
+                <div class="containerequipamentos">
+                    <form id="equipamento-form">
+                        <button id="adicionar-item">Adicionar Item</button>
+                    </form>
+                </div>
             </div>
 
             <div id="tab5" class="tabcontent">

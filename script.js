@@ -1395,12 +1395,12 @@ function displayTasks(categoryFilter = "Todos", statusFilter = "Todos") {
         if ((categoryFilter === "Todos" || task.category === categoryFilter) &&
             (statusFilter === "Todos" || (statusFilter === "Completas" && task.completed) || (statusFilter === "Não Completas" && !task.completed))) {
 
-            
-                const taskElement = document.createElement("div");
-                taskElement.classList.add("task");
-                if (task.completed) {
-                    taskElement.classList.add("completed");
-                }
+
+            const taskElement = document.createElement("div");
+            taskElement.classList.add("task");
+            if (task.completed) {
+                taskElement.classList.add("completed");
+            }
             taskElement.innerHTML = `<h3>${task.title}</h3>
                 <p>${task.description}</p>
                 <p>Categoria: ${task.category}</p>
@@ -1428,7 +1428,7 @@ function saveTasksToFile() {
 
 function loadTasksFromFile() {
     const fileInput = document.getElementById("file-inputtasks");
-    
+
     fileInput.addEventListener("change", function () {
         const selectedFile = fileInput.files[0];
 
@@ -1461,6 +1461,37 @@ loadTasksFromFile();
 
 
 //EQUIPAMENTOS ---------------------------------------------------------------------------------------------------------------------------
+// Array de opções para a qualidade do item
+const qualidadeOpcoes = [
+    { value: 'comum', label: 'Comum' },
+    { value: 'incomum', label: 'Incomum' },
+    { value: 'raro', label: 'Raro' },
+    { value: 'épico', label: 'Épico' },
+    // Adicione mais opções conforme necessário
+];
+
+function criarCampoSelect(nome, opcoes) {
+    const select = document.createElement('select');
+    select.name = nome;
+
+    opcoes.forEach(opcao => {
+        const opcaoElement = document.createElement('option');
+        opcaoElement.value = opcao.value;
+        opcaoElement.text = opcao.label;
+        select.appendChild(opcaoElement);
+    });
+
+    return select;
+}
+
+function criarCampoInput(nome, type, placeholder) {
+    const input = document.createElement('input');
+    input.type = type;
+    input.name = nome;
+    input.placeholder = placeholder;
+    return input;
+}
+
 function criarItem() {
     const equipamentoContainer = document.createElement('div');
     equipamentoContainer.className = 'equipamento-container';
@@ -1468,82 +1499,52 @@ function criarItem() {
     const toggleButton = document.createElement('span');
     toggleButton.className = 'toggle-button';
     toggleButton.innerHTML = '▼';
-    equipamentoContainer.appendChild(toggleButton);
 
-    toggleButton.addEventListener('click', function() {
+    toggleButton.addEventListener('click', function () {
         equipamentoContainer.classList.toggle('collapsed');
         toggleButton.innerHTML = equipamentoContainer.classList.contains('collapsed') ? '▼' : '▲';
     });
 
-    const nomeItem = document.createElement('input');
-    nomeItem.type = 'text';
-    nomeItem.name = 'nome-item';
-    nomeItem.placeholder = 'Nome do Item';
-
+    const nomeItem = criarCampoInput('nome-item', 'text', 'Nome do Item');
     const itemDetails = document.createElement('div');
     itemDetails.className = 'item-details';
 
-    const tamanhoItem = document.createElement('select');
-    tamanhoItem.name = 'tamanho-item';
-    const opcaoTiny = document.createElement('option');
-    opcaoTiny.value = 'tiny';
-    opcaoTiny.text = 'Pequenininho (0.2 de peso)';
-    const opcaoSmall = document.createElement('option');
-    opcaoSmall.value = 'small';
-    opcaoSmall.text = 'Slot 1';
-    const opcaoMedium = document.createElement('option');
-    opcaoMedium.value = 'medium';
-    opcaoMedium.text = 'Slot 2';
-    tamanhoItem.appendChild(opcaoTiny);
-    tamanhoItem.appendChild(opcaoSmall);
-    tamanhoItem.appendChild(opcaoMedium);
+    const tamanhoItemSelect = criarCampoSelect('tamanho-item', [
+        { value: 'tiny', label: 'Pequenininho (0.2 de peso)' },
+        { value: 'small', label: 'Slot 1' },
+        { value: 'medium', label: 'Slot 2' }
+        // Adicione mais opções conforme necessário
+    ]);
 
-    const quantidadeItem = document.createElement('input');
-    quantidadeItem.type = 'number';
-    quantidadeItem.name = 'quantidade-item';
-    quantidadeItem.placeholder = 'Quantidade';
+    const quantidadeItem = criarCampoInput('quantidade-item', 'number', 'Quantidade');
+    const descricaoItem = criarCampoInput('descricao-item', 'text', 'Descrição');
+    const qualidadeItemSelect = criarCampoSelect('qualidade-item', qualidadeOpcoes);
 
-    const descricaoItem = document.createElement('textarea');
-    descricaoItem.name = 'descricao-item';
-    descricaoItem.placeholder = 'Descrição';
-
-    const qualidadeItem = document.createElement('select');
-    qualidadeItem.name = 'qualidade-item';
-    const opcaoComum = document.createElement('option');
-    opcaoComum.value = 'comum';
-    opcaoComum.text = 'Comum';
-    const opcaoIncomum = document.createElement('option');
-    opcaoIncomum.value = 'incomum';
-    opcaoIncomum.text = 'Incomum';
-    const opcaoRaro = document.createElement('option');
-    opcaoRaro.value = 'raro';
-    opcaoRaro.text = 'Raro';
-    const opcaoEpico = document.createElement('option');
-    opcaoEpico.value = 'épico';
-    opcaoEpico.text = 'Épico';
-    qualidadeItem.appendChild(opcaoComum);
-    qualidadeItem.appendChild(opcaoIncomum);
-    qualidadeItem.appendChild(opcaoRaro);
-    qualidadeItem.appendChild(opcaoEpico);
-
+    // Adicione um botão de exclusão
     const deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Excluir';
-    deleteButton.addEventListener('click', function() {
+    deleteButton.addEventListener('click', function () {
         equipamentoContainer.remove();
     });
 
-    itemDetails.appendChild(tamanhoItem);
+    // Envolve nomeItem e toggleButton em um elemento flex
+    const flexContainer = document.createElement('div');
+    flexContainer.className = 'container-flex';
+    flexContainer.appendChild(nomeItem);
+    flexContainer.appendChild(toggleButton);
+
+    itemDetails.appendChild(tamanhoItemSelect);
     itemDetails.appendChild(quantidadeItem);
     itemDetails.appendChild(descricaoItem);
-    itemDetails.appendChild(qualidadeItem);
+    itemDetails.appendChild(qualidadeItemSelect);
     itemDetails.appendChild(deleteButton);
 
-    equipamentoContainer.appendChild(nomeItem);
+    equipamentoContainer.appendChild(flexContainer);
     equipamentoContainer.appendChild(itemDetails);
     return equipamentoContainer;
 }
 
-document.getElementById('adicionar-item').addEventListener('click', function(event) {
+document.getElementById('adicionar-item').addEventListener('click', function (event) {
     event.preventDefault();
     const equipamentoForm = document.getElementById('equipamento-form');
     equipamentoForm.appendChild(criarItem());
