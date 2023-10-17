@@ -45,6 +45,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
 /* Remova as setas do input de número */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -181,9 +182,33 @@ h1 {
     font-size: 24px;
 }
 
-h2 {
-    font-size: 20px;
+h2{
+    font-size: 26px;
+
+
 }
+
+#race-description h2,
+#gods-description h2,
+#class-description h2,
+#alignment-description h2 ,
+#background-description h2 {
+    margin-bottom: -10px;
+}
+
+
+h3{
+    color: #2d48be;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+h4{
+    color: #007BFF;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 
 label {
     display: block;
@@ -303,9 +328,8 @@ input:focus {
     gap: 5px;
     box-sizing: border-box;
     flex-direction: column;
-    border: 1px solid #007BFF;
-    border-radius: 5px;
-    padding: 15px;
+    border-left: 1px solid #007BFF;
+    padding:  0 15px;
 }
 
 .character-info .racaeclasse label {
