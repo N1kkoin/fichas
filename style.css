@@ -82,8 +82,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .character-info,
 .character-stats {
     margin-bottom: 10px;
-    text-transform: uppercase;
     font-weight: 100;
+}
+
+.character-info h2,
+.character-stats h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .character-info {
@@ -105,6 +110,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 120px;
     text-align: center;
     box-sizing: border-box;
+    display: flex;
     border: 1px solid #007BFF;
     border-radius: 100%;
     width: 120px;
@@ -280,12 +286,13 @@ input {
 .character-info label {
     color: #787878;
     margin-top: 5px;
-    margin-bottom: -10px;
-    font-size: 12px;
+    margin-bottom: -4px;
+    margin-left: 10px;
+    font-size: 14px;
     position: relative; /* Adicione position: relative */
     width: fit-content;
     background-color: white;
-    padding: 0  5px 5px 0;
+    padding: 0 5px;
 }
 
 .character-info input {
@@ -329,7 +336,7 @@ input:focus {
     box-sizing: border-box;
     flex-direction: column;
     border-left: 1px solid #007BFF;
-    padding:  0 15px;
+    padding:  0 0 0 15px;
 }
 
 .character-info .racaeclasse label {
