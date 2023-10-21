@@ -552,90 +552,25 @@ raceSelect.addEventListener('change', function () {
             raceTitle = 'Humano';
             raceDescription = 'Humans are a versatile race known for their adaptability and ambition. They are found in various societies and environments, excelling in diverse fields.';
             break;
-        case 'elf':
-            raceTitle = 'Elfo';
-            raceDescription = 'Elves are an elegant and long-lived race with a deep connection to nature. They are known for their grace, keen senses, and proficiency in archery and magic.';
-            break;
-        case 'aarakocra':
-            raceTitle = 'Aarakocra';
-            raceDescription = 'Aarakocra are bird-like humanoids with the ability to fly. They live in high mountainous regions and are skilled in aerial combat and scouting.';
-            break;
-        case 'aasimar':
-            raceTitle = 'Aasimar';
-            raceDescription = 'Aasimar are celestial descendants with divine traits. They are often noble and possess abilities related to their celestial ancestry.';
-            break;
-        case 'airgenasi':
-            raceTitle = 'Air Genasi';
-            raceDescription = 'Air Genasi are infused with the power of air elementals. They have air-related abilities and are known for their agility and connection to the sky.';
-            break;
-        case 'bugbear':
-            raceTitle = 'Bugbear';
-            raceDescription = 'Bugbears are large and strong goblinoids. They are known for their stealth and brutality, often making them skilled in ambushes.';
-            break;
-        case 'centaur':
-            raceTitle = 'Centaur';
-            raceDescription = 'Centaur are half-human, half-horse creatures. They are skilled in archery, hunting, and are often guardians of the wilderness.';
-            break;
-        case 'changeling':
-            raceTitle = 'Changeling';
-            raceDescription = 'Changelings are shapeshifters with the ability to change their appearance. They are skilled in subterfuge and disguise.';
-            break;
-        case 'deepgnome':
-            raceTitle = 'Deep Gnome';
-            raceDescription = 'Deep Gnomes, or Svirfneblin, are subterranean gnomes known for their stealth and connection to the Underdark.';
-            break;
         case 'dragonborn':
             raceTitle = 'Draconato';
             raceDescription = 'Descendentes de dragões, como seus nomes demonstram, os draconatos andam orgulhosamente pelo mundo que os saúda com um temor incompreensível. Moldados por deuses dracônicos ou pelos próprios dragões, draconatos originalmente nasceram de ovos de dragão como uma raça única, combinando os melhores atributos de dragões e humanos. Alguns draconatos são servos fieis de dragões verdadeiros, outros formas as fileiras de soldados em grandes guerras e ainda existem os que encontram-se à toa, sem um objetivo claro na vida.</br></br>Draconatos parecem muito com dragões que estão de pé em forma humanoide, apesar de não possuírem asas nem uma calda. O primeiro draconato possuía escamas de matizes brilhantes combinando com as cores do dragão de que descendia, mas gerações de misturas criaram uma aparência mais uniforme. Suas pequenas escamas finas, normalmente são de cor bronze ou latão, algumas vezes indo até tons de escarlate, ferrugem, ouro ou cobre esverdeado. Eles são altos e de constituição forte, muitas vezes medindo 1,95 metro de altura e pesando 150 kg ou mais. Suas mãos e pés são fortes, com três dedos de garras curvadas em cada mão. </br></br><h3>Traços de Ascendência</h3><b>Aprimoramento de Atributo:</b> +2 de FOR, +1 de CAR<br><b>Tamanho:</b> Médio<br><b>Deslocamento:</b> 9m<br><b>Visão no Escuro:</b> 18m<br><b>Idiomas:</b> Comum, Dracônico.<br><br><b>Ancestral Dracônico:</b> Escolha um tipo de dragão da tabela Ancestral Dracônico. Sua arma de sopro e resistência a dano são determinadas pelo tipo de dragão, como mostrado na tabela abaixo.<br><b>Arma de Sopro:</b> Pode usar uma ação para exalar energia destrutiva. A CD do teste de resistência é 8 + seu modificador de CON + bônus de proficiência. Uma criatura sofre 2d6 de dano num fracasso e metade desse dano num sucesso. O dano aumenta para 3d6 no 6° nível, 4d6 no 11° nível e 5d6 no 16° nível. Depois de usar a arma de sopro, você não poderá utilizá-la novamente até completar um descanso curto ou longo.<br><b>Resistência a Dano:</b> Você possui resistência ao tipo de dano associado ao seu ancestral dracônico.<br><br><table style="border-collapse: collapse; width: 100%;"> <tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"><b> Ancestral</b> </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> <b>Tipo de Dano</b> </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> <b>Arma de Sopro</b> </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> <b>Salvaguarda</b> </td> </tr> <tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Azul </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Fogo </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Linha - 1.5m/9m </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> DES </td> </tr> <tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Branco </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Frio </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Cone - 4.5m </td> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> CON </td> </tr> <tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Bronze </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Elétrico </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Linha - 1.5m/9m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> DES </td></tr><tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Cobre </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Ácido </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Linha - 1.5m/9m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> DES </td></tr><tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Latão </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Fogo </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Linha - 1.5m/9m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> DES </td></tr><tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Negro </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Fogo </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Linha - 1.5m/9m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> DES </td></tr><tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Ouro </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Fogo </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Cone - 4.5m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> CON </td></tr><tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Prata </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Gelo </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Cone - 4.5m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> CON </td></tr><tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Verde </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Veneno </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Cone - 4.5m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> CON </td></tr><tr> <td style="border: 1px solid #DFDFDF; padding: 5pt;"> Vermelho </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Veneno </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> Cone - 4.5m </td><td style="border: 1px solid #DFDFDF; padding: 5pt;"> CON </td></table>';
-            break;
-
-        case 'duergar':
-            raceTitle = 'Duergar';
-            raceDescription = 'Duergar are dark dwarves who dwell underground. They are known for their resilience and innate magical abilities.';
             break;
         case 'dwarf':
             raceTitle = 'Anão';
             raceDescription = 'Audazes e resistentes, os anões são conhecidos como hábeis guerreiros, mineradores e trabalhadores em pedra e metal. Embora tenham menos de 1,50 metro de altura, os anões são tão largos e compactos que podem pesar tanto quanto um humano 60 centímetros mais alto. Sua coragem e resistência compete facilmente com qualquer povo mais alto. </br></br><h3>Traços de Ascendência.</h3><b>Aprimoramento de Atributo:</b> +2 de CON</br><b>Tamanho:</b> Médio </br><b>Deslocamento:</b> 7.5m - Deslocamento não é reduzido por usar armaduras pesadas.</br><b>Visão no Escuro:</b> 18m</br><b>Idiomas:</b> Comum, Anão</br></br><b>Resiliência:</b> Vantagem em salvaguardas contra veneno e resistência à veneno.</br><b>Treinamento Anão:</b> Proficiência com machados de batalha, machadinhas, martelos leves emartelos de guerra.</br><b>Proficiência em Ferramentas:</b> Proficiência em uma ferramenta de artesão à escolha, dentre:ferramentas de ferreiro, suprimentos de cervejeiro ou ferramentas de pedreiro.</br><b>Especialização em Rochas:</b> Considerado proficiente em História (INT) ao realizar um testerelacionado a um trabalho em pedra. O bônus é dobrado no teste.</br></br><b>Ancestralidades:</b> Anão da Colina OU Anão da Montanha.</br><h4>Anão da Colina</h4><b>Aprimoramento de Atributo:</b> +1 de SAB</br><b>Tenacidade:</b> PV máximo aumenta em +1, e aumenta em +1 sempre que subir de Nvl.</br><h4>Anão da Montanha</h4><b>Aprimoramento de Atributo:</b> +2 de FOR</br><b>Armadurado:</b> Treinamento em armaduras leves e médias. ';
             break;
-        case 'earthgenasi':
-            raceTitle = 'Earth Genasi';
-            raceDescription = 'Earth Genasi are infused with the power of earth elementals. They have earth-related abilities and are known for their endurance and stability.';
-            break;
         case 'highelves':
             raceTitle = 'Alto Elfo';
             raceDescription = 'Como alto elfo, você possui uma mente afiada e um domínio da magia básico.</br> </br>  <h3>Traços de Ascendência (Elfo)</h3><b>Aprimoramento de Atributo:</b> +2 de DES</br><b>Tamanho:</b> Médio </br><b>Deslocamento:</b> 9m</br><b>Visão no Escuro:</b> 18m</br><b>Idiomas:</b> Comum, Élfico.</br></br><b>Sentidos Aguçados:</b> Proficiência na perícia Percepção.</br><b>Ancestral Feérico:</b> Vantagem em salvaguarda contra ser enfeitiçado. Magias não podem tecolocar para dormir.</br><b>Treinamento Élfico:</b> Proficiência com espadas longas, espadas curtas, arcos longos e arcoscurtos.</br><b>Transe:</b> Ao invés de dormir, você medida, 4h por dia. Após meditar por 4h, você ganha osbenefícios de um descanso longo.</br></br><b>Ancestralidades:</b> Alto Elfo, Elfo da Floresta ou Drow.</br></br><h4>Alto Elfo</h4><b>Aprimoramento de Atributo:</b> +1 de INT</br><b>Truque:</b> Conhece 1 truque da lista de magias do Mago. INT é o atributo de conjuração.</br><b>Língua Versada:</b> +1 Idioma à escolha.';
-            break;
-        case 'avariel':
-            raceTitle = 'Elfos Alados (Avariel)';
-            raceDescription = 'Os avariel são elfos alados. Essas criaturas raras eram mais comuns quando os mundos do multiverso eram jovens, mas conflitos frequentes com dragões reduziram significativamente o número dos elfos alados. Ainda assim, algumas colônias persistem aqui e ali no Plano Material e no Plano do Ar.</br></br><h3>Traços de Ascendência (Elfo)</h3><b>Aprimoramento de Atributo:</b> +2 de DES</br><b>Tamanho:</b> Médio </br><b>Deslocamento:</b> 9m</br><b>Visão no Escuro:</b> 18m</br><b>Idiomas:</b> Comum, Élfico.</br></br><b>Sentidos Aguçados:</b> Proficiência na perícia Percepção.</br><b>Ancestral Feérico:</b> Vantagem em salvaguarda contra ser enfeitiçado. Magias não podem tecolocar para dormir.</br><b>Treinamento Élfico:</b> Proficiência com espadas longas, espadas curtas, arcos longos e arcoscurtos.</br><b>Transe:</b> Ao invés de dormir, você medida, 4h por dia. Após meditar por 4h, você ganha osbenefícios de um descanso longo.</br></br><b>Ancestralidades:</b> Alto Elfo, Elfo da Floresta ou Drow.</br></br><h4>Avariel</h4><b>Voo:</b> Você possui uma velocidade de voo de 9m. Para usar essa velocidade, você não pode estar usando armadura média ou pesada.</br><b>Idioma:</b> Você pode falar, ler e escrever o Auran.</br>';
-            break;
-        case 'eladrin':
-            raceTitle = 'Eladrin';
-            raceDescription = 'Seres mágicos com fortes laços com a natureza, os eladrin vivem no reino crepuscular da Feywild. Suas cidades às vezes atravessam para o Plano Material, aparecendo brevemente em vales de montanhas ou clareiras de florestas profundas antes de desaparecerem de volta para a Feywild.<h3>Traços de Ascendência (Elfo)</h3><b>Aprimoramento de Atributo:</b> +2 de DES</br><b>Tamanho:</b> Médio </br><b>Deslocamento:</b> 9m</br><b>Visão no Escuro:</b> 18m</br><b>Idiomas:</b> Comum, Élfico.</br></br><b>Sentidos Aguçados:</b> Proficiência na perícia Percepção.</br><b>Ancestral Feérico:</b> Vantagem em salvaguarda contra ser enfeitiçado. Magias não podem tecolocar para dormir.</br><b>Treinamento Élfico:</b> Proficiência com espadas longas, espadas curtas, arcos longos e arcoscurtos.</br><b>Transe:</b> Ao invés de dormir, você medida, 4h por dia. Após meditar por 4h, você ganha osbenefícios de um descanso longo.</br></br><b>Ancestralidades:</b> Alto Elfo, Elfo da Floresta ou Drow.</br></br><h4>Eladrin</h4><b>Aprimoramento de Atributo:</b> +1 de INT</br><b>Treinamento de Arma Élfica:</b> Você possui proficiência com a espada longa, espada curta, arco curto e arco longo.</br><b>Passo Feérico:</b> Você pode conjurar o feitiço <i>Passo Nebuloso</i> uma vez usando essa habilidade. Você recupera a capacidade de fazê-lo quando termina um descanso curto ou longo.            ';
             break;
         case 'woodelves':
             raceTitle = 'Elfo da Floresta';
             raceDescription = 'Como um elfo da floresta, você possui sentidos e intuição aguçados, seus pés ágeis guiam-no rápida e furtivamente através de suas florestas nativas.</br></br>A pele dos elfos da floresta tende a ser de matiz cobreada, algumas vezes com traços esverdeados. Seu cabelo geralmente é castanho ou negro, mas ocasionalmente podem ser loiros ou cor de cobre. Seus olhos são verdes, castanhos ou cor de avelã.  </br></br><h3>Traços de Ascendência (Elfo)</h3><b>Aprimoramento de Atributo:</b> +2 de DES</br><b>Tamanho:</b> Médio </br><b>Deslocamento:</b> 9m</br><b>Visão no Escuro:</b> 18m</br><b>Idiomas:</b> Comum, Élfico.</br></br><b>Sentidos Aguçados:</b> Proficiência na perícia Percepção.</br><b>Ancestral Feérico:</b> Vantagem em salvaguarda contra ser enfeitiçado. Magias não podem tecolocar para dormir.</br><b>Treinamento Élfico:</b> Proficiência com espadas longas, espadas curtas, arcos longos e arcoscurtos.</br><b>Transe:</b> Ao invés de dormir, você medida, 4h por dia. Após meditar por 4h, você ganha osbenefícios de um descanso longo.</br></br><b>Ancestralidades:</b> Alto Elfo, Elfo da Floresta ou Drow.</br></br><h4>Elfo da Floresta</h4><b>Aprimoramento de Atributo:</b> +1 de SAB</br><b>Pés Ligeiros:</b> Deslocamento aumenta para 10.5m.</br><b>Máscara da Natureza:</b> Você pode tentar se esconder mesmo quando você está apenaslevemente obscurecido por folhagem, chuva forte, neve caindo, névoa ou outro fenômenonatural.</br>';
             break;
-        case 'seaelves':
-            raceTitle = 'Elfo do Mar';
-            raceDescription = 'Os elfos do mar são uma sub-raça de elfos que habitam as regiões costeiras e são hábeis nadadores e navegadores.';
-            break;
-        case 'wildelves':
-            raceTitle = 'Elfos Selvagens';
-            raceDescription = 'Os elfos selvagens são nômades e possuem uma profunda conexão com a vida selvagem e a natureza.';
-            break;
         case 'darkelves':
             raceTitle = 'Elfo Negro (Drow)';
             raceDescription = 'Descendentes de uma antiga sub-raça de elfos de pele negra, os drow foram banidos da superfície do mundo por seguirem a deusa Lolth pelo caminho do mal e corrupção. Agora, eles construíram sua própria civilização nas profundezas do Subterrâneo, moldados pelo Caminho de Lolth.</br></br> Também conhecidos como elfos negros, os drow possuem pele negra similar a obsidiana polida e cabelos brancos opacos ou amarelo pálido. Normalmente eles possuem olhos muito pálidos (tão pálidos que são confundidos com olhos brancos) com tons de lilás, prata, rosa, vermelho e azul. Eles costumam ser menores e mais magros que a maioria dos elfos. </br></br>Aventureiros drow são raros e a raça não existe em todo o mundo. </br></br><h3>Traços de Ascendência (Elfo)</h3><b>Aprimoramento de Atributo:</b> +2 de DES</br><b>Tamanho:</b> Médio </br><b>Deslocamento:</b> 9m</br><b>Visão no Escuro:</b> 18m</br><b>Idiomas:</b> Comum, Élfico.</br></br><b>Sentidos Aguçados:</b> Proficiência na perícia Percepção.</br><b>Ancestral Feérico:</b> Vantagem em salvaguarda contra ser enfeitiçado. Magias não podem tecolocar para dormir.</br><b>Treinamento Élfico:</b> Proficiência com espadas longas, espadas curtas, arcos longos e arcoscurtos.</br><b>Transe:</b> Ao invés de dormir, você medida, 4h por dia. Após meditar por 4h, você ganha osbenefícios de um descanso longo.</br></br><b>Ancestralidades:</b> Alto Elfo, Elfo da Floresta ou Drow.</br></br><h4>Drow</h4><b>Aprimoramento de Atributo:</b> +1 de CAR</br><b>Visão no Escuro Superior:</b> Visão no escuro aumenta para 36m.</br><b>Sensibilidade à Luz Solar:</b> Desvantagem em jogadas de ataque e testes de Percepção (SAB)relacionados a visão quando você, o alvo do seu ataque, ou qualquer coisa que você estátentando perceber, esteja sob luz solar direta.</br><b>Treinamento Drow:</b> Proficiência com rapieiras, espadas curtas e bestas de mão. Esse traçosubstitui <i>Treinamento Élfico</i>.</br><b>Magia Drow:</b> Possui o truque Globos de Luz. No 3ºNvl pode conjurar Fogo das Fadas, no5ºNvl pode conjurar Escuridão. Ao conjurar essas magias, é necessário um descanso longopara usá-las novamente. CAR é o atributo de conjuração.</br>';
-            break;
-        case 'greyelves':
-            raceTitle = 'Grey elves';
-            raceDescription = 'Grey elves are a reclusive subrace of elves known for their intelligence and magic proficiency.';
-            break;
-        case 'fairy':
-            raceTitle = 'Fairy';
-            raceDescription = 'Fairies are small, magical beings known for their playful nature and connection to the natural world.';
             break;
         case 'gnome':
             raceTitle = 'Gnome';
@@ -656,6 +591,10 @@ raceSelect.addEventListener('change', function () {
         case 'tiefling':
             raceTitle = 'Tiefling';
             raceDescription = 'Tieflings are descendants of fiends, with infernal traits and a struggle against their dark ancestry.';
+            break;
+        case 'customrace':
+            raceTitle = 'Outra Ancestralidade';
+            raceDescription = 'Existem varias ancestralidades nesse mundo, se a sua não estiver aqui, escolha essa opção.';
             break;
 
         default:
