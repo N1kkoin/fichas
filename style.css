@@ -435,16 +435,6 @@ input:focus {
         /* Permite que os elementos flexíveis envolvam para a próxima linha quando necessário */
     }
 
-    .character-sheet {
-        max-width: 900px;
-        /* Define a largura máxima */
-        margin-left: auto;
-        /* Move o character-sheet para o lado direito */
-        padding: 20px;
-        border-radius: 5px;
-        flex-basis: 960px;
-    }
-
     .explicação-sheet {
         width: 100%;
 
@@ -751,6 +741,7 @@ summary {
 .tab {
     overflow: hidden;
     display: flex; /* Torna os botões de guias flexíveis */
+    width: 1000px;
 }
 
 .tab button {
@@ -797,9 +788,9 @@ summary {
 }
 
 .task {
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #description, #editDescription{
@@ -844,6 +835,7 @@ summary {
 }
 
 .filtros{
+    margin-top: -14px;
     display: flex;
     gap: 10px;
 }
@@ -902,6 +894,15 @@ summary {
     cursor: pointer;
     height: 75px;
   }
-  
+    
+.jornal{
+    display: flex;
+}
 
-  
+.jornaladd{
+    margin-right: 20px;
+}
+
+.jornalfiltros{
+    width: 100%;
+}

@@ -43,7 +43,6 @@
                                 <label for="char-level">Nível de Personagem</label>
                                 <input type="number" id="char-level" onchange="updateCharBonus()">
                             </div>
-
                             <div>
                                 <label for="char-exp">Pontos de Exp</label>
                                 <input type="number" id="char-exp">
@@ -184,10 +183,11 @@
 
             <div class="tab">
                 <button class="tablinks" onclick="openTab(event, 'tab1')">Principal</button>
+                <button class="tablinks" onclick="openTab(event, 'tab6')">Personagem</button>
                 <button class="tablinks" onclick="openTab(event, 'tab2')">Editor de texto</button>
                 <button class="tablinks" onclick="openTab(event, 'tab3')">Jornal</button>
                 <button class="tablinks" onclick="openTab(event, 'tab4')">Equipamentos</button>
-                <button class="tablinks" onclick="openTab(event, 'tab5')">Aba 5</button>
+                <button class="tablinks" onclick="openTab(event, 'tab5')">Habilidades</button>
             </div>
 
             <div id="tab1" class="tabcontent">
@@ -629,37 +629,44 @@
             </div>
 
             <div id="tab3" class="tabcontent">
-                <h1>Jornal</h1>
-                <input type="text" id="title" placeholder="Título">
-                <textarea id="description" placeholder="Descrição"></textarea>
-                <select id="category">
-                    <option value="Historia">Historia</option>
-                    <option value="Personal">Personal</option>
-                    <option value="Companheiros">Companheiros</option>
-                    <option value="Outro">Outro</option>
-                </select>
-                <button onclick="addTask()">Adicionar Tarefa</button>
-                <div class="filtros">
-                    <div>
-                        <h2>Categoria</h2>
-                        <select id="filterCategory" onchange="filterTasks()">
-                            <option value="Todos">Todos</option>
+                <div class="jornal">
+                    <div class="jornaladd">
+                        <h1>Jornal</h1>
+                        <input type="text" id="title" placeholder="Título">
+                        <textarea id="description" placeholder="Descrição"></textarea>
+                        <select id="category">
                             <option value="Historia">Historia</option>
                             <option value="Personal">Personal</option>
                             <option value="Companheiros">Companheiros</option>
-                            <option value="Outro">Outros</option>
+                            <option value="Outro">Outro</option>
                         </select>
+                        <button onclick="addTask()">Adicionar Tarefa</button>
                     </div>
-                    <div>
-                        <h2>Status</h2>
-                        <select id="filterStatus" onchange="filterTasks()">
-                            <option value="Todos">Todos</option>
-                            <option value="Completas">Completas</option>
-                            <option value="Não Completas">Não Completas</option>
-                        </select>
+                    <div class="jornalfiltros">
+                        <div class="filtros">
+                            <div>
+                                <h2>Categoria</h2>
+                                <select id="filterCategory" onchange="filterTasks()">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Historia">Historia</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Companheiros">Companheiros</option>
+                                    <option value="Outro">Outros</option>
+                                </select>
+                            </div>
+                            <div>
+                                <h2>Status</h2>
+                                <select id="filterStatus" onchange="filterTasks()">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Completas">Completas</option>
+                                    <option value="Não Completas">Não Completas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="taskList"></div>
                     </div>
                 </div>
-                <div id="taskList"></div>
+
 
                 <div id="editTaskForm" style="display: none;">
                     <h2>Editar Tarefa</h2>
@@ -696,6 +703,10 @@
             </div>
 
             <div id="tab5" class="tabcontent">
+                <!-- Conteúdo da quinta aba -->
+                <!-- Insira o HTML que você quer na quinta aba aqui -->
+            </div>
+            <div id="tab6" class="tabcontent">
                 <!-- Conteúdo da quinta aba -->
                 <!-- Insira o HTML que você quer na quinta aba aqui -->
             </div>
