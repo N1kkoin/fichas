@@ -1608,3 +1608,7 @@ toggleButton.addEventListener("click", function () {
         explicacaoSheet.style.display = "none";
     }
 });
+
+
+// POPUP HABILIDADES NIVEIS E EXPLICAÇÕES ----------------------------------------------------------
+
