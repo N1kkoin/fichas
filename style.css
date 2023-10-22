@@ -55,28 +55,27 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .sheets {
-    display: flex;
+	display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+
 }
 
 .character-sheet {
-    max-width: 900px;
-    /* Define a largura máxima */
-    margin-left: auto;
-    /* Move o character-sheet para o lado direito */
+    max-width: 1000px;
     border-radius: 5px;
-    flex-basis: 960px;
+    margin: 10px;
+
 }
 
 .explicação-sheet {
-    width: 600px;
-    /* Define a largura máxima */
-    margin-right: auto;
-    /* Move o explicação-sheet para o lado esquerdo */
+    width: 90%;
     padding: 20px;
     border-radius: 20px;
     background-color: #007bff56;
     margin-left: 20px;
-    margin-top: 40px;
+    margin-top: 64px;
+display: none;
 }
 
 .character-info,
@@ -464,10 +463,11 @@ button {
     border-radius: 20px;
     color: #fff;
     text-transform: uppercase;
-    margin-right: 7px;
-    margin-top: 10px;
-    width: 100%;
+    width: 50px;
     cursor: pointer;
+    display: block;
+    margin-top: 10px;
+
 }
 
 .buttonload {
@@ -477,13 +477,23 @@ button {
     border-radius: 20px;
     color: #db355c;
     text-transform: uppercase;
-    margin-right: 7px;
     margin-top: 10px;
-    width: 100%;
+    width: 50px;
     border: 1px solid #db355c;
     cursor: pointer;
-
 }
+
+.buttondescrição {
+    background-color: #007BFF;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    width: 50px;
+    cursor: pointer;
+}
+
 
 .juntos {
     display: block;
@@ -867,4 +877,19 @@ summary {
     width: 50%;
     border: 1px solid #db355c;
     min-height: 700px;
+}
+
+
+/* Estilos para o contêiner flutuante */
+.floating-container {
+    position: fixed;
+    right: 10px; /* Ajuste a distância da direita conforme necessário */
+    top: 15px; /* Ajuste a distância do fundo conforme necessário */
+    z-index: 999; /* Certifique-se de que o contêiner flutuante esteja na parte superior de outros elementos */
+}
+
+/* Estilos para os botões flutuantes dentro do contêiner */
+.floating-button {
+    display: block;
+    cursor: pointer;
 }

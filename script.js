@@ -1492,3 +1492,23 @@ document.getElementById('adicionar-item').addEventListener('click', function (ev
 
 
 //  MUDAR LINGUA PT/EN -----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// BOTÃO APRA ESCONDER EXPLICAÇÃO -----------------------------------------------------------------------------
+
+const toggleButton = document.getElementById("toggle-button");
+const explicacaoSheet = document.querySelector(".explicação-sheet");
+
+toggleButton.addEventListener("click", function () {
+    if (explicacaoSheet.style.display === "none" || explicacaoSheet.style.display === "") {
+        explicacaoSheet.style.display = "block";
+    } else {
+        explicacaoSheet.style.display = "none";
+    }
+});

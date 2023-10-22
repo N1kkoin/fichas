@@ -6,11 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha D&D</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+    <div class="floating-container">
+        <button id="toggle-button" class="buttondescrição"><i class="fa-solid fa-file-lines"></i></button>
+        <button class="buttonsalvar" id="save-button"><i class="fa-solid fa-floppy-disk"></i></button>
+        <input type="file" id="file-input" style="display: none;">
+        <button class="buttonload" id="load-button"><i class="fa-solid fa-upload"></i></button>
+
+    </div>
+
+
     <div class="sheets">
         <div class="character-sheet">
             <h1>Ficha de Personagem D&D<span style="color: #d5d5d5;"> (em construção)</span></h1>
@@ -690,9 +699,6 @@
                 <!-- Conteúdo da quinta aba -->
                 <!-- Insira o HTML que você quer na quinta aba aqui -->
             </div>
-            <button class="buttonsalvar" id="save-button">Salvar</button>
-            <input type="file" id="file-input" style="display: none;">
-            <button class="buttonload" id="load-button">Carregar</button>
 
         </div>
         <div class="explicação-sheet">
