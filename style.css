@@ -893,3 +893,13 @@ summary {
     display: block;
     cursor: pointer;
 }
+
+
+.closed-description {
+    background-color: #007BFF !important; /* Cor de fundo quando fechado com !important */
+    color: white;
+    padding-bottom: 20px;
+    cursor: pointer;
+    height: 75px;
+  }
+  

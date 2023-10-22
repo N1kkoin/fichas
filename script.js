@@ -1175,6 +1175,8 @@ document.getElementById("tab1").style.display = "block";
 
 const backgroundSelect = document.getElementById('char-background');
 const backgroundDescriptionDiv = document.getElementById('background-description');
+let isOpen = false; // Define o estado inicial como aberto
+
 
 backgroundSelect.addEventListener('change', function () {
     const selectedBackground = backgroundSelect.value;
@@ -1243,7 +1245,25 @@ backgroundSelect.addEventListener('change', function () {
             backgrounddescription = 'Selecione um antecedente para ver a descrição.';
     }
 
-    backgroundDescriptionDiv.innerHTML = `<h2>${backgroundtitle}</h2><p>${backgrounddescription}</p>`;
+   
+    const descriptionHTML = `<h2>${backgroundtitle}</h2><p>${backgrounddescription}</p>`;
+    backgroundDescriptionDiv.innerHTML = descriptionHTML;
+
+    if (!isOpen) {
+      backgroundDescriptionDiv.querySelector('p').style.display = 'none'; // Mantenha a descrição oculta se estiver fechada
+      backgroundDescriptionDiv.classList.add('closed-description');
+    } else {
+      backgroundDescriptionDiv.querySelector('p').style.display = 'block'; // Mostra a descrição se estiver aberta
+      backgroundDescriptionDiv.classList.remove('closed-description');
+    }
+});
+
+// Adicione um ouvinte de eventos ao elemento para alternar a visibilidade da descrição
+backgroundDescriptionDiv.addEventListener('click', function () {
+    const descriptionParagraph = backgroundDescriptionDiv.querySelector('p');
+    descriptionParagraph.style.display = isOpen ? 'none' : 'block';
+    isOpen = !isOpen;
+    backgroundDescriptionDiv.classList.toggle('closed-description'); // Toggle a classe
 });
 
 // Disparar manualmente o evento "change" no carregamento da página
@@ -1251,7 +1271,6 @@ window.addEventListener('load', function () {
     const backgroundSelect = document.getElementById('char-background');
     backgroundSelect.dispatchEvent(new Event('change'));
 });
-
 //TASKLIST -----------------------------------------------------------
 
 let tasks = [];
@@ -1489,14 +1508,6 @@ document.getElementById('adicionar-item').addEventListener('click', function (ev
     const equipamentoForm = document.getElementById('equipamento-form');
     equipamentoForm.appendChild(criarItem());
 });
-
-
-//  MUDAR LINGUA PT/EN -----------------------------------------------------------------------------------------
-
-
-
-
-
 
 
 
