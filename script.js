@@ -1611,4 +1611,38 @@ toggleButton.addEventListener("click", function () {
 
 
 // POPUP HABILIDADES NIVEIS E EXPLICAÇÕES ----------------------------------------------------------
+const showPopupButton = document.getElementById("show-popup-button");
+const popup = document.getElementById("popup");
+const body = document.querySelector("body");
+const leftPanel = document.getElementById("left-panel");
+const rightPanel = document.getElementById("right-panel");
 
+showPopupButton.addEventListener("click", function () {
+    if (popup.style.display === "block") {
+        popup.style.display = "none";
+        body.style.overflow = "auto"; // Reativar o scroll na página
+    } else {
+        popup.style.display = "block";
+        body.style.overflow = "hidden"; // Desativar o scroll na página
+    }
+});
+
+leftPanel.addEventListener("click", function (e) {
+    e.stopPropagation(); // Impedir a propagação do clique para os <details>
+});
+
+leftPanel.querySelectorAll("details").forEach((details) => {
+    details.addEventListener("click", function (e) {
+        e.preventDefault(); // Impedir a abertura dos detalhes
+
+        // Limpar o conteúdo do painel direito
+        rightPanel.innerHTML = "";
+
+        // Clonar o conteúdo do detalhe clicado e adicionar ao painel direito
+        const detailsContent = details.querySelector("div");
+        if (detailsContent) {
+            const clone = detailsContent.cloneNode(true);
+            rightPanel.appendChild(clone);
+        }
+    });
+});

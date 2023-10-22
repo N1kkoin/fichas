@@ -973,7 +973,7 @@ summary {
 }
 
 .itemhabilidades:nth-child(7),
-.itemhabilidades:nth-child(8){
+.itemhabilidades:nth-child(8) {
     margin-bottom: -10px;
 }
 
@@ -1008,14 +1008,77 @@ summary {
 
 /* POPOUP HABILIDADES --------------------------------------------------------------------------------*/
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    max-height: 100%;
+    /* Adicione uma altura máxima para o popup */
+    overflow: hidden;
+    /* Adicione esta linha para impedir o scroll na página principal */
+}
+
+.popup .panel {
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+
+}
+
+.popup button {
+    display: block;
+    margin: 20px;
+}
+
+.popup details {
+    margin-top: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.popup summary {
+    cursor: pointer;
+}
+
+#right-panel {
+    background-color: white;
+}
+
+#right-panel div {
+    padding: 20px;
+}
+
+#left-panel summary {
+    background-color: white;
+    margin-left: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 0;
+    border: 0;
+}
+
+#left-panel{
+    background-color: #007BFF;
+}
 
 
+summary {
+    list-style: none; /* Remove a formatação da lista */
+}
 
+/* Adicione um ícone personalizado, como um ícone de fonte de ícone */
+summary::before {
+    content: ""; /* Use o código do seu ícone personalizado */
 
-
-
-
-
-
-
+}
 
