@@ -690,6 +690,8 @@ window.addEventListener('load', function () {
 //DESCRIÇÃO ALINHAMENTO ------------------------------------------------------------------
 const godSelect = document.getElementById('char-gods');
 const godsdescriptionDiv = document.getElementById('gods-description');
+let isOpenGod = false; // Defina o estado inicial como fechado
+
 
 godSelect.addEventListener('change', function () {
     const selectedGod = godSelect.value;
@@ -854,7 +856,24 @@ godSelect.addEventListener('change', function () {
             godsdescription = 'Selecione uma religião para ver a descrição.';
     }
 
-    godsdescriptionDiv.innerHTML = `<h2>${godstitle}</h2><p>${godsdescription}</p>`;
+    const descriptionHTML = `<h2>${godstitle}</h2><p>${godsdescription}</p>`;
+    godsdescriptionDiv.innerHTML = descriptionHTML;
+
+    if (!isOpenGod) {
+      godsdescriptionDiv.querySelector('p').style.display = 'none'; // Mantenha a descrição oculta se estiver fechada
+      godsdescriptionDiv.classList.add('closed-description');
+    } else {
+      godsdescriptionDiv.querySelector('p').style.display = 'block'; // Mostra a descrição se estiver aberta
+      godsdescriptionDiv.classList.remove('closed-description');
+    }
+});
+
+// Adicione um ouvinte de eventos ao elemento para alternar a visibilidade da descrição
+godsdescriptionDiv.addEventListener('click', function () {
+    const descriptionParagraph = godsdescriptionDiv.querySelector('p');
+    descriptionParagraph.style.display = isOpenGod ? 'none' : 'block';
+    isOpenGod = !isOpenGod;
+    godsdescriptionDiv.classList.toggle('closed-description'); // Toggle a classe
 });
 
 // Disparar manualmente o evento "change" no carregamento da página
@@ -862,7 +881,6 @@ window.addEventListener('load', function () {
     const godSelect = document.getElementById('char-gods');
     godSelect.dispatchEvent(new Event('change'));
 });
-
 
 //CONTA PONTOS DE XP E NIVEIS ------------------------------------------------------------------------------------------------
 
