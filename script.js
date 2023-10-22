@@ -408,6 +408,8 @@ document.getElementById('char-portrait').addEventListener('change', function () 
 //DESCRIÇÃO ALINHAMENTO ------------------------------------------------------------------
 const alignmentSelect = document.getElementById('char-alignment');
 const descriptionDiv = document.getElementById('alignment-description');
+let isOpenAlignment = false; // Defina o estado inicial como fechado
+
 
 alignmentSelect.addEventListener('change', function () {
     const selectedAlignment = alignmentSelect.value;
@@ -457,7 +459,24 @@ alignmentSelect.addEventListener('change', function () {
             description = 'Selecione um alinhamento para ver a descrição.';
     }
 
-    descriptionDiv.innerHTML = `<h2>${title}</h2><p>${description}</p>`;
+    const descriptionHTML = `<h2>${title}</h2><p>${description}</p>`;
+    descriptionDiv.innerHTML = descriptionHTML;
+
+    if (!isOpenAlignment) {
+        descriptionDiv.querySelector('p').style.display = 'none'; // Mantenha a descrição oculta se estiver fechada
+        descriptionDiv.classList.add('closed-description');
+    } else {
+        descriptionDiv.querySelector('p').style.display = 'block'; // Mostra a descrição se estiver aberta
+        descriptionDiv.classList.remove('closed-description');
+    }
+});
+
+// Adicione um ouvinte de eventos ao elemento para alternar a visibilidade da descrição
+descriptionDiv.addEventListener('click', function () {
+    const descriptionParagraph = descriptionDiv.querySelector('p');
+    descriptionParagraph.style.display = isOpenAlignment ? 'none' : 'block';
+    isOpenAlignment = !isOpenAlignment;
+    descriptionDiv.classList.toggle('closed-description'); // Toggle a classe
 });
 
 // Disparar manualmente o evento "change" no carregamento da página
@@ -614,6 +633,8 @@ window.addEventListener('load', function () {
 // DESCRICAO CLASSEs ---------------------------------------------------------------------------------------
 const classSelect = document.getElementById('char-class');
 const classDescriptionDiv = document.getElementById('class-description');
+let isOpenClass = false; // Defina o estado inicial como fechado
+
 
 classSelect.addEventListener('change', function () {
     const selectedClass = classSelect.value;
@@ -678,7 +699,24 @@ classSelect.addEventListener('change', function () {
             classDescription = 'Selecione uma classe para ver a descrição.';
     }
 
-    classDescriptionDiv.innerHTML = `<h2>${classTitle}</h2><p>${classDescription}</p>`;
+    const descriptionHTML = `<h2>${classTitle}</h2><p>${classDescription}</p>`;
+    classDescriptionDiv.innerHTML = descriptionHTML;
+
+    if (!isOpenClass) {
+      classDescriptionDiv.querySelector('p').style.display = 'none'; // Mantenha a descrição oculta se estiver fechada
+      classDescriptionDiv.classList.add('closed-description');
+    } else {
+      classDescriptionDiv.querySelector('p').style.display = 'block'; // Mostra a descrição se estiver aberta
+      classDescriptionDiv.classList.remove('closed-description');
+    }
+});
+
+// Adicione um ouvinte de eventos ao elemento para alternar a visibilidade da descrição
+classDescriptionDiv.addEventListener('click', function () {
+    const descriptionParagraph = classDescriptionDiv.querySelector('p');
+    descriptionParagraph.style.display = isOpenClass ? 'none' : 'block';
+    isOpenClass = !isOpenClass;
+    classDescriptionDiv.classList.toggle('closed-description'); // Toggle a classe
 });
 
 // Disparar manualmente o evento "change" no carregamento da página
