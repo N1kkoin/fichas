@@ -626,7 +626,7 @@ raceSelect.addEventListener('change', function () {
 
    
     // Coloque o conteúdo na div de descrição
-    raceDescriptionDiv.innerHTML = `<h2>${raceTitle}</h2><div style="margin-top:15px;">${raceDescription}</div><div>${racetable}</div></br>`;
+    raceDescriptionDiv.innerHTML = `<h2>${raceTitle}</h2><div style="margin-top:16px;">${raceDescription}</div><div>${racetable}</div></br>`;
 
 // Defina o estado inicial para fechado
 if (!isOpenRace) {
