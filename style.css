@@ -943,7 +943,7 @@ summary {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start; /* Alinhar o conteúdo verticalmente no início */
     background-color: #007bff56;
     display: flex;
     flex-wrap: wrap;
@@ -984,5 +984,4 @@ summary {
     flex: 1;
     min-width: 100%; /* Isso fará com que o terceiro item fique abaixo */
     box-sizing: border-box;
-    
 }
