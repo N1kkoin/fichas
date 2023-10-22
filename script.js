@@ -1653,12 +1653,31 @@ leftPanel.querySelectorAll("details").forEach((details) => {
 const tabButtons = document.querySelectorAll(".tab-button-habilidade");
 const tabContents = document.querySelectorAll(".tab-content-habilidade");
 
-tabButtons.forEach((button) => {
+// Feche todas as guias
+tabContents.forEach((content) => {
+    content.style.display = "none";
+});
+
+// Abra a primeira guia por padrão
+tabButtons[0].classList.add("active");
+tabContents[0].style.display = "block";
+
+tabButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
         const tabId = this.getAttribute("data-tab");
+
+        // Feche todas as guias
         tabContents.forEach((content) => {
             content.style.display = "none";
         });
+
+        // Abra apenas a guia clicada
         document.getElementById(tabId).style.display = "block";
+
+        // Remova a classe "active" de todos os botões e, em seguida, adicione-a apenas ao botão clicado
+        tabButtons.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+        this.classList.add("active");
     });
 });
