@@ -1646,3 +1646,19 @@ leftPanel.querySelectorAll("details").forEach((details) => {
         }
     });
 });
+
+
+//POPUP TABS --------------------------------------------------------------------------------------
+
+const tabButtons = document.querySelectorAll(".tab-button-habilidade");
+const tabContents = document.querySelectorAll(".tab-content-habilidade");
+
+tabButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+        const tabId = this.getAttribute("data-tab");
+        tabContents.forEach((content) => {
+            content.style.display = "none";
+        });
+        document.getElementById(tabId).style.display = "block";
+    });
+});

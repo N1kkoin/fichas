@@ -1031,11 +1031,6 @@ summary {
 
 }
 
-.popup button {
-    display: block;
-    margin: 20px;
-}
-
 .popup details {
     margin-top: 5px;
     margin: 10px;
@@ -1062,13 +1057,14 @@ summary {
     font-family: 'Lato', sans-serif;
     text-transform: none;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 0;
     border: 0;
 }
 
 #left-panel{
     background-color: #007BFF;
+    overflow-y: auto;
 }
 
 
@@ -1081,4 +1077,37 @@ summary::before {
     content: ""; /* Use o código do seu ícone personalizado */
 
 }
+
+
+.tab-button-habilidade:hover {
+    background-color: #333; /* Cor de fundo ao passar o mouse sobre os botões */
+}
+
+/* Estilos para as guias */
+.tab-buttons-habilidade {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; /* Permite que as guias quebrem para a próxima linha */
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tab-button-habilidade {
+    background-color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    flex: 1;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap; /* Evita que o texto quebre para a próxima linha */
+    width: 100%; /* Ajuste este valor conforme necessário */
+    margin: 5px; /* Espaço entre as guias */
+    border-radius: 10px;
+}
+
 
